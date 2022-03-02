@@ -599,13 +599,48 @@
     <main class="main">
       <div class="container">
         <div class="row">
-          <div class="breadcrumbs u-margin-top-9">
+          <div class="breadcrumbs u-margin-top-9 u-margin-bottom-19">
             <div class="breadcrumbs--title">
               <h5>حساب ها</h5>
             </div>
             <button class="btn-sussess">ایجاد حساب</button>
-
-            
+          </div>
+        </div>
+        <div class="row">
+          <div class="search__form">
+            <form class="form__submit" onsubmit="return event.preventDefault()">
+              <div class="form--group">
+                <div class="dropdown form--group__dropdown">
+                  <button class="btn__dropdown"> فقط من , همه</button>
+                  <div class="dropdown__items">
+                    <ul class="dropdown__menu">
+                      <li class="dropdown__menu--item">
+                        <a href="#" class="link">همه</a>
+                      </li>
+                      <li class="dropdown__menu--item">
+                        <a href="#" class="link">به تازگی ایجاد شده</a>
+                      </li>
+                      <li class="dropdown__menu--item">
+                        <label class="container__checkbox">
+                          <span class="title--checkbox">فقط من</span>
+                          <input type="checkbox" checked="checked">
+                          <span class="checkmark"></span>
+                        </label>
+                      </li>
+                      <li class="dropdown__menu--item">
+                        <label class="container__checkbox">
+                          <span class="title--checkbox">دنبال شده</span>
+                          <input type="checkbox" checked="checked">
+                          <span class="checkmark"></span>
+                        </label>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <input type="text" class="form--group__search--box" placeholder="جستجو کنید ..."/>
+                <button class="btn-sussess form--group__sussess"></button>
+              </div>
+            </form>
           </div>
         </div>
       </div>

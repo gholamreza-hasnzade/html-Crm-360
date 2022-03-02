@@ -1,0 +1,89 @@
+.search__form {
+  margin-bottom: $margin-16;
+  padding: $margin-16 0;
+
+  .form--group {
+    @include flexBox(row, center, flex-start);
+    height: 35px;
+    width: auto;
+    background: $bg-color-secondry;
+    box-shadow: 0 2px 10px 0 rgba($bg-color-black, 0.05);
+    border-radius: $border-radius-6;
+
+    &__dropdown {
+      padding: 0 $padding-6;
+      .btn__dropdown {
+        background-color: transparent;
+        height: 100%;
+        width: 100%;
+        position: relative;
+        padding-left: $padding-6;
+
+        font-size: 14px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        color: $text-color-warm-grey;
+        font-family: $fontFamily;
+
+        &::before {
+          content: "";
+          position: absolute;
+          height: 20px;
+          width: 1px;
+          background-color: $text-color-warm-grey-light-100;
+          left: -11px;
+          top: 11px;
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          background: url(../images/arrow_down.svg) no-repeat center;
+          left: -5px;
+          top: 16px;
+          width: 10px;
+          height: 10px;
+          transform: rotate(90deg);
+          transition: all 0.3s ease 0s;
+          -webkit-transition: all 0.3s ease 0s;
+          -moz-transition: all 0.3s ease 0s;
+          -ms-transition: all 0.3s ease 0s;
+          -o-transition: all 0.3s ease 0s;
+        }
+
+        &:hover::after {
+          transform: rotate(0deg);
+        }
+      }
+      .dropdown__items {
+        right: 0;
+      }
+    }
+    &__search--box {
+      height: 100%;
+      width: 350px;
+      outline: 0;
+      border: 0;
+      background-color: transparent;
+      padding-right: $padding-9;
+      font-family: $fontFamily;
+      font-size: 10px;
+      color: $text-color-warm-grey-light-100;
+
+      &::placeholder {
+        font-size: 10px;
+      }
+    }
+
+    &__sussess {
+      height: 100%;
+      width: 35px;
+      background-image: url("../images/search.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      margin-right: 0;
+      border-top-left-radius: $border-radius-6;
+      border-bottom-left-radius: $border-radius-6;
+    }
+  }
+}

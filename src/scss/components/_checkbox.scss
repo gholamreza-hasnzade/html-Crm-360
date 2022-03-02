@@ -1,0 +1,75 @@
+.container__checkbox {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    font-size: 12px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    padding: 3px 20px;
+    @include flexBox(row,center,flex-start);
+
+    .title--checkbox{
+        font-size: 12px;
+        font-weight: 300;
+        font-stretch: normal;
+        font-style: normal;
+        letter-spacing: normal;
+        margin-right: 35px;
+        color: $text-color-warm-grey;
+    }
+  }
+  
+  /* Hide the browser's default checkbox */
+  .container__checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  .checkmark {
+    position: absolute;
+    top: 0;
+    right: 19px;
+    height: 20px;
+    width: 20px;
+    //background-color: #eee;
+    border: solid 0.5px $bg-color-border-dark;
+    border-radius: 6px;
+
+  }
+  
+  .container__checkbox:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  .container__checkbox input:checked ~ .checkmark {
+    background-color: $bg-color-light;
+    border: none;
+  }
+  
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  .container__checkbox input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .container__checkbox .checkmark:after {
+    left: 7px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid $bg-color-secondry;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }

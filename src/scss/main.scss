@@ -34,15 +34,14 @@
 /* tooltip */
 @import "components/tooltip";
 
-
 /* dropdown */
 @import "components/dropdown";
-
-
 
 /* badge */
 @import "components/badge";
 
+/* checkbox */
+@import "components/checkbox";
 /***** ==== layout ==== *****/
 /*  header  */
 @import "layout/header";
@@ -56,6 +55,7 @@
 /*  layout  */
 @import "layout/layout";
 
+@import "layout/search";
 
 /*  footer  */
 @import "layout/footer";
