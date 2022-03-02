@@ -1,0 +1,78 @@
+.button__group {
+  @include flexBox(row, center, flex-start);
+
+  .btn {
+    display: inline-block;
+    margin: 30px 0 0 0px;
+    padding: 12px 15px;
+    font-family: $fontFamily;
+    border-radius: $border-radius-5;
+    -webkit-border-radius: $border-radius-5;
+    -moz-border-radius: $border-radius-5;
+    -ms-border-radius: $border-radius-5;
+    -o-border-radius: $border-radius-5;
+    font-family: $fontFamily;
+    text-shadow: none;
+    position: relative;
+    transition: all 400ms ease-in-out;
+    z-index: 0;
+    &--login {
+      display: inline-block;
+      width: 100%;
+      margin: 30px 0 0 0px;
+      padding: 12px 15px;
+      color: $bg-color-white;
+      font-size: 14px;
+      font-weight: bold;
+      background: $bg-color-main;
+      border: 1px solid $bg-color-main;
+
+      &:hover {
+        color: $bg-color-main !important;
+        border: 1px solid $bg-color-main !important;
+      }
+
+      &:hover::before {
+        width: 100%;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 100%;
+        background: $bg-color-white;
+        left: 0;
+        right: 0;
+        top: 0;
+        margin: 0 auto;
+        transition: all 400ms ease-in-out;
+        z-index: -1;
+        border-radius: $border-radius-4;
+        -webkit-border-radius: $border-radius-4;
+        -moz-border-radius: $border-radius-4;
+        -ms-border-radius: $border-radius-4;
+        -o-border-radius: $border-radius-4;
+      }
+    }
+
+    &--inset {
+      color: $bg-color-white;
+      font-size: 14px;
+      font-weight: bold;
+      background: $bg-color-main;
+      border: 1px solid $bg-color-main;
+      padding: 8px 40px;
+      margin-left: 16px;
+    }
+
+    &--close {
+      color: $bg-color-main;
+      font-size: 14px;
+      font-weight: bold;
+      background: $bg-color-white;
+      border: 1px solid $bg-color-main;
+      padding: 8px 40px;
+    }
+  }
+}

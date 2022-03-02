@@ -1,0 +1,15 @@
+body{
+    font-family: $fontFamily;
+    line-height: 1.5em;
+    font-size: 16px;
+} 
+
+.login__title {
+    h2 {
+      font-size: 18px;
+      margin: 0;
+      margin-top: 15px;
+      font-family: $fontFamily;
+      color: $text-color-warm-grey;
+    }
+  }

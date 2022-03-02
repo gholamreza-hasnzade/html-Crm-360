@@ -1,0 +1,147 @@
+.login {
+  width: 100%;
+  min-height: 100vh;
+  background-color: $bg-color-white;
+  display: flex;
+
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    width: 100%;
+
+    .sidbar__left--login {
+      flex: 0 0 40%;
+      max-width: 40%;
+      background-image: linear-gradient(
+        to bottom,
+        $bg-color-main,
+        $bg-color-light
+      );
+      @include flexBox(row, center, center);
+      .img__sidbar {
+        img {
+          width: 317.2px;
+          height: 315.4px;
+        }
+      }
+    }
+
+    .sidbar__right--login {
+      flex: 0 0 60%;
+      max-width: 60%;
+      height: 100%;
+      .sidbar__right__wrapper {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .login__logo {
+          width: 98px;
+          height: 98px;
+          margin: 50px 0;
+        }
+        
+        .login__form {
+          margin: 35px 0;
+          width: 100%;
+          @include flexBox(column, center, center);
+
+          .contact__form {
+            width: 60%;
+            @include flexBox(column, center, center);
+            .form__group {
+              position: relative;
+              @include flexBox(column, unset, center);
+              width: 100%;
+              position: relative;
+              &--lable {
+                font-size: 16px;
+                font-weight: normal;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: 3.56;
+                color: $text-color-warm-grey;
+              }
+              &--input {
+                padding: 10px 35px 4px 0;
+                color: $text-color-warm-grey-dark;
+                font-size: 16px;
+                font-family: $fontFamily, Arial, Helvetica, sans-serif;
+                outline: 0;
+                border: 0;
+                border-bottom: 1px solid $text-color-warm-grey-light-100;
+
+                &:focus {
+                  border-bottom: 1px solid $text-color-warm-grey-dark;
+                }
+              }
+              &--forgetPassword {
+                color: $bg-color-light;
+                font-size: 16px;
+                font-weight: normal;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: 3.56;
+                letter-spacing: normal;
+                &:hover {
+                  color: $bg-color-dark;
+                }
+              }
+              
+
+              .user__icon,
+              .user__pass {
+                position: absolute;
+                padding: 15px;
+                bottom: 4px;
+                border-radius: $border-radius-3;
+              }
+              .user__icon {
+                background: url(../images/user.svg) no-repeat center center
+                  $text-color-warm-grey-light-50;
+              }
+              .user__pass {
+                background: url(../images/pass.svg) no-repeat center center
+                  $text-color-warm-grey-light-50;
+              }
+
+              &.isErros {
+                .form__group--lable {
+                  color: $text-color-warning-dark !important;
+                }
+                .form__group--input {
+                  border-bottom: 1px solid $text-color-warning-dark;
+                }
+
+                .user__pass {
+                  background: url(../images/ePass.svg) no-repeat center center
+                    $text-color-warning-light;
+                }
+                .user__icon {
+                  background: url(../images/eUser.svg) no-repeat center center
+                    $text-color-warning-light;
+                }
+              }
+
+              .showPassword {
+                width: 21px;
+                height: 20px;
+                position: absolute;
+                left: 4px;
+                bottom: 7px;
+                cursor: pointer;
+                background: url(../images/eye_visible_icon.svg) no-repeat center center;
+
+                &.isToggle{
+                    background: url(../images/eye_slash_icon.svg) no-repeat center center;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

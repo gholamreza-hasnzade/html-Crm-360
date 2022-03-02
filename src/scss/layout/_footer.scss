@@ -1,0 +1,35 @@
+.footer {
+  width: 100%;
+  height: 59px;
+  background-color: $bg-color-secondry;
+  z-index: 17;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  text-align: center;
+  box-shadow: 0 -3px 6px 0 rgba($bg-color-black, 0.08);
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    .footer__icon {
+      font-weight: 500;
+      font-size: 22px;
+      color: $text-color-warm-grey;
+    }
+
+    .footer__title {
+      font-size: 12px;
+      font-weight: 500;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.58;
+      letter-spacing: normal;
+      text-align: center;
+      color: $text-color-warm-grey-dark;
+      padding: 0 16px;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+.tooltip {
+  position: absolute;
+  left: 0%;
+  top: 43%;
+
+  .tooltiptext {
+    visibility: visible;
+    width: 120px;
+    background-color: $bg-color-warning-dark;
+    color: $text-color-warm-grey;
+    text-align: center;
+    border-radius: $border-radius-6;
+    padding: 9px 14px;
+    z-index: 1;
+    font-size: 10px;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 10%;
+        border-width: 11px;
+        border-style: solid;
+        border-color: $bg-color-warning-dark transparent transparent transparent;
+      }
+  }
+}

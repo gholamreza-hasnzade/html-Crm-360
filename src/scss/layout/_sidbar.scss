@@ -1,0 +1,190 @@
+.sidbar {
+  min-width: $sidebar-width;
+  height: calc(100vh - 60px);
+  position: fixed;
+  right: 0;
+  top: 90px;
+  border-top-left-radius: $border-radius-20;
+  background-image: linear-gradient(to bottom, $bg-color-main, $bg-color-light);
+  &__container {
+    width: 100%;
+    height: 100%;
+    padding: 20px 0;
+
+    .sidbar__row {
+      width: 100%;
+      height: 100%;
+
+      .navbar {
+        @include flexBox(column, center, unset);
+        padding-bottom: 60px;
+        position: relative;
+        overflow: hidden;
+        overflow-y: scroll;
+        scrollbar-width: none;
+        height: 100%;
+        .nav__item {
+          margin-bottom: 31px;
+          position: relative;
+          width: 100%;
+          &--link {
+            width: 100%;
+            @include flexBox(column, center, space-between);
+
+            &--picuter {
+              background-color: rgba($bg-color-white, 0.2);
+              width: 60px;
+              height: 60px;
+              border-radius: $border-radius-6;
+              overflow: hidden;
+              @include flexBox(row, center, center);
+              margin-bottom: 10px;
+              transition: all 0.3s ease 0s;
+              -webkit-transition: all 0.3s ease 0s;
+              -moz-transition: all 0.3s ease 0s;
+              -ms-transition: all 0.3s ease 0s;
+              -o-transition: all 0.3s ease 0s;
+              .icon--navbar {
+                font-size: 30px;
+                color: $text-color-secondr;
+                transition: all 0.3s ease 0s;
+                -webkit-transition: all 0.3s ease 0s;
+                -moz-transition: all 0.3s ease 0s;
+                -ms-transition: all 0.3s ease 0s;
+                -o-transition: all 0.3s ease 0s;
+              }
+
+              @media (hover: hover) and (pointer: fine) {
+                &:hover {
+                  background-color: $bg-color-secondry;
+                }
+
+                &:hover .icon--navbar {
+                  color: $bg-color-main;
+                }
+              }
+            }
+
+            &--title {
+              font-size: 14px;
+              font-weight: 500;
+              font-stretch: normal;
+              font-style: normal;
+              line-height: 1.57;
+              letter-spacing: normal;
+              text-align: center;
+              color: #fcfcfc;
+              z-index: 1;
+            }
+          }
+
+          &::before {
+            content: "";
+            position: absolute;
+            left: 2px;
+            width: 5px;
+            height: 49px;
+            top: 7px;
+            background-color: $bg-color-secondry;
+            border-top-right-radius: 6px;
+            border-bottom-right-radius: 6px;
+            opacity: 0;
+            transition: opacity 0.3s ease 0s;
+            -webkit-transition: opacity 0.3s ease 0s;
+            -moz-transition: opacity 0.3s ease 0s;
+            -ms-transition: opacity 0.3s ease 0s;
+            -o-transition: opacity 0.3s ease 0s;
+            z-index: 15;
+          }
+          &.active::before {
+            opacity: 1;
+          }
+
+          .submenu {
+            background: $bg-color-secondry;
+            position: fixed;
+            right: 97px;
+            top: 93px;
+            box-shadow: $box-shadow-10;
+            border-top-left-radius: $border-radius-16;
+            padding: 26px 30px 0 0;
+            width: 370px;
+            height: calc(93vh);
+            overflow: auto;
+            overflow-x: hidden;
+            visibility: hidden;
+
+            &__container {
+              overflow-y: auto;
+              overflow-x: hidden;
+              direction: rtl;
+              padding-bottom: 50px !important;
+              scrollbar-width: thin;
+              /* min-height: calc(73vh); */
+              display: flex;
+              flex-wrap: wrap;
+              max-height: calc(73vh);
+            }
+
+            &__item {
+              height: 58px;
+              padding: 18px 0;
+              direction: ltr;
+              border-bottom: 1px solid $border-color-bottom;
+              padding-right: 12px;
+              &--link {
+                width: 100%;
+                @include flexBox(row, center, end);
+                &--title {
+                  font-size: 12px;
+                  font-weight: 500;
+                  font-stretch: normal;
+                  font-style: normal;
+                  line-height: 1.58;
+                  letter-spacing: normal;
+                  text-align: right;
+                  color: $text-color-warm-grey;
+                  padding-right: 16px;
+                }
+                .icon__submenu {
+                  width: 28px;
+                  height: 28px;
+                  border-radius: $border-radius-6;
+                  background-color: rgba($bg-color-main, 0.2);
+                  @include flexBox(row, center, center);
+                  span {
+                    color: $text-color-main;
+                    font-size: 12px;
+                  }
+                }
+              }
+            }
+          }
+          .submenu ul > * {
+            flex: 1 1 160px;
+          }
+
+          &.isActive .submenu {
+            visibility: visible;
+          }
+        }
+        &::-webkit-scrollbar {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.line-sidbar {
+  border-top-left-radius: $border-radius-16;
+  width: 21px;
+  height: calc(93vh);
+  position: fixed;
+  right: 96px;
+  border: none;
+  outline: none;
+  background-image: linear-gradient(to bottom, $bg-color-main, $bg-color-light);
+  top: 90px;
+  min-height: 785px;
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="dist/style/main.css" />
+    <title>صفحه ورود</title>
+  </head>
+  <body>
+    <section class="login section">
+      <div class="login__wrapper">
+        <div class="sidbar__left--login">
+          <div class="img__sidbar">
+            <img src="dist/images/bgLogin.svg" alt="" />
+          </div>
+        </div>
+        <div class="sidbar__right--login">
+          <div class="sidbar__right__wrapper">
+            <div class="login__logo">
+              <img src="dist/images/Logo.svg" alt="" />
+            </div>
+            <div class="login__title">
+              <h2>سیستم مدیریت ارتباط با مشتری</h2>
+            </div>
+            <div class="login__form">
+              <form action="#" class="contact__form" id="form__login">
+                <div class="form__group">
+                  <label class="form__group--lable">نام کاربری</label>
+                  <input
+                    type="text"
+                    name=""
+                    class="form__group--input"
+                    id="username__login"
+                  />
+                  <i class="user__icon"></i>
+                </div>
+
+                <div class="form__group">
+                  <label class="form__group--lable">پسورد</label>
+                  <input
+                    name=""
+                    class="form__group--input"
+                    type="password"
+                    id="password__login"
+                  />
+                  <i class="user__pass"></i>
+                  <div class="showPassword"></div>
+                </div>
+
+                <div class="form__group">
+                  <div class="button__group">
+                    <button type="submit" class="btn btn--login">ورود</button>
+                  </div>
+                </div>
+
+                <div class="form__group">
+                  <a href="forget.html" class="form__group--forgetPassword"
+                    >کلمه عبور را فراموش کرده اید؟</a
+                  >
+                </div>
+              </form>
+            </div>
+
+            <!--  <div class="login__alert">
+              <strong class="login__alert--title">خطا</strong>
+              <p class="login__alert--text">نام کاربری یا کلمه عبور اشتباه است</p>
+              <i class="login__alert--close"></i>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="dist/script/login.js"></script>
+  </body>
+</html>

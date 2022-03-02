@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>crm</title>
+    <link rel="stylesheet" href="dist/style/all.min.css" />
+    <link rel="stylesheet" href="dist/style/main.css" />
+  </head>
+  <body>
+    <!-- start Header  -->
+    <header class="header">
+      <div class="header__container">
+        <div class="logo__row">
+          <a href="/" class="logo">
+            <img src="dist/images/Logo.svg" alt="" srcset="" />
+          </a>
+          <p>سامانه جامع مشتریان</p>
+        </div>
+        <nav class="nav">
+          <div class="dropdown">
+            <button class="btn__dropdown btn__dropdown__more"></button>
+            <div class="dropdown__items">
+              <ul class="dropdown__menu">
+                <li class="dropdown__menu--item">
+                  <a href="#" class="link">Admin</a>
+                </li>
+                <li class="dropdown__menu--item">
+                  <a href="#" class="link">مدیریت</a>
+                </li>
+                <li class="dropdown__menu--item">
+                  <a href="#" class="link">اولویت ها</a>
+                </li>
+                <li class="dropdown__menu--item">
+                  <a href="#" class="link">آخرین بازدید</a>
+                </li>
+                <li class="dropdown__menu--item">
+                  <a href="#" class="link">خروج</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="dropdown u-margin-left-5">
+            <button class="btn__dropdown btn__dropdown__plus"></button>
+
+            <div class="dropdown__items">
+              <ul class="dropdown__menu">
+                <li class="dropdown__menu--item">
+                  <a href="#" class="link">ایجاد کردن</a>
+                </li>
+                <li class="dropdown__menu--item">
+                  <a href="#" class="link">حساب</a>
+                </li>
+                <li class="dropdown__menu--item">
+                  <a href="#" class="link">مخاطب</a>
+                </li>
+                <li class="dropdown__menu--item">
+                  <a href="#" class="link">لید</a>
+                </li>
+                <li class="dropdown__menu--item">
+                  <a href="#" class="link">فرصت</a>
+                </li>
+                <li class="dropdown__menu--item">
+                  <a href="#" class="link">جلسه</a>
+                </li>
+                <li class="dropdown__menu--item">
+                  <a href="#" class="link">تماس تلفنی</a>
+                </li>
+                <li class="dropdown__menu--item">
+                  <a href="#" class="link">وظیفه</a>
+                </li>
+                <li class="dropdown__menu--item">
+                  <a href="#" class="link">پرونده</a>
+                </li>
+                <li class="dropdown__menu--item">
+                  <a href="#" class="link">پست الکترونیک</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="dropdown u-margin-left-5">
+            <button class="btn__dropdown btn__dropdown__bell"></button>
+            <div class="dropdown__items notifications">
+              <div class="notifications__container">
+                <div class="notif__header">
+                  <div class="notif__header--item">
+                    <h3>اعلان ها</h3>
+                    <p>علامت زده به خواندخه شده</p>
+                  </div>
+                </div>
+                <div class="notif__body">
+                  <div class="notif__container">
+                    <div class="notif__item">
+                      <div class="notif__item--avtor">
+                        <div class="avtor__wapper">
+                          <img src="dist/images/png.png" alt="" />
+                        </div>
+                      </div>
+                      <div class="notif__item--caption">
+                        <div class="caption__title">
+                          <h4>کدهای فروش رفته تست جدید</h4>
+                        </div>
+                        <div class="caption__link">
+                          <a href="#"> sold cod create assign to you </a>
+                        </div>
+                        <div class="caption__text">
+                          <p>
+                            کدهای فروش رفته تست جدید کدهای فروش رفته تست جدید
+                            کدهای فروش رفته تست جدید کدهای فروش رفته تست جدید
+                            کدهای فروش رفته تست جدید کدهای فروش رفته تست جدید
+                          </p>
+                        </div>
+                      </div>
+                      <div class="notif__item--datetime">
+                        <div class="notif__item--datetime--title">
+                          <span>1400-12-10</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="more__notif" id="more__notif">بیشتر</div>
+                </div>
+                <div class="notif__footer">
+                  <a href="#" class="notif__footer--link"> مشاهده بیشتر </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="dropdown u-margin-left-5">
+            <button class="btn__dropdown btn__dropdown__note"></button>
+            <div class="dropdown__items noetbook">
+              <div class="noetbook__container">
+                <div class="noetbook__header">
+                  <div class="noetbook__header--row">
+                    <h3>یادداشت های من</h3>
+                  </div>
+                </div>
+                <div class="noetbook__body">
+                  <div class="noetbook__body--row" id="Mynotebooke">
+                    <div class="noetbook--item">
+                      <p class="noetbook__pragraf">یادداشت های من</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="noetbook__footer">
+                  <a href="" class="noetbook__footer--link"> یادداشت جدید </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="dropdown__search u-margin-left-5">
+            <form class="item__search__bar">
+              <button class="btn__search"></button>
+              <input type="text" class="search" placeholder="جستجو کردن" />
+              <div class="show__result" style="display: none">
+                <div class="show__result--header">
+                  <div class="show__result--header--title">
+                    <p>جستجو</p>
+                  </div>
+                </div>
+                <div class="show__result--body">
+                  <div class="result__items">
+                    <a href="" class="link__result">نتیجه جستجو</a>
+                    <span class="badge-sussess">حساب</span>
+                  </div>
+                  <div class="result__items">
+                    <a href="" class="link__result">نتیجه جستجو</a>
+                    <span class="badge-sussess">حساب</span>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end Header    -->
+    <!-- start Sidbar  -->
+    <div class="sidbar">
+      <div class="sidbar__container">
+        <div class="sidbar__row">
+          <ul class="navbar">
+            <li class="nav__item">
+              <a href="#" class="nav__item--link">
+                <div class="nav__item--link--picuter">
+                  <span class="fas fa-cash-register icon--navbar"></span>
+                </div>
+                <span class="nav__item--link--title">فروش</span>
+              </a>
+              <div class="submenu">
+                <ul class="submenu__container">
+                  <li class="submenu__item">
+                    <a href="#" class="submenu__item--link">
+                      <p class="submenu__item--link--title">پیش فاکتور</p>
+                      <div class="icon__submenu">
+                        <span class="fas fa-file-invoice-dollar"></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="submenu__item">
+                    <a href="#" class="submenu__item--link">
+                      <p class="submenu__item--link--title">پیش فاکتور</p>
+                      <div class="icon__submenu">
+                        <span class="fas fa-file-invoice-dollar"></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="submenu__item">
+                    <a href="#" class="submenu__item--link">
+                      <p class="submenu__item--link--title">پیش فاکتور</p>
+                      <div class="icon__submenu">
+                        <span class="fas fa-file-invoice-dollar"></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="submenu__item">
+                    <a href="#" class="submenu__item--link">
+                      <p class="submenu__item--link--title">پیش فاکتور</p>
+                      <div class="icon__submenu">
+                        <span class="fas fa-file-invoice-dollar"></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="submenu__item">
+                    <a href="#" class="submenu__item--link">
+                      <p class="submenu__item--link--title">پیش فاکتور</p>
+                      <div class="icon__submenu">
+                        <span class="fas fa-file-invoice-dollar"></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="submenu__item">
+                    <a href="#" class="submenu__item--link">
+                      <p class="submenu__item--link--title">پیش فاکتور</p>
+                      <div class="icon__submenu">
+                        <span class="fas fa-file-invoice-dollar"></span>
+                      </div>
+                    </a>
+                  </li>
+
+                  <li class="submenu__item">
+                    <a href="#" class="submenu__item--link">
+                      <p class="submenu__item--link--title">پیش فاکتور</p>
+                      <div class="icon__submenu">
+                        <span class="fas fa-file-invoice-dollar"></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="submenu__item">
+                    <a href="#" class="submenu__item--link">
+                      <p class="submenu__item--link--title">پیش فاکتور</p>
+                      <div class="icon__submenu">
+                        <span class="fas fa-file-invoice-dollar"></span>
+                      </div>
+                    </a>
+                  </li>
+
+
+                  <li class="submenu__item">
+                    <a href="#" class="submenu__item--link">
+                      <p class="submenu__item--link--title">پیش فاکتور</p>
+                      <div class="icon__submenu">
+                        <span class="fas fa-file-invoice-dollar"></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="submenu__item">
+                    <a href="#" class="submenu__item--link">
+                      <p class="submenu__item--link--title">پیش فاکتور</p>
+                      <div class="icon__submenu">
+                        <span class="fas fa-file-invoice-dollar"></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="submenu__item">
+                    <a href="#" class="submenu__item--link">
+                      <p class="submenu__item--link--title">پیش فاکتور</p>
+                      <div class="icon__submenu">
+                        <span class="fas fa-file-invoice-dollar"></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="submenu__item">
+                    <a href="#" class="submenu__item--link">
+                      <p class="submenu__item--link--title">پیش فاکتور</p>
+                      <div class="icon__submenu">
+                        <span class="fas fa-file-invoice-dollar"></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="submenu__item">
+                    <a href="#" class="submenu__item--link">
+                      <p class="submenu__item--link--title">پیش فاکتور</p>
+                      <div class="icon__submenu">
+                        <span class="fas fa-file-invoice-dollar"></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="submenu__item">
+                    <a href="#" class="submenu__item--link">
+                      <p class="submenu__item--link--title">پیش فاکتور</p>
+                      <div class="icon__submenu">
+                        <span class="fas fa-file-invoice-dollar"></span>
+                      </div>
+                    </a>
+                  </li>
+
+                  <li class="submenu__item">
+                    <a href="#" class="submenu__item--link">
+                      <p class="submenu__item--link--title">پیش فاکتور</p>
+                      <div class="icon__submenu">
+                        <span class="fas fa-file-invoice-dollar"></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="submenu__item">
+                    <a href="#" class="submenu__item--link">
+                      <p class="submenu__item--link--title">پیش فاکتور</p>
+                      <div class="icon__submenu">
+                        <span class="fas fa-file-invoice-dollar"></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="submenu__item">
+                    <a href="#" class="submenu__item--link">
+                      <p class="submenu__item--link--title">پیش فاکتور</p>
+                      <div class="icon__submenu">
+                        <span class="fas fa-file-invoice-dollar"></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="submenu__item">
+                    <a href="#" class="submenu__item--link">
+                      <p class="submenu__item--link--title">پیش فاکتور</p>
+                      <div class="icon__submenu">
+                        <span class="fas fa-file-invoice-dollar"></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="submenu__item">
+                    <a href="#" class="submenu__item--link">
+                      <p class="submenu__item--link--title">پیش فاکتور</p>
+                      <div class="icon__submenu">
+                        <span class="fas fa-file-invoice-dollar"></span>
+                      </div>
+                    </a>
+                  </li>
+
+                  <li class="submenu__item">
+                    <a href="#" class="submenu__item--link">
+                      <p class="submenu__item--link--title">پیش فاکتور</p>
+                      <div class="icon__submenu">
+                        <span class="fas fa-file-invoice-dollar"></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="submenu__item">
+                    <a href="#" class="submenu__item--link">
+                      <p class="submenu__item--link--title">پیش فاکتور</p>
+                      <div class="icon__submenu">
+                        <span class="fas fa-file-invoice-dollar"></span>
+                      </div>
+                    </a>
+                  </li>
+                  <!-- not loop -->
+                  <div class="line-sidbar"></div>
+                </ul>
+              </div>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__item--link">
+                <div class="nav__item--link--picuter">
+                  <span class="fas fa-balance-scale icon--navbar"></span>
+                </div>
+                <span class="nav__item--link--title">پشتیبانی</span>
+              </a>
+              <div class="submenu">
+                <ul class="submenu__container">
+                  <li class="submenu__item">
+                    <a href="#" class="submenu__item--link">
+                      <p class="submenu__item--link--title">پیش فاکتور</p>
+                      <div class="icon__submenu">
+                        <span class="fas fa-file-invoice-dollar"></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="submenu__item">
+                    <a href="#" class="submenu__item--link">
+                      <p class="submenu__item--link--title">پیش فاکتور</p>
+                      <div class="icon__submenu">
+                        <span class="fas fa-file-invoice-dollar"></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="submenu__item">
+                    <a href="#" class="submenu__item--link">
+                      <p class="submenu__item--link--title">پیش فاکتور</p>
+                      <div class="icon__submenu">
+                        <span class="fas fa-file-invoice-dollar"></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="submenu__item">
+                    <a href="#" class="submenu__item--link">
+                      <p class="submenu__item--link--title">پیش فاکتور</p>
+                      <div class="icon__submenu">
+                        <span class="fas fa-file-invoice-dollar"></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="submenu__item">
+                    <a href="#" class="submenu__item--link">
+                      <p class="submenu__item--link--title">پیش فاکتور</p>
+                      <div class="icon__submenu">
+                        <span class="fas fa-file-invoice-dollar"></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="submenu__item">
+                    <a href="#" class="submenu__item--link">
+                      <p class="submenu__item--link--title">پیش فاکتور</p>
+                      <div class="icon__submenu">
+                        <span class="fas fa-file-invoice-dollar"></span>
+                      </div>
+                    </a>
+                  </li>
+
+                  <li class="submenu__item">
+                    <a href="#" class="submenu__item--link">
+                      <p class="submenu__item--link--title">پیش فاکتور</p>
+                      <div class="icon__submenu">
+                        <span class="fas fa-file-invoice-dollar"></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="submenu__item">
+                    <a href="#" class="submenu__item--link">
+                      <p class="submenu__item--link--title">پیش فاکتور</p>
+                      <div class="icon__submenu">
+                        <span class="fas fa-file-invoice-dollar"></span>
+                      </div>
+                    </a>
+                  </li>
+
+
+                  <li class="submenu__item">
+                    <a href="#" class="submenu__item--link">
+                      <p class="submenu__item--link--title">پیش فاکتور</p>
+                      <div class="icon__submenu">
+                        <span class="fas fa-file-invoice-dollar"></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="submenu__item">
+                    <a href="#" class="submenu__item--link">
+                      <p class="submenu__item--link--title">پیش فاکتور</p>
+                      <div class="icon__submenu">
+                        <span class="fas fa-file-invoice-dollar"></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="submenu__item">
+                    <a href="#" class="submenu__item--link">
+                      <p class="submenu__item--link--title">پیش فاکتور</p>
+                      <div class="icon__submenu">
+                        <span class="fas fa-file-invoice-dollar"></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="submenu__item">
+                    <a href="#" class="submenu__item--link">
+                      <p class="submenu__item--link--title">پیش فاکتور</p>
+                      <div class="icon__submenu">
+                        <span class="fas fa-file-invoice-dollar"></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="submenu__item">
+                    <a href="#" class="submenu__item--link">
+                      <p class="submenu__item--link--title">پیش فاکتور</p>
+                      <div class="icon__submenu">
+                        <span class="fas fa-file-invoice-dollar"></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="submenu__item">
+                    <a href="#" class="submenu__item--link">
+                      <p class="submenu__item--link--title">پیش فاکتور</p>
+                      <div class="icon__submenu">
+                        <span class="fas fa-file-invoice-dollar"></span>
+                      </div>
+                    </a>
+                  </li>
+
+                  <li class="submenu__item">
+                    <a href="#" class="submenu__item--link">
+                      <p class="submenu__item--link--title">پیش فاکتور</p>
+                      <div class="icon__submenu">
+                        <span class="fas fa-file-invoice-dollar"></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="submenu__item">
+                    <a href="#" class="submenu__item--link">
+                      <p class="submenu__item--link--title">پیش فاکتور</p>
+                      <div class="icon__submenu">
+                        <span class="fas fa-file-invoice-dollar"></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="submenu__item">
+                    <a href="#" class="submenu__item--link">
+                      <p class="submenu__item--link--title">پیش فاکتور</p>
+                      <div class="icon__submenu">
+                        <span class="fas fa-file-invoice-dollar"></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="submenu__item">
+                    <a href="#" class="submenu__item--link">
+                      <p class="submenu__item--link--title">پیش فاکتور</p>
+                      <div class="icon__submenu">
+                        <span class="fas fa-file-invoice-dollar"></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="submenu__item">
+                    <a href="#" class="submenu__item--link">
+                      <p class="submenu__item--link--title">پیش فاکتور</p>
+                      <div class="icon__submenu">
+                        <span class="fas fa-file-invoice-dollar"></span>
+                      </div>
+                    </a>
+                  </li>
+
+                  <li class="submenu__item">
+                    <a href="#" class="submenu__item--link">
+                      <p class="submenu__item--link--title">پیش فاکتور</p>
+                      <div class="icon__submenu">
+                        <span class="fas fa-file-invoice-dollar"></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="submenu__item">
+                    <a href="#" class="submenu__item--link">
+                      <p class="submenu__item--link--title">پیش فاکتور</p>
+                      <div class="icon__submenu">
+                        <span class="fas fa-file-invoice-dollar"></span>
+                      </div>
+                    </a>
+                  </li>
+                  <!-- not loop -->
+                  <div class="line-sidbar"></div>
+                </ul>
+              </div>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__item--link">
+                <div class="nav__item--link--picuter">
+                  <span class="fas fa-cart-plus icon--navbar"></span>
+                </div>
+                <span class="nav__item--link--title">بازاریابی</span>
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__item--link">
+                <div class="nav__item--link--picuter">
+                  <span class="icon--navbar fas fa-chart-bar"></span>
+                </div>
+                <span class="nav__item--link--title">گزارش ها</span>
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__item--link">
+                <div class="nav__item--link--picuter">
+                  <span class="icon--navbar fas fa-city"></span>
+                </div>
+                <span class="nav__item--link--title">تنظیمات</span>
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__item--link">
+                <div class="nav__item--link--picuter">
+                  <span class="icon--navbar fas fa-briefcase"></span>
+                </div>
+                <span class="nav__item--link--title">سایر</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- end Sidbar    -->
+
+    <!-- start main__container -->
+    <div class="main__container">
+      <div class="main__row"></div>
+    </div>
+    <!-- end main__container -->
+
+    <!-- start Footer  -->
+    <footer class="footer">
+      <div class="footer__row">
+        <div class="footer__icon">[</div>
+        <p class="footer__title">گروه شرکت های طرفه نگار 2022</p>
+        <div class="footer__icon">]</div>
+      </div>
+    </footer>
+    <!-- end Footer  -->
+
+    <script src="dist/script/main.js"></script>
+  </body>
+</html>

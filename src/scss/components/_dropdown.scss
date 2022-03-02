@@ -1,0 +1,415 @@
+.dropdown {
+  position: relative;
+  button {
+    outline: none;
+    border: none;
+  }
+  .btn__dropdown {
+    padding: 9px 0px;
+    border-radius: $border-radius-5;
+    text-align: center;
+    height: 33px;
+    width: 33px;
+
+    &__more {
+      background: url("../images/more.svg") no-repeat center center
+        $bg-color-warning-dark;
+    }
+
+    &__plus {
+      background: url("../images/plus.svg") no-repeat center center
+        $bg-color-warning-dark;
+    }
+
+    &__bell {
+      background: url("../images/bell.svg") no-repeat center center
+        $bg-color-warning-dark;
+    }
+
+    &__note {
+      background: url("../images/note.png") no-repeat center center
+        $bg-color-warning-dark;
+    }
+  }
+
+  .dropdown__items {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    transform: scale(0);
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    transition: transform 0.3s ease 0s;
+    -webkit-transition: transform 0.3s ease 0s;
+    -moz-transition: transform 0.3s ease 0s;
+    -ms-transition: transform 0.3s ease 0s;
+    -o-transition: transform 0.3s ease 0s;
+    transform-origin: top left;
+
+    .dropdown__menu {
+      background: $bg-color-secondry;
+      border-radius: $border-radius-3;
+      box-shadow: 1px 1px 5px 0 rgba($bg-color-black, 0.16);
+      min-width: 180px;
+      width: auto;
+
+      &--item {
+        padding: 5px 0px !important;
+        transition: all 0.3s ease;
+
+        &:not(:last-child) {
+          border-bottom: solid 0.3px $border-color-bottom;
+        }
+        .link {
+          font-size: 12px;
+          font-weight: 300;
+          font-stretch: normal;
+          font-style: normal;
+          letter-spacing: normal;
+          text-align: right;
+          color: #848484 !important;
+          padding-top: 4px;
+          padding-bottom: 4px;
+          padding: 3px 20px;
+        }
+
+        &:hover {
+          background-color: $bg-color-secondry-hover;
+        }
+      }
+    }
+
+    .notifications__container {
+      background: $bg-color-secondry;
+      box-shadow: $box-shadow-50;
+      width: 400px;
+      max-height: 410px;
+      position: relative;
+      border-radius: $border-radius-16;
+      @include flexBox(column, center, space-between);
+      .notif__header {
+        height: 45.2px;
+        width: 100%;
+        &--item {
+          background-color: $bg-color-light;
+          height: 45.2px;
+          width: 100%;
+          @include flexBox(row, center, space-between);
+          padding: 0 8px;
+          border-top-left-radius: $border-radius-16;
+          border-top-right-radius: $border-radius-16;
+          h3 {
+            font-family: $fontFamily;
+            font-size: 16px;
+            font-weight: bold;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.57;
+            color: $bg-color-secondry;
+          }
+
+          p {
+            font-family: $fontFamily;
+            font-size: 12px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            color: $bg-color-secondry;
+            z-index: 2;
+          }
+        }
+      }
+
+      .notif__body {
+        width: 100%;
+        height: 80%;
+        overflow: hidden;
+        overflow-y: scroll;
+        background-color: $bg-color-secondry;
+        scroll-behavior: smooth;
+        .notif__container {
+          width: 100%;
+          height: 100%;
+          padding: 0 3px;
+
+          .notif__item {
+            width: 100%;
+            min-height: 60px;
+            &--avtor {
+              height: 100%;
+              width: 15%;
+              @include flexBox(row, center, center);
+              .avtor__wapper {
+                width: 35px;
+                height: 35px;
+                border-radius: 50%;
+                background-color: $bg-color-grey-light-100;
+                img {
+                  max-width: 100%;
+                }
+              }
+            }
+
+            &--caption {
+              height: 100%;
+              width: 70%;
+
+              .caption__title {
+                margin-top: 10px;
+                h4 {
+                  font-size: 12px;
+                  font-weight: 900;
+                  font-stretch: normal;
+                  font-style: normal;
+                  line-height: 1.63;
+                  letter-spacing: normal;
+                  color: $text-color-warm-grey;
+                }
+              }
+              .caption__link {
+                line-height: 1;
+                a {
+                  font-size: 10px;
+                  font-weight: 900;
+                  font-stretch: normal;
+                  font-style: normal;
+                  line-height: 1.63;
+                  letter-spacing: normal;
+                  text-align: right;
+                  color: $text-color-light;
+                }
+
+                &.active a {
+                  color: $text-color-warm-grey;
+                }
+              }
+
+              .caption__text {
+                p {
+                  color: $text-color-warm-grey;
+                  font-size: 12px;
+                  font-weight: 400;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  display: -webkit-box;
+                  -webkit-line-clamp: 1;
+                  -webkit-box-orient: vertical;
+                }
+              }
+            }
+
+            &--datetime {
+              height: 100%;
+              width: 15%;
+
+              &--title {
+                @include flexBox(row, center, center);
+                height: 100%;
+                width: 100%;
+
+                span {
+                  color: $text-color-warm-grey-light-100;
+                  font-size: 10px;
+                  font-weight: 500;
+                  font-stretch: normal;
+                  font-style: normal;
+                }
+              }
+            }
+
+            @include flexBox(row, center, space-between);
+            &:not(:last-child) {
+              border-bottom: 0.3px solid $border-color-bottom;
+            }
+          }
+        }
+        .more__notif {
+          background: $bg-color-secondry;
+          z-index: 1;
+          position: fixed;
+          bottom: 40px;
+          height: 28px;
+          width: 95%;
+          text-align: left;
+          padding: 0 10px;
+          cursor: pointer;
+        }
+
+        &::-webkit-scrollbar {
+          width: 10px;
+        }
+
+        /* Track */
+        &::-webkit-scrollbar-track {
+          background: $bg-color-secondry-50;
+        }
+
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+          background: $bg-color-scroll;
+          border-radius: $border-radius-4;
+        }
+      }
+
+      .notif__footer {
+        border-bottom-left-radius: $border-radius-16;
+        border-bottom-right-radius: $border-radius-16;
+        background: $bg-color-main;
+        width: 100%;
+        height: 38px;
+        @include flexBox(row, center, center);
+
+        &--link {
+          color: $bg-color-secondry;
+          font-size: 12px;
+          width: 100%;
+          height: 100%;
+          text-align: center;
+          line-height: 3.5;
+        }
+      }
+
+      &::before {
+        position: absolute;
+        content: "";
+        height: 30px;
+        width: 30px;
+        transform: rotate(45deg);
+        background-color: $bg-color-light;
+        left: 39px;
+        top: -9px;
+        border-radius: $border-radius-8;
+      }
+    }
+
+    .noetbook__container {
+      background: $bg-color-secondry;
+      box-shadow: $box-shadow-50;
+      width: 400px;
+      max-height: 410px;
+      position: relative;
+      border-radius: $border-radius-16;
+      @include flexBox(column, center, space-between);
+      .noetbook__header {
+        height: 45.2px;
+        width: 100%;
+        &--row {
+          height: 45.2px;
+          width: 100%;
+          @include flexBox(row, center, space-between);
+          padding: 0 8px;
+          border-top-left-radius: $border-radius-16;
+          border-top-right-radius: $border-radius-16;
+          background-color: $bg-color-light;
+
+          h3 {
+            font-family: $fontFamily;
+            font-size: 16px;
+            font-weight: bold;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.57;
+            color: $bg-color-secondry;
+          }
+
+          &.active {
+            height: 60px !important;
+          }
+        }
+      }
+
+      .noetbook__body {
+        height: 80%;
+        width: 100%;
+        overflow: hidden;
+        overflow-y: scroll;
+        background-color: $bg-color-secondry;
+        scroll-behavior: smooth;
+
+        &--row {
+          width: 100%;
+          height: 100%;
+
+          .noetbook--item {
+            width: 100%;
+            min-height: 40px;
+            padding: 0 10px;
+
+            .noetbook__pragraf {
+              color: $text-color-warm-grey-dark;
+              font-size: 12px;
+              font-weight: 400;
+            }
+          }
+        }
+
+        &::-webkit-scrollbar {
+          width: 10px;
+        }
+
+        /* Track */
+        &::-webkit-scrollbar-track {
+          background: $bg-color-secondry-50;
+        }
+
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+          background: $bg-color-scroll;
+          border-radius: $border-radius-4;
+        }
+      }
+
+      .noetbook__footer {
+        height: 38px;
+        width: 100%;
+        border-bottom-left-radius: $border-radius-16;
+        border-bottom-right-radius: $border-radius-16;
+        background: $bg-color-main;
+        @include flexBox(row, center, center);
+
+        &--link {
+          color: $bg-color-secondry;
+          font-size: 12px;
+          width: 100%;
+          height: 100%;
+          text-align: center;
+          line-height: 3.5;
+        }
+      }
+
+      &::before {
+        position: absolute;
+        content: "";
+        height: 30px;
+        width: 30px;
+        transform: rotate(45deg);
+        background-color: $bg-color-light;
+        left: 39px;
+        top: -9px;
+        border-radius: $border-radius-8;
+      }
+    }
+
+    &.active {
+      transform: scale(1);
+      -webkit-transform: scale(1);
+      -moz-transform: scale(1);
+      -ms-transform: scale(1);
+      -o-transform: scale(1);
+      transition: transform 0.5s cubic-bezier(0.175, 0.885, 32, 1.275);
+      -webkit-transition: transform 0.5s cubic-bezier(0.175, 0.885, 32, 1.275);
+      -moz-transition: transform 0.5s cubic-bezier(0.175, 0.885, 32, 1.275);
+      -ms-transition: transform 0.5s cubic-bezier(0.175, 0.885, 32, 1.275);
+      -o-transition: transform 0.5s cubic-bezier(0.175, 0.885, 32, 1.275);
+    }
+  }
+
+  .dropdown__items.notifications {
+    left: -37px;
+  }
+  .dropdown__items.noetbook {
+    left: -37px;
+  }
+}

@@ -1,0 +1,63 @@
+.login__alert {
+  position: absolute;
+  background-color: $bg-color-warning-light;
+  top: 30%;
+  padding: 15px 60px 15px 15px;
+  border-radius: $border-radius-5;
+  width: 29%;
+  overflow: hidden;
+  opacity: 0;
+  &::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 7px;
+    background: $text-color-warning-dark;
+    top: 0;
+    right: 0;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: url(../images/error.svg) no-repeat center center;
+    top: 0;
+    right: -14px;
+  }
+
+  &--title {
+    font-size: 18px;
+    font-weight: 900;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: normal;
+    text-align: right;
+    color: $text-color-warm-grey-dark;
+  }
+
+  &--text {
+    font-size: 14px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: normal;
+    text-align: right;
+    color: $text-color-warm-grey;
+  }
+
+  &--close {
+    background: url(../images/close__error.svg) no-repeat center center;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 7px;
+    top: 8px;
+    cursor: pointer;
+  }
+
+  &.isErros {
+    opacity: 1 !important;
+  }
+}

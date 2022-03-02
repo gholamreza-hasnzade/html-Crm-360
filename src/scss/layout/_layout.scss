@@ -1,0 +1,16 @@
+.main__container {
+  padding-right: $sidebar-width;
+  width: 100%;
+  height: 100vh;
+
+  padding-right: $sidebar-width;
+  padding-top: 100px;
+
+  .main__row {
+    padding-right: $border-radius-16;
+    padding-top: $border-radius-8;
+    width: 100%;
+    height: 100%;
+    
+  }
+}
