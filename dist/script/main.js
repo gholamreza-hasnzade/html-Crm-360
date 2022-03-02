@@ -69,7 +69,7 @@
 
 
 
-    var navItems = document.querySelectorAll(".nav__item")
+    /* var navItems = document.querySelectorAll(".nav__item")
     try {
         for (var i = 0; i < navItems.length; i++) {
             navItems[i].addEventListener("click", function () {
@@ -82,5 +82,5 @@
         }
     } catch (e) {
         console.log(e)
-    }
+    } */
 }())
