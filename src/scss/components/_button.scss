@@ -76,3 +76,35 @@
     }
   }
 }
+
+$btn-types: (
+  sussess: #3fac73,
+  info: #5fabed,
+) !default;
+
+%btn {
+  padding: 0 16px;
+  height: 30px;
+  outline: 0;
+  border: 0;
+  border-radius: $border-radius-3;
+  cursor: pointer;
+  color: $text-color-secondr;
+  font-family: $fontFamily;
+  font-size: 12px;
+  font-weight: 500;
+  &:not(first-child){
+    margin-right: 5px;
+  }
+}
+
+@mixin btn($color) {
+  @extend %btn;
+  background: $color;
+}
+
+@each $type, $color in $btn-types {
+  .btn-#{$type} {
+    @include btn($color);
+  }
+}
