@@ -24,24 +24,24 @@
 }
 
 @media only screen and (max-width: 576px) {
-  
 }
 
 @media only screen and (max-width: 768px) {
-  .u-margin-bottom-sm-16{
+  .u-margin-bottom-sm-16 {
     margin-bottom: 16px;
   }
 }
 
 @media only screen and (max-width: 992px) {
-
-  .grid__container{
+  .grid__container {
     grid-template-columns: 100%;
   }
 }
-
-
-
+@media only screen and (max-width: 1200px) {
+  .grid__container {
+    grid-template-columns: 100%;
+  }
+}
 
 .col {
   max-width: 100%;

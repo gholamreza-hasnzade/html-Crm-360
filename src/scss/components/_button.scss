@@ -146,3 +146,32 @@
     }
   }
 }
+
+.btn__form {
+  height: 100%;
+  width: 45px;
+  border: 0;
+  @include flexBox(row, center, center);
+
+  &--modal {
+    transform: rotate(180deg);
+    background-color: $bg-color-border-dark-50;
+    @include transition3s();
+    &:hover {
+      background-color: $bg-color-border-dark-hover;
+    }
+  }
+
+  &--close {
+    background-color: $bg-color-warning-dark;
+    @include transition3s();
+    img {
+      width: 10px;
+      width: 10px;
+    }
+
+    &:hover {
+      background-color: $bg-color-border-dark-hover;
+    }
+  }
+}
