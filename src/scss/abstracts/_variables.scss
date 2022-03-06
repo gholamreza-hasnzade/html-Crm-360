@@ -9,11 +9,15 @@ $bg-color-dark: #14a3c7;
 $bg-color-secondry: #fcfcfc;
 $bg-color-secondry-50 : #d6d6d6;
 $bg-color-grey-light-100: #f0f0f0;
+$bg-color-grey-light-200: #848484;
+$bg-color-grey-200: #dfdfdf;
+$bg-color-grey-300: #d4d4d4;
 $bg-color-secondry-hover: #f5f5f5;
 $bg-color-scroll: rgba(103, 103, 103, 0.68);
 $bg-color-warning-light: #ffe7e0;
 $bg-color-warning-dark: #ebebeb;
 $bg-color-border-dark: #a8a8a8;
+
 
 
 /* ************************* */
@@ -30,6 +34,7 @@ $text-color-light: #16b8e0;
 $text-color-secondr: #fcfcfc;
 $text-color-main: #3fac73;
 $text-color-main-hover: #218551;
+$text-color-border-dark: #a8a8a8;
 /* box shadow */
 $box-shadow: 0 3px 6px 0 rgba($bg-color-black, 0.08);
 $box-shadow-10: -6px 0 30px 0 rgba($bg-color-black, 0.1);
@@ -59,9 +64,13 @@ $sidebar-width: 119px;
 
 
 /* ***** */
+$margin-18: 18px;
 $margin-16: 16px;
 $margin-8: 8px;
-$padding-16: 8px;
+$margin-6: 6px;
+$padding-16: 16px;
 $padding-9: 9px;
 $padding-8: 8px;
 $padding-6: 6px;
+
+

@@ -2,6 +2,9 @@
   text-align: center;
 }
 
+.u-margin-0{
+  margin: 0 !important;
+}
 .u-margin-right-5 {
   margin-right: 5px;
 }
@@ -14,17 +17,24 @@
   margin-right: 6px;
 }
 
-.u-margin-left-5 {
+.u-margin-left-6 {
   margin-left: 6px;
 }
 
 .u-margin-top-9 {
   margin-top: 9px;
 }
+
+.u-margin-top-16{
+  margin-top: 16px;
+}
 .u-margin-bottom-19{
   margin-bottom: 19px;
 }
 
+.u-margin-bottom-30{
+  margin-bottom: 30px !important;
+}
 .nofiction__p {
   padding: 1rem 1rem 1rem 1rem;
   background-color: $bg-color-secondry;

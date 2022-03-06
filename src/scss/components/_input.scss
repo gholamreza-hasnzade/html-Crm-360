@@ -1,0 +1,67 @@
+.m-form--group {
+  width: 100%;
+  height: 100px;
+  padding: $padding-8;
+  @include flexBox(column, unset, unset);
+  &--top {
+    @include flexBox(row, center, space-between);
+    .right {
+      .title {
+        font-size: 12px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 2.75;
+        letter-spacing: normal;
+        text-align: right;
+        color: $text-color-warm-grey;
+        &.error {
+          color: $text-color-warning-dark;
+        }
+      }
+      .icon--pencil {
+        font-size: 10px;
+        margin-right: $margin-8;
+        color: $text-color-light;
+      }
+    }
+    .left {
+      @include flexBox(row, center, unset);
+      /* display: none; */
+
+      .icon--edit {
+        font-size: 10px;
+        color: $text-color-light;
+        margin-left: $margin-8;
+      }
+      .icon--cansel {
+        font-size: 10px;
+        color: $text-color-light;
+      }
+    }
+  }
+  &--bottom {
+    .m-form--control {
+      width: 100%;
+      border-radius: 2px;
+      border: solid 0.5px $bg-color-border-dark;
+      background-color: transparent;
+      height: 30px;
+      padding-right: $padding-8;
+      font-family: $fontFamily;
+      color: $text-color-warm-grey;
+
+      &.error {
+        border: solid 0.5px $text-color-warning-dark;
+      }
+    }
+    .error--message {
+      color: $text-color-warning-dark;
+      font-size: 13px;
+    }
+    .data__value{
+        font-size: 13px;
+        color: $text-color-border-dark;
+    }
+  }
+}

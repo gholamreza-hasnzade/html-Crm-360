@@ -601,595 +601,126 @@
         <div class="row">
           <div class="breadcrumbs u-margin-top-9 u-margin-bottom-19">
             <div class="breadcrumbs--title">
-              <h5>حساب ها</h5>
+              <h5><a href="#" class="title"> حساب ها </a></h5>
+              <img
+                src="dist/images/arrow_down.svg"
+                alt=""
+                class="breadcrumbs--icon"
+              />
+              <p>این متن تستی است</p>
             </div>
-            <button class="btn btn--success">ایجاد حساب</button>
-          </div>
-        </div>
-        <div class="row">
-          <div class="search__form">
-            <form class="form__submit" onsubmit="return event.preventDefault()">
-              <div class="form--group">
-                <div class="dropdown form--group__dropdown">
-                  <button class="btn__dropdown">فقط من , همه</button>
-                  <div class="dropdown__items">
-                    <ul class="dropdown__menu">
-                      <li class="dropdown__menu--item">
-                        <a href="#" class="link">همه</a>
-                      </li>
-                      <li class="dropdown__menu--item">
-                        <a href="#" class="link">به تازگی ایجاد شده</a>
-                      </li>
-                      <li class="dropdown__menu--item">
-                        <label class="container__checkbox">
-                          <span class="title--checkbox">فقط من</span>
-                          <input type="checkbox" checked="checked" />
-                          <span class="checkmark"></span>
-                        </label>
-                      </li>
-                      <li class="dropdown__menu--item">
-                        <label class="container__checkbox">
-                          <span class="title--checkbox">دنبال شده</span>
-                          <input type="checkbox" checked="checked" />
-                          <span class="checkmark"></span>
-                        </label>
-                      </li>
-                    </ul>
-                  </div>
+            <div class="header-buttons" style="display: none">
+              <div class="dropdown">
+                <button class="btn__dropdown btn__dropdown__more"></button>
+                <div class="dropdown__items">
+                  <ul class="dropdown__menu">
+                    <li class="dropdown__menu--item">
+                      <a href="#" class="link">Start Process</a>
+                    </li>
+                  </ul>
                 </div>
-                <input
-                  type="text"
-                  class="form--group__search--box"
-                  placeholder="جستجو کنید ..."
-                />
-                <button class="btn btn--success form--group__sussess"></button>
               </div>
-            </form>
+              <button class="btn btn--outline--info u-margin-left-6">
+                دنبال شد
+              </button>
+            </div>
           </div>
         </div>
+
         <div class="row">
-          <div class="table__continer">
-            <div class="table__row">
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th>
-                      <div class="select-all">
-                        <label class="container__checkbox">
-                          <span class="title--checkbox"></span>
-                          <input
-                            type="checkbox"
-                            checked="checked"
-                            name="select__all"
-                          />
-                          <span class="checkmark"></span>
-                        </label>
-                        <div class="dropdown">
-                          <button
-                            class="btn__dropdown btn__dropdown__more"
-                          ></button>
-                          <div class="dropdown__items">
-                            <ul class="dropdown__menu">
-                              <li class="dropdown__menu--item">
-                                <a href="#" class="link"
-                                  >تمام نتایج را انتخاب کنید</a
+          <div class="grid grid__container">
+            <div class="row u-margin-0">
+              <form action="#" class="master__form">
+                <div class="submit__form">
+                  <button class="btn btn--success" type="submit">ذخیره</button>
+                  <button class="btn btn--outline--success">لغو</button>
+                </div>
+
+                <div class="row u-margin-0 u-margin-bottom-30">
+                  <div class="panel">
+                    <div class="panel__header">
+                      <div class="panel__header--row">
+                        <h3>بررسی اجمالی</h3>
+                      </div>
+                    </div>
+                    <div class="panel__body">
+                      <div class="row u-margin-top-16">
+                        <div class="col-md-4 col-sm-12 u-margin-bottom-sm-16">
+                          <div class="m-form--group">
+                            <div class="m-form--group--top">
+                              <div class="right">
+                                <label for="" class="title"
+                                  >نام کسب و کار <span>*</span></label
+                                ><!-- error -->
+                                <a href="#" class="icon--pencil"
+                                  ><i class="fas fa-pencil-alt"></i
+                                ></a>
+                              </div>
+                              <div class="left">
+                                <a href="#" class="icon--edit">آپدیت</a>
+                                <a href="#" class="icon--cansel">لغو</a>
+                              </div>
+                            </div>
+                            <div class="m-form--group--bottom">
+                              <div class="m-form--control--row">
+                                <input
+                                  type="text"
+                                  name=""
+                                  id=""
+                                  class="m-form--control "
+                                /><!-- error -->
+                                <span
+                                  class="error--message"
+                                 style="display: none;"
+                                  >نام کسب و کار مورد نیاز است</span
                                 >
-                              </li>
-                            </ul>
+                              </div>
+
+                              <p class="data__value" style="display: none">
+                                این متن تستی است
+                              </p>
+                            </div>
                           </div>
                         </div>
                       </div>
-                    </th>
-                    <th><a href="#">نام</a></th>
-                    <th><a href="#">نام کسب و کار</a></th>
-                    <th><a href="#">کد اشتراک</a></th>
-                    <th><a href="#">مالک</a></th>
-                    <th><a href="#">نمایندگی خدمات ریجیستر شده</a></th>
-                    <th><a href="#">فروش توسط (نماینده)</a></th>
-                    <th><a href="#">صنف کسب و کار</a></th>
-                    <th><a href="#">تلفن کسب و کار</a></th>
-                    <th><a href="#">استان</a></th>
-                    <th><a href="#">شهر</a></th>
-                    <th><a href="#">نوع</a></th>
-                    <th><a href="#">وضعیت</a></th>
-                    <th></th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>
-                      <label class="container__checkbox">
-                        <span class="title--checkbox"></span>
-                        <input
-                          type="checkbox"
-                          checked="checked"
-                          class="delete_checkbox"
-                          name="selected[]"
-                          value="1"
-                        />
-                        <span class="checkmark"></span>
-                      </label>
-                    </td>
-                    <td>
-                      <span class="title">Account-00008</span>
-                    </td>
-                    <td>
-                      <a href=""
-                        >این متن تستی است این متن تستی است این متن تستی است</a
-                      >
-                    </td>
-                    <td>
-                      <span class="title">این پیام تستی است</span>
-                    </td>
-                    <td><span class="title">این پیام تستی است</span></td>
-                    <td><span class="title"> این پیام تستی است</span></td>
-                    <td><span class="title">این پیام تستی است</span></td>
-                    <td><span class="title">این پیام تستی است</span></td>
-                    <td><span class="title">این پیام تستی است</span></td>
-                    <td><span class="title">این پیام تستی است</span></td>
-                    <td><span class="title">این پیام تستی است</span></td>
-                    <td>
-                      <span class="title badge badge-warn">سرمایگذار</span>
-                    </td>
-                    <td>
-                      <span class="title badge badge-default">غیر فعال</span>
-                    </td>
-                    <td>
-                      <div class="dropdown">
-                        <button
-                          class="btn__dropdown btn__dropdown__more"
-                        ></button>
-                        <div class="dropdown__items">
-                          <ul class="dropdown__menu">
-                            <li class="dropdown__menu--item">
-                              <a href="#" class="link">چشم انداز</a>
-                            </li>
-                            <li class="dropdown__menu--item">
-                              <a href="#" class="link">ویرایش</a>
-                            </li>
-                            <li class="dropdown__menu--item">
-                              <a href="#" class="link">حذف</a>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td>
-                      <label class="container__checkbox">
-                        <span class="title--checkbox"></span>
-                        <input
-                          type="checkbox"
-                          checked="checked"
-                          class="delete_checkbox"
-                          name="selected[]"
-                          value="2"
-                        />
-                        <span class="checkmark"></span>
-                      </label>
-                    </td>
-                    <td>
-                      <span class="title">Account-00008</span>
-                    </td>
-                    <td>
-                      <a href=""
-                        >این متن تستی است این متن تستی است این متن تستی است</a
-                      >
-                    </td>
-                    <td>
-                      <span class="title">این پیام تستی است</span>
-                    </td>
-                    <td><span class="title">این پیام تستی است</span></td>
-                    <td><span class="title"> این پیام تستی است</span></td>
-                    <td><span class="title">این پیام تستی است</span></td>
-                    <td><span class="title">این پیام تستی است</span></td>
-                    <td><span class="title">این پیام تستی است</span></td>
-                    <td><span class="title">این پیام تستی است</span></td>
-                    <td><span class="title">این پیام تستی است</span></td>
-                    <td>
-                      <span class="title badge badge-info">سرمایگذار</span>
-                    </td>
-                    <td>
-                      <span class="title badge badge-sussess" title="فعال"
-                        >فعال</span
-                      >
-                    </td>
-                    <td>
-                      <div class="dropdown">
-                        <button
-                          class="btn__dropdown btn__dropdown__more"
-                        ></button>
-                        <div class="dropdown__items">
-                          <ul class="dropdown__menu">
-                            <li class="dropdown__menu--item">
-                              <a href="#" class="link">چشم انداز</a>
-                            </li>
-                            <li class="dropdown__menu--item">
-                              <a href="#" class="link">ویرایش</a>
-                            </li>
-                            <li class="dropdown__menu--item">
-                              <a href="#" class="link">حذف</a>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td>
-                      <label class="container__checkbox">
-                        <span class="title--checkbox"></span>
-                        <input
-                          type="checkbox"
-                          checked="checked"
-                          class="delete_checkbox"
-                          name="selected[]"
-                          value="3"
-                        />
-                        <span class="checkmark"></span>
-                      </label>
-                    </td>
-                    <td>
-                      <span class="title">Account-00008</span>
-                    </td>
-                    <td>
-                      <a href=""
-                        >این متن تستی است این متن تستی است این متن تستی است</a
-                      >
-                    </td>
-                    <td>
-                      <span class="title">این پیام تستی است</span>
-                    </td>
-                    <td><span class="title">این پیام تستی است</span></td>
-                    <td><span class="title"> این پیام تستی است</span></td>
-                    <td><span class="title">این پیام تستی است</span></td>
-                    <td><span class="title">این پیام تستی است</span></td>
-                    <td><span class="title">این پیام تستی است</span></td>
-                    <td><span class="title">این پیام تستی است</span></td>
-                    <td><span class="title">این پیام تستی است</span></td>
-                    <td>
-                      <span class="title badge badge-error">سرمایگذار</span>
-                    </td>
-                    <td>
-                      <span class="title badge badge-default">غیر فعال</span>
-                    </td>
-                    <td>
-                      <div class="dropdown">
-                        <button
-                          class="btn__dropdown btn__dropdown__more"
-                        ></button>
-                        <div class="dropdown__items">
-                          <ul class="dropdown__menu">
-                            <li class="dropdown__menu--item">
-                              <a href="#" class="link">چشم انداز</a>
-                            </li>
-                            <li class="dropdown__menu--item">
-                              <a href="#" class="link">ویرایش</a>
-                            </li>
-                            <li class="dropdown__menu--item">
-                              <a href="#" class="link">حذف</a>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td>
-                      <label class="container__checkbox">
-                        <span class="title--checkbox"></span>
-                        <input
-                          type="checkbox"
-                          checked="checked"
-                          class="delete_checkbox"
-                          name="selected[]"
-                          value="4"
-                        />
-                        <span class="checkmark"></span>
-                      </label>
-                    </td>
-                    <td>
-                      <span class="title">Account-00008</span>
-                    </td>
-                    <td>
-                      <a href=""
-                        >این متن تستی است این متن تستی است این متن تستی است</a
-                      >
-                    </td>
-                    <td>
-                      <span class="title">این پیام تستی است</span>
-                    </td>
-                    <td><span class="title">این پیام تستی است</span></td>
-                    <td><span class="title"> این پیام تستی است</span></td>
-                    <td><span class="title">این پیام تستی است</span></td>
-                    <td><span class="title">این پیام تستی است</span></td>
-                    <td><span class="title">این پیام تستی است</span></td>
-                    <td><span class="title">این پیام تستی است</span></td>
-                    <td><span class="title">این پیام تستی است</span></td>
-                    <td>
-                      <span class="title badge badge-sussess">سرمایگذار</span>
-                    </td>
-                    <td>
-                      <span class="title badge badge-sussess" title="فعال"
-                        >فعال</span
-                      >
-                    </td>
-                    <td>
-                      <div class="dropdown">
-                        <button
-                          class="btn__dropdown btn__dropdown__more"
-                        ></button>
-                        <div class="dropdown__items">
-                          <ul class="dropdown__menu">
-                            <li class="dropdown__menu--item">
-                              <a href="#" class="link">چشم انداز</a>
-                            </li>
-                            <li class="dropdown__menu--item">
-                              <a href="#" class="link">ویرایش</a>
-                            </li>
-                            <li class="dropdown__menu--item">
-                              <a href="#" class="link">حذف</a>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td>
-                      <label class="container__checkbox">
-                        <span class="title--checkbox"></span>
-                        <input
-                          type="checkbox"
-                          checked="checked"
-                          class="delete_checkbox"
-                          name="selected[]"
-                          value="1"
-                        />
-                        <span class="checkmark"></span>
-                      </label>
-                    </td>
-                    <td>
-                      <span class="title">Account-00008</span>
-                    </td>
-                    <td>
-                      <a href=""
-                        >این متن تستی است این متن تستی است این متن تستی است</a
-                      >
-                    </td>
-                    <td>
-                      <span class="title">این پیام تستی است</span>
-                    </td>
-                    <td><span class="title">این پیام تستی است</span></td>
-                    <td><span class="title"> این پیام تستی است</span></td>
-                    <td><span class="title">این پیام تستی است</span></td>
-                    <td><span class="title">این پیام تستی است</span></td>
-                    <td><span class="title">این پیام تستی است</span></td>
-                    <td><span class="title">این پیام تستی است</span></td>
-                    <td><span class="title">این پیام تستی است</span></td>
-                    <td>
-                      <span class="title badge badge-warn">سرمایگذار</span>
-                    </td>
-                    <td>
-                      <span class="title badge badge-default">غیر فعال</span>
-                    </td>
-                    <td>
-                      <div class="dropdown">
-                        <button
-                          class="btn__dropdown btn__dropdown__more"
-                        ></button>
-                        <div class="dropdown__items">
-                          <ul class="dropdown__menu">
-                            <li class="dropdown__menu--item">
-                              <a href="#" class="link">چشم انداز</a>
-                            </li>
-                            <li class="dropdown__menu--item">
-                              <a href="#" class="link">ویرایش</a>
-                            </li>
-                            <li class="dropdown__menu--item">
-                              <a href="#" class="link">حذف</a>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td>
-                      <label class="container__checkbox">
-                        <span class="title--checkbox"></span>
-                        <input
-                          type="checkbox"
-                          checked="checked"
-                          class="delete_checkbox"
-                          name="selected[]"
-                          value="2"
-                        />
-                        <span class="checkmark"></span>
-                      </label>
-                    </td>
-                    <td>
-                      <span class="title">Account-00008</span>
-                    </td>
-                    <td>
-                      <a href=""
-                        >این متن تستی است این متن تستی است این متن تستی است</a
-                      >
-                    </td>
-                    <td>
-                      <span class="title">این پیام تستی است</span>
-                    </td>
-                    <td><span class="title">این پیام تستی است</span></td>
-                    <td><span class="title"> این پیام تستی است</span></td>
-                    <td><span class="title">این پیام تستی است</span></td>
-                    <td><span class="title">این پیام تستی است</span></td>
-                    <td><span class="title">این پیام تستی است</span></td>
-                    <td><span class="title">این پیام تستی است</span></td>
-                    <td><span class="title">این پیام تستی است</span></td>
-                    <td>
-                      <span class="title badge badge-info">سرمایگذار</span>
-                    </td>
-                    <td>
-                      <span class="title badge badge-sussess" title="فعال"
-                        >فعال</span
-                      >
-                    </td>
-                    <td>
-                      <div class="dropdown">
-                        <button
-                          class="btn__dropdown btn__dropdown__more"
-                        ></button>
-                        <div class="dropdown__items">
-                          <ul class="dropdown__menu">
-                            <li class="dropdown__menu--item">
-                              <a href="#" class="link">چشم انداز</a>
-                            </li>
-                            <li class="dropdown__menu--item">
-                              <a href="#" class="link">ویرایش</a>
-                            </li>
-                            <li class="dropdown__menu--item">
-                              <a href="#" class="link">حذف</a>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td>
-                      <label class="container__checkbox">
-                        <span class="title--checkbox"></span>
-                        <input
-                          type="checkbox"
-                          checked="checked"
-                          class="delete_checkbox"
-                          name="selected[]"
-                          value="3"
-                        />
-                        <span class="checkmark"></span>
-                      </label>
-                    </td>
-                    <td>
-                      <span class="title">Account-00008</span>
-                    </td>
-                    <td>
-                      <a href=""
-                        >این متن تستی است این متن تستی است این متن تستی است</a
-                      >
-                    </td>
-                    <td>
-                      <span class="title">این پیام تستی است</span>
-                    </td>
-                    <td><span class="title">این پیام تستی است</span></td>
-                    <td><span class="title"> این پیام تستی است</span></td>
-                    <td><span class="title">این پیام تستی است</span></td>
-                    <td><span class="title">این پیام تستی است</span></td>
-                    <td><span class="title">این پیام تستی است</span></td>
-                    <td><span class="title">این پیام تستی است</span></td>
-                    <td><span class="title">این پیام تستی است</span></td>
-                    <td>
-                      <span class="title badge badge-error">سرمایگذار</span>
-                    </td>
-                    <td>
-                      <span class="title badge badge-default">غیر فعال</span>
-                    </td>
-                    <td>
-                      <div class="dropdown">
-                        <button
-                          class="btn__dropdown btn__dropdown__more"
-                        ></button>
-                        <div class="dropdown__items">
-                          <ul class="dropdown__menu">
-                            <li class="dropdown__menu--item">
-                              <a href="#" class="link">چشم انداز</a>
-                            </li>
-                            <li class="dropdown__menu--item">
-                              <a href="#" class="link">ویرایش</a>
-                            </li>
-                            <li class="dropdown__menu--item">
-                              <a href="#" class="link">حذف</a>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td>
-                      <label class="container__checkbox">
-                        <span class="title--checkbox"></span>
-                        <input
-                          type="checkbox"
-                          checked="checked"
-                          class="delete_checkbox"
-                          name="selected[]"
-                          value="4"
-                        />
-                        <span class="checkmark"></span>
-                      </label>
-                    </td>
-                    <td>
-                      <span class="title">Account-00008</span>
-                    </td>
-                    <td>
-                      <a href=""
-                        >این متن تستی است این متن تستی است این متن تستی است</a
-                      >
-                    </td>
-                    <td>
-                      <span class="title">این پیام تستی است</span>
-                    </td>
-                    <td><span class="title">این پیام تستی است</span></td>
-                    <td><span class="title"> این پیام تستی است</span></td>
-                    <td><span class="title">این پیام تستی است</span></td>
-                    <td><span class="title">این پیام تستی است</span></td>
-                    <td><span class="title">این پیام تستی است</span></td>
-                    <td><span class="title">این پیام تستی است</span></td>
-                    <td><span class="title">این پیام تستی است</span></td>
-                    <td>
-                      <span class="title badge badge-sussess">سرمایگذار</span>
-                    </td>
-                    <td>
-                      <span class="title badge badge-sussess" title="فعال"
-                        >فعال</span
-                      >
-                    </td>
-                    <td>
-                      <div class="dropdown">
-                        <button
-                          class="btn__dropdown btn__dropdown__more"
-                        ></button>
-                        <div class="dropdown__items">
-                          <ul class="dropdown__menu">
-                            <li class="dropdown__menu--item">
-                              <a href="#" class="link">چشم انداز</a>
-                            </li>
-                            <li class="dropdown__menu--item">
-                              <a href="#" class="link">ویرایش</a>
-                            </li>
-                            <li class="dropdown__menu--item">
-                              <a href="#" class="link">حذف</a>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+                    </div>
+                  </div>
+                </div>
+                <div class="row u-margin-0 u-margin-bottom-30">
+                  <div class="panel">
+                    <div class="panel__header">erth</div>
+                    <div class="panel__body">rhtrth</div>
+                  </div>
+                </div>
+                <div class="row u-margin-0 u-margin-bottom-30">
+                  <div class="panel">
+                    <div class="panel__header">erth</div>
+                    <div class="panel__body">rhtrth</div>
+                  </div>
+                </div>
+              </form>
             </div>
-            <a href="#" class="show__more--lists">
-              <span>رکورد 201 </span>
-              <span>مشاهده رکوردهای بیشتر</span>
-            </a>
+            <div class="row u-margin-0">
+              <!-- <form action="#" class="master__form">
+                <div class="row u-margin-0 u-margin-bottom-30">
+                  <div class="panel">
+                    <div class="panel__header">
+                      <div class="panel__header--row">
+                        <h3>بررسی اجمالی</h3>
+                      </div>
+                    </div>
+                    <div class="panel__body">
+                      <div class="row u-margin-top-16">
+                        <div class="col-md-4 col-sm-12 u-margin-bottom-sm-16">
+                          <label for="">ewrg</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form> -->
+              fdsgsdfgsfdgsfdg
+            </div>
           </div>
         </div>
       </div>

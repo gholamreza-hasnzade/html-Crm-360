@@ -69,18 +69,15 @@
 
 
 
-    /* var navItems = document.querySelectorAll(".nav__item")
-    try {
-        for (var i = 0; i < navItems.length; i++) {
-            navItems[i].addEventListener("click", function () {
-                var current = document.getElementsByClassName("active");
-                if (current.length > 0) {
-                    current[0].className = current[0].className.replace(" active", "");
-                }
-                this.className += " active";
-            });
-        }
-    } catch (e) {
-        console.log(e)
-    } */
+    let allCB = $('input[name="selected[]"]');
+    let mainCB = $('input[name="select__all"]')
+    mainCB.on('click', function () {
+        let status = $(this).is(':checked');
+        allCB.prop('checked', status);
+    });
+    allCB.on('change', function () {
+        let status = $('input[name="selected[]"]:checked').length === allCB.length;
+        $('input[name="select__all"]').prop('checked', status);
+    });
 }())
+

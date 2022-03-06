@@ -18,18 +18,45 @@ body {
   @include flexBox(row, center, space-between);
   flex: 0 0 100%;
   max-width: 100%;
-  h5 {
-    font-size: 13px;
-    font-weight: 900;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1.58;
-    letter-spacing: normal;
-    text-align: left;
-    color: $text-color-warm-grey;
+  &--title {
+    @include flexBox(row, center, unset);
+    h5 {
+      font-size: 13px;
+      font-weight: 900;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.58;
+      letter-spacing: normal;
+      text-align: left;
+      color: $text-color-warm-grey;
+    }
+
+    h5 {
+      .title {
+        font-size: 13px;
+        font-weight: 900;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.58;
+        letter-spacing: normal;
+        text-align: left;
+        color: $bg-color-light;
+        margin-left: 5px;
+      }
+    }
+    p {
+      font-size: 14px;
+      font-weight: 500;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.57;
+      letter-spacing: normal;
+      text-align: left;
+      color: $text-color-warm-grey;
+    }
+  }
+  &--icon {
+    transform: rotate(90deg);
+    margin: 0 $margin-6;
   }
 }
-
-
-
-

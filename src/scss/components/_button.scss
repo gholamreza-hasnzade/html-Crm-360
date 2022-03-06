@@ -77,14 +77,17 @@
   }
 }
 
-$btn-types: (
-  sussess: #3fac73,
-  sussess-hover: red,
-  info: #5fabed,
-) !default;
+.header-buttons {
+  @include flexBox(row-reverse, center, unset);
+  .dropdown {
+    .btn__dropdown.btn__dropdown__more {
+      background-color: $bg-color-secondry !important;
+    }
+  }
+}
 
-%btn {
-  padding: 0 16px;
+.btn {
+  padding: 0 25px;
   height: 30px;
   outline: 0;
   border: 0;
@@ -99,21 +102,47 @@ $btn-types: (
   -moz-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
-  &:not(first-child) {
-    margin-right: 5px;
-  }
-}
 
-@mixin btn($color) {
-  @extend %btn;
-  background: $color;
-  &:hover {
-    background: #218551;
+  &.btn--success {
+    background-color: $bg-color-main;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    &:hover {
+      background-color: $bg-color-main-dark;
+    }
   }
-}
+  &.btn--outline--success {
+    border: 1px solid $bg-color-main;
+    background-color: transparent;
+    color: $bg-color-main;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    &:hover {
+      border: 1px solid $bg-color-main-dark;
+      color: $bg-color-main-dark;
+    }
+  }
 
-@each $type, $color in $btn-types {
-  .btn-#{$type} {
-    @include btn($color);
+  &.btn--outline--info {
+    border: 1px solid $bg-color-light;
+    background-color: transparent;
+    color: $bg-color-light;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+
+    &:hover {
+      border: 1px solid $bg-color-dark;
+      background-color: transparent;
+      color: $bg-color-dark;
+    }
   }
 }
