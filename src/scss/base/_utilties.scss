@@ -41,3 +41,16 @@
   color: $text-color-warm-grey;
   font-size: 15px;
 }
+
+.u-padding-bottom-100{
+  padding-bottom: 100px;
+}
+
+
+.u-width-15 {
+  width: 15% !important;
+}
+
+.u-d--flex{
+  @include flexBox(row,center,unset);
+}

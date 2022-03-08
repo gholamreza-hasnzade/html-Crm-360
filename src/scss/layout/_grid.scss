@@ -30,6 +30,17 @@
   .u-margin-bottom-sm-16 {
     margin-bottom: 16px;
   }
+  .address__city {
+    display: flex;
+    flex-direction: column !important;
+    .container__forms {
+      width: 100% !important;
+      margin-right: 0 !important;
+    }
+  }
+  .address__country {
+    margin-top: 6px;
+  }
 }
 
 @media only screen and (max-width: 992px) {

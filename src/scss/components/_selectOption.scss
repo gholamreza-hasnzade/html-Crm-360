@@ -1,0 +1,103 @@
+select.m-form--control--select {
+  display: none;
+}
+
+.dropdown-select {
+  background: transparent;
+  width: 100%;
+  height: 27px;
+  line-height: 27px;
+  border-radius: 2px;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 0 8px 0 17px;
+  position: relative;
+  user-select: none;
+  white-space: nowrap;
+  color: $text-color-warm-grey;
+  transition: all 0.2s ease-in-out;
+  &.m-form--control--select--custom {
+    width: 15% !important;
+    position: relative;
+    // padding-left: 25px;
+    .dropdown-select__list {
+      height: auto;
+    }
+    &::before {
+      position: absolute;
+      content: "";
+      border: 0.5px solid $bg-color-border-dark;
+      height: 100%;
+      left: 0;
+      top: -1px;
+    }
+    .dropdown-select__current {
+      font-size: 10px;
+    }
+    .dropdown-select__list {
+        overflow: hidden;
+    }
+    .dropdown-select__option{
+        font-size: 10px;
+    }
+  }
+}
+.dropdown-select__ul {
+  background-color: $bg-color-secondry;
+}
+.dropdown-select__list {
+  background: $text-color-white;
+  width: 100%;
+  border-radius: 3px;
+  border: 0.5px solid $bg-color-border-dark;
+  padding: 3px 0;
+  margin-top: 4px;
+  overflow: hidden;
+  overflow-y: scroll;
+  max-height: 250px;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  z-index: 100;
+  transform-origin: 50% 0;
+  transform: scale(0.75);
+  opacity: 0;
+  transition: all 0.15s ease;
+  pointer-events: none;
+}
+
+.dropdown-select__option {
+  cursor: pointer;
+  line-height: 40px;
+  padding: 0 8px;
+  color: $text-color-border-dark;
+}
+
+.dropdown-select--selected {
+  color: $text-color-secondr;
+  background: $text-color-light;
+  font-weight: 700;
+}
+
+.dropdown-select::after {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transition: all 0.15s ease;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 4px solid $bg-color-border-dark;
+  pointer-events: none;
+  margin-top: -2px;
+}
+
+.dropdown-select--open::after {
+  transform: rotate(-180deg);
+}
+
+.dropdown-select--open .dropdown-select__list {
+  transform: scale(1);
+  opacity: 1;
+  pointer-events: auto;
+}

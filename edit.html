@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>crm</title>
+    <title>crm 360</title>
+    <link rel="stylesheet" href="dist/style/persian-datepicker.min.css" />
     <link rel="stylesheet" href="dist/style/all.min.css" />
     <link rel="stylesheet" href="dist/style/main.css" />
   </head>
@@ -609,7 +610,8 @@
               />
               <p>این متن تستی است</p>
             </div>
-            <div class="header-buttons" style="display: none">
+            <div class="header-buttons">
+              <!-- style="display: none" -->
               <div class="dropdown">
                 <button class="btn__dropdown btn__dropdown__more"></button>
                 <div class="dropdown__items">
@@ -627,15 +629,16 @@
           </div>
         </div>
 
-        <div class="row">
-          <div class="grid grid__container">
+        <form class="row" action="#">
+          <div class="col-md-12 u-margin-bottom-19">
+            <div class="submit__form">
+              <button class="btn btn--success" type="submit">ذخیره</button>
+              <button class="btn btn--outline--success">لغو</button>
+            </div>
+          </div>
+          <div class="grid grid__container u-padding-bottom-100">
             <div class="row u-margin-0">
-              <form action="#" class="master__form">
-                <div class="submit__form">
-                  <button class="btn btn--success" type="submit">ذخیره</button>
-                  <button class="btn btn--outline--success">لغو</button>
-                </div>
-
+              <div class="master__form">
                 <div class="row u-margin-0 u-margin-bottom-30">
                   <div class="panel">
                     <div class="panel__header">
@@ -711,18 +714,20 @@
                                     id=""
                                     class="m-form--control m-form--control--input"
                                   />
-                                  <button class="btn__form btn__form--modal">
-                                    <img
-                                      src="dist/images/arrow_down.svg"
-                                      alt=""
-                                    />
-                                  </button>
-                                  <button class="btn__form btn__form--close">
-                                    <img
-                                      src="dist/images/close___icon.svg"
-                                      alt=""
-                                    />
-                                  </button>
+                                  <div class="container__button">
+                                    <button class="btn__form btn__form--modal">
+                                      <img
+                                        src="dist/images/arrow_down.svg"
+                                        alt=""
+                                      />
+                                    </button>
+                                    <button class="btn__form btn__form--close">
+                                      <img
+                                        src="dist/images/close___icon.svg"
+                                        alt=""
+                                      />
+                                    </button>
+                                  </div>
                                 </div>
                                 <!-- error -->
 
@@ -760,22 +765,8 @@
                               <div class="m-form--control--row">
                                 <div class="container__forms">
                                   <select class="m-form--control--select">
-                                   <!--  <option
-                                      value="نام  کسب و کار"
-                                    >
-                                      نام کسب و کار
-                                    </option> -->
                                     <option value="قرمز">قرمز</option>
                                     <option value="سبز">سبز</option>
-                                    <option value="آبی">آبی</option>
-                                    <option value="آبی">آبی</option>
-                                    <option value="آبی">آبی</option>
-                                    <option value="آبی">آبی</option>
-                                    <option value="آبی">آبی</option>
-                                    <option value="آبی">آبی</option>
-                                    <option value="آبی">آبی</option>
-                                    <option value="آبی">آبی</option>
-                                    <option value="آبی">آبی</option>
                                     <option value="آبی">آبی</option>
                                     <option value="آبی">آبی</option>
                                   </select>
@@ -796,48 +787,472 @@
                           </div>
                         </div>
                       </div>
+                      <div class="row u-margin-top-16">
+                        <div class="col-md-12 col-sm-12 u-margin-bottom-sm-16">
+                          <div class="m-form--group">
+                            <div class="m-form--group--top">
+                              <div class="right">
+                                <label for="" class="title"
+                                  >تلفن کسب و کار <span>*</span></label
+                                ><!-- error -->
+                                <a href="#" class="icon--pencil"
+                                  ><i class="fas fa-pencil-alt"></i
+                                ></a>
+                              </div>
+                              <div class="left">
+                                <a href="#" class="icon--edit">آپدیت</a>
+                                <a href="#" class="icon--cansel">لغو</a>
+                              </div>
+                            </div>
+                            <div class="m-form--group--bottom">
+                              <div class="m-form--control--row">
+                                <div class="container__forms">
+                                  <select
+                                    class="m-form--control--select m-form--control--select--custom"
+                                  >
+                                    <option value="نام  کسب و کار">
+                                      نام کسب و کار
+                                    </option>
+                                    <option value="قرمز">قرمز</option>
+                                  </select>
+                                  <input
+                                    type="text"
+                                    name=""
+                                    id=""
+                                    class="m-form--control m-form--control--input"
+                                  />
+                                  <div class="container__button">
+                                    <button class="btn__form btn__form--start">
+                                      <img src="dist/images/start.png" alt="" />
+                                    </button>
+                                    <button class="btn__form btn__form--modal">
+                                      <img src="dist/images/ben.png" alt="" />
+                                    </button>
+
+                                    <button
+                                      class="btn__form btn__form--exclamation"
+                                    >
+                                      <img
+                                        src="dist/images/exclamation.png"
+                                        alt=""
+                                      />
+                                    </button>
+                                    <button class="btn__form btn__form--close">
+                                      <img
+                                        src="dist/images/close___icon.svg"
+                                        alt=""
+                                      />
+                                    </button>
+                                  </div>
+                                </div>
+                                <button class="btn__form btn__form--duplicate">
+                                  <img src="dist/images/duplicate.png" alt="" />
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row u-margin-top-16">
+                        <div class="col-md-12 col-sm-12 u-margin-bottom-sm-16">
+                          <div class="m-form--group">
+                            <div class="m-form--group--top">
+                              <div class="right">
+                                <label for="" class="title"
+                                  >نام <span>*</span></label
+                                ><!-- error -->
+                                <a href="#" class="icon--pencil"
+                                  ><i class="fas fa-pencil-alt"></i
+                                ></a>
+                              </div>
+                              <div class="left">
+                                <a href="#" class="icon--edit">آپدیت</a>
+                                <a href="#" class="icon--cansel">لغو</a>
+                              </div>
+                            </div>
+                            <div class="m-form--group--bottom">
+                              <div class="m-form--control--row u-d--flex">
+                                <div class="container__forms gender">
+                                  <select class="m-form--control--select">
+                                    <option value="men">مرد</option>
+                                    <option value="women">زن</option>
+                                  </select>
+                                </div>
+                                <div class="container__forms firstName">
+                                  <input
+                                    type="text"
+                                    name=""
+                                    id=""
+                                    class="m-form--control m-form--control--input"
+                                  />
+                                </div>
+                                <div class="container__forms lastName">
+                                  <input
+                                    type="text"
+                                    name=""
+                                    id=""
+                                    class="m-form--control m-form--control--input"
+                                  />
+                                  <p class="data__value" style="display: none">
+                                    این متن تستی است
+                                  </p>
+                                </div>
+                                <!-- error -->
+
+                                <span
+                                  class="error--message"
+                                  style="display: none"
+                                  >نام کسب و کار مورد نیاز است</span
+                                >
+                              </div>
+
+                              <p class="data__value" style="display: none">
+                                این متن تستی است
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row u-margin-top-16">
+                        <div class="col-md-12 col-sm-12 u-margin-bottom-sm-16">
+                          <div class="m-form--group">
+                            <div class="m-form--group--top">
+                              <div class="right">
+                                <label for="" class="title">آدرس</label>
+                                <a href="#" class="icon--pencil"
+                                  ><i class="fas fa-pencil-alt"></i
+                                ></a>
+                              </div>
+                              <div class="left">
+                                <a href="#" class="icon--edit">آپدیت</a>
+                                <a href="#" class="icon--cansel">لغو</a>
+                              </div>
+                            </div>
+                            <div class="m-form--group--bottom">
+                              <div class="m-form--control--row">
+                                <div class="address">
+                                  <div class="address__street">
+                                    <textarea
+                                      name=""
+                                      placeholder="خیابان"
+                                      id=""
+                                      class="form-control--textarea"
+                                    ></textarea>
+                                  </div>
+                                  <div class="address__city">
+                                    <div class="container__forms">
+                                      <input
+                                        type="text"
+                                        name=""
+                                        id=""
+                                        placeholder="شهر"
+                                        class="m-form--control m-form--control--input"
+                                      />
+                                    </div>
+                                    <div class="container__forms">
+                                      <input
+                                        type="text"
+                                        name=""
+                                        id=""
+                                        placeholder="استان"
+                                        class="m-form--control m-form--control--input"
+                                      />
+                                    </div>
+                                    <div class="container__forms">
+                                      <input
+                                        type="text"
+                                        name=""
+                                        id=""
+                                        placeholder="کد پستی"
+                                        class="m-form--control m-form--control--input"
+                                      />
+                                    </div>
+                                  </div>
+                                  <div class="address__country">
+                                    <div class="container__forms">
+                                      <input
+                                        type="text"
+                                        name=""
+                                        id=""
+                                        placeholder="کشور"
+                                        class="m-form--control m-form--control--input"
+                                      />
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row u-margin-top-16">
+                        <div class="col-md-6 col-sm-12 u-margin-bottom-sm-16">
+                          <div class="m-form--group">
+                            <div class="m-form--group--top">
+                              <div class="right">
+                                <label for="" class="title">vip </label
+                                ><!-- error -->
+                                <a href="#" class="icon--pencil"
+                                  ><i class="fas fa-pencil-alt"></i
+                                ></a>
+                              </div>
+                              <div class="left">
+                                <a href="#" class="icon--edit">آپدیت</a>
+                                <a href="#" class="icon--cansel">لغو</a>
+                              </div>
+                            </div>
+                            <div class="m-form--group--bottom">
+                              <label class="container__checkbox">
+                                <span class="title--checkbox"></span>
+                                <input
+                                  type="checkbox"
+                                  checked="checked"
+                                  class="delete_checkbox"
+                                  name="selected[]"
+                                  value="2"
+                                />
+                                <span class="checkmark"></span>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12 u-margin-bottom-sm-16">
+                          <div class="m-form--group">
+                            <div class="m-form--group--top">
+                              <div class="right">
+                                <label for="" class="title">تاریخ </label
+                                ><!-- error -->
+                                <a href="#" class="icon--pencil"
+                                  ><i class="fas fa-pencil-alt"></i
+                                ></a>
+                              </div>
+                              <div class="left">
+                                <a href="#" class="icon--edit">آپدیت</a>
+                                <a href="#" class="icon--cansel">لغو</a>
+                              </div>
+                            </div>
+                            <div class="m-form--group--bottom">
+                              <div class="m-form--control--row">
+                                <div class="container__forms">
+                                  <input
+                                    type="text"
+                                    class="form__control__Datepiker m-form--control m-form--control--input"
+                                  />
+                                </div>
+                                <!-- error -->
+
+                                <span
+                                  class="error--message"
+                                  style="display: none"
+                                  >نام کسب و کار مورد نیاز است</span
+                                >
+                              </div>
+
+                              <p class="data__value" style="display: none">
+                                این متن تستی است
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
                     </div>
                   </div>
                 </div>
-                <div class="row u-margin-0 u-margin-bottom-30">
-                  <div class="panel">
-                    <div class="panel__header">erth</div>
-                    <div class="panel__body">rhtrth</div>
-                  </div>
-                </div>
-                <div class="row u-margin-0 u-margin-bottom-30">
-                  <div class="panel">
-                    <div class="panel__header">erth</div>
-                    <div class="panel__body">rhtrth</div>
-                  </div>
-                </div>
-              </form>
+              </div>
             </div>
             <div class="row u-margin-0">
-              <!-- <form action="#" class="master__form">
+              <div class="master__form">
                 <div class="row u-margin-0 u-margin-bottom-30">
                   <div class="panel">
                     <div class="panel__header">
                       <div class="panel__header--row">
-                        <h3>بررسی اجمالی</h3>
+                        <h3></h3>
                       </div>
                     </div>
                     <div class="panel__body">
                       <div class="row u-margin-top-16">
-                        <div class="col-md-4 col-sm-12 u-margin-bottom-sm-16">
-                          <label for="">ewrg</label>
+                        <div class="col-md-12 col-sm-12 u-margin-bottom-sm-16">
+                          <div class="m-form--group">
+                            <div class="m-form--group--top">
+                              <div class="right">
+                                <label for="" class="title">
+                                  اختصاص داده شده کاربر </label
+                                ><!-- error -->
+                                <a href="#" class="icon--pencil"
+                                  ><i class="fas fa-pencil-alt"></i
+                                ></a>
+                              </div>
+                              <div class="left">
+                                <a href="#" class="icon--edit">آپدیت</a>
+                                <a href="#" class="icon--cansel">لغو</a>
+                              </div>
+                            </div>
+                            <div class="m-form--group--bottom">
+                              <div class="m-form--control--row">
+                                <div class="container__forms">
+                                  <input
+                                    type="text"
+                                    name=""
+                                    id=""
+                                    class="m-form--control m-form--control--input"
+                                  />
+                                  <div class="container__button">
+                                    <button class="btn__form btn__form--modal">
+                                      <img
+                                        src="dist/images/arrow_down.svg"
+                                        alt=""
+                                      />
+                                    </button>
+                                    <button class="btn__form btn__form--close">
+                                      <img
+                                        src="dist/images/close___icon.svg"
+                                        alt=""
+                                      />
+                                    </button>
+                                  </div>
+                                </div>
+                                <!-- error -->
+
+                                <span
+                                  class="error--message"
+                                  style="display: none"
+                                  >نام کسب و کار مورد نیاز است</span
+                                >
+                              </div>
+
+                              <p class="data__value" style="display: none">
+                                این متن تستی است
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-md-12 col-sm-12 u-margin-bottom-sm-16">
+                          <div class="m-form--group">
+                            <div class="m-form--group--top">
+                              <div class="right">
+                                <label for="" class="title">
+                                  دنبال کنندگان
+                                </label>
+                              </div>
+                            </div>
+                            <div class="m-form--group--bottom">
+                              <div class="m-form--control--row">
+                                <div class="form__infromation">
+                                  <a href="#" class="form__infromation--link"
+                                    >User00005</a
+                                  >
+                                  <span>,</span>
+                                  <a href="#" class="form__infromation--link"
+                                    >Admin</a
+                                  >
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-12 col-sm-12 u-margin-bottom-sm-16">
+                          <div class="m-form--group">
+                            <div class="m-form--group--top">
+                              <div class="right">
+                                <label for="" class="title"> اصلاح شده </label>
+                              </div>
+                            </div>
+                            <div class="m-form--group--bottom">
+                              <div class="m-form--control--row">
+                                <div class="form__infromation">
+                                  <p class="form__infromation--text">
+                                    05 بهمن 07:05
+                                  </p>
+                                  <span>,</span>
+                                  <a href="#" class="form__infromation--link"
+                                    >Admin</a
+                                  >
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-12 col-sm-12 u-margin-bottom-sm-16">
+                          <div class="m-form--group">
+                            <div class="m-form--group--top">
+                              <div class="right">
+                                <label for="" class="title"> ایجاد شده </label>
+                              </div>
+                            </div>
+                            <div class="m-form--group--bottom">
+                              <div class="m-form--control--row">
+                                <div class="form__infromation">
+                                  <p class="form__infromation--text">
+                                    05 بهمن 07:05
+                                  </p>
+                                  <span>,</span>
+                                  <a href="#" class="form__infromation--link"
+                                    >Admin</a
+                                  >
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-12 col-sm-12 u-margin-bottom-sm-16">
+                          <div class="m-form--group">
+                            <div class="m-form--group--top">
+                              <div class="right">
+                                <label for="" class="title"> تیم </label
+                                ><!-- error -->
+                                <a href="#" class="icon--pencil"
+                                  ><i class="fas fa-pencil-alt"></i
+                                ></a>
+                              </div>
+                              <div class="left">
+                                <a href="#" class="icon--edit">آپدیت</a>
+                                <a href="#" class="icon--cansel">لغو</a>
+                              </div>
+                            </div>
+                            <div class="m-form--group--bottom">
+                              <div class="m-form--control--row">
+                                <div class="container__forms">
+                                  <input
+                                    type="text"
+                                    name=""
+                                    id=""
+                                    class="m-form--control m-form--control--input"
+                                  />
+                                  <div class="container__button">
+                                    <button class="btn__form btn__form--modal">
+                                      <img
+                                        src="dist/images/arrow_down.svg"
+                                        alt=""
+                                      />
+                                    </button>
+                                  </div>
+                                </div>
+                                <!-- error -->
+
+                                <span
+                                  class="error--message"
+                                  style="display: none"
+                                  >نام کسب و کار مورد نیاز است</span
+                                >
+                              </div>
+
+                              <p class="data__value" style="display: none">
+                                این متن تستی است
+                              </p>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </form> -->
-              fdsgsdfgsfdgsfdg
+              </div>
             </div>
           </div>
-        </div>
+        </form>
       </div>
-      <div class="controls__group"></div>
     </main>
     <!-- end main__container -->
 
@@ -851,7 +1266,9 @@
     </footer>
     <!-- end Footer  -->
     <script src="dist/script/jquery-3.6.0.min.js"></script>
-
+    <script src="dist/script/persian-date.min.js"></script>
+    <script src="dist/script/persian-datepicker.min.js"></script>
     <script src="dist/script/main.js"></script>
+    <script type="text/javascript"></script>
   </body>
 </html>

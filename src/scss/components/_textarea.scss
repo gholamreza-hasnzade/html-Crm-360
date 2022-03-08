@@ -1,0 +1,17 @@
+.form-control--textarea {
+  width: 100%;
+  background-color: transparent;
+  height: 60px;
+  font-family: $fontFamily;
+  color: $text-color-warm-grey;
+  font-size: 12px;
+  padding: $padding-8;
+  resize: none;
+  border: solid 0.5px $text-color-warm-grey;
+  @include transition3s();
+  margin-bottom: $margin-6;
+
+  &:focus {
+    border: solid 0.5px $text-color-light;
+  }
+}

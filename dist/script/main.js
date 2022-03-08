@@ -133,6 +133,14 @@
         })
     }
 
-    dropdownSelect();
+
+
 }())
 
+$(document).ready(function () {
+    $(".form__control__Datepiker").pDatepicker({
+        observer: true,
+        format: 'YYYY/MM/DD',
+        altField: '.observer-example-alt'
+    });
+});
