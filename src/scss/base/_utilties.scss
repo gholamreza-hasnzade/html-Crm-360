@@ -28,6 +28,10 @@
 .u-margin-top-16{
   margin-top: 16px;
 }
+
+.u-margin-bottom-16{
+  margin-bottom: 16px;
+}
 .u-margin-bottom-19{
   margin-bottom: 19px;
 }
@@ -46,11 +50,22 @@
   padding-bottom: 100px;
 }
 
+.u-padding {
+  padding: 6px;
+}
 
+.u-overflow-y-auto {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
 .u-width-15 {
   width: 15% !important;
 }
 
 .u-d--flex{
   @include flexBox(row,center,unset);
+}
+
+.u-transparent-bg {
+  background-color: transparent !important;
 }

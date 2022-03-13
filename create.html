@@ -1,0 +1,2372 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>crm 360</title>
+    <link rel="stylesheet" href="dist/style/persian-datepicker.min.css" />
+    <link rel="stylesheet" href="dist/style/all.min.css" />
+    <link rel="stylesheet" href="dist/style/main.css" />
+  </head>
+  <body>
+    <!-- start Header  -->
+    <header class="mina__header">
+      <div class="mina__header--container">
+        <div class="logo__row">
+          <a href="/" class="logo">
+            <img src="dist/images/Logo.svg" alt="" srcset="" />
+          </a>
+          <p>سامانه جامع مشتریان</p>
+        </div>
+        <nav class="nav">
+          <div class="dropdown">
+            <button class="btn__dropdown btn__dropdown__more"></button>
+            <div class="dropdown__items">
+              <ul class="dropdown__menu">
+                <li class="dropdown__menu--item">
+                  <a href="#" class="link">Admin</a>
+                </li>
+                <li class="dropdown__menu--item">
+                  <a href="#" class="link">مدیریت</a>
+                </li>
+                <li class="dropdown__menu--item">
+                  <a href="#" class="link">اولویت ها</a>
+                </li>
+                <li class="dropdown__menu--item">
+                  <a href="#" class="link">آخرین بازدید</a>
+                </li>
+                <li class="dropdown__menu--item">
+                  <a href="#" class="link">خروج</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="dropdown u-margin-left-5">
+            <button class="btn__dropdown btn__dropdown__plus"></button>
+
+            <div class="dropdown__items">
+              <ul class="dropdown__menu">
+                <li class="dropdown__menu--item">
+                  <a href="#" class="link">ایجاد کردن</a>
+                </li>
+                <li class="dropdown__menu--item">
+                  <a href="#" class="link">حساب</a>
+                </li>
+                <li class="dropdown__menu--item">
+                  <a href="#" class="link">مخاطب</a>
+                </li>
+                <li class="dropdown__menu--item">
+                  <a href="#" class="link">لید</a>
+                </li>
+                <li class="dropdown__menu--item">
+                  <a href="#" class="link">فرصت</a>
+                </li>
+                <li class="dropdown__menu--item">
+                  <a href="#" class="link">جلسه</a>
+                </li>
+                <li class="dropdown__menu--item">
+                  <a href="#" class="link">تماس تلفنی</a>
+                </li>
+                <li class="dropdown__menu--item">
+                  <a href="#" class="link">وظیفه</a>
+                </li>
+                <li class="dropdown__menu--item">
+                  <a href="#" class="link">پرونده</a>
+                </li>
+                <li class="dropdown__menu--item">
+                  <a href="#" class="link">پست الکترونیک</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="dropdown u-margin-left-5">
+            <button class="btn__dropdown btn__dropdown__bell"></button>
+            <div class="dropdown__items notifications">
+              <div class="notifications__container">
+                <div class="notif__header">
+                  <div class="notif__header--item">
+                    <h3>اعلان ها</h3>
+                    <p>علامت زده به خواندخه شده</p>
+                  </div>
+                </div>
+                <div class="notif__body">
+                  <div class="notif__container">
+                    <div class="notif__item">
+                      <div class="notif__item--avtor">
+                        <div class="avtor__wapper">
+                          <img src="dist/images/png.png" alt="" />
+                        </div>
+                      </div>
+                      <div class="notif__item--caption">
+                        <div class="caption__title">
+                          <h4>کدهای فروش رفته تست جدید</h4>
+                        </div>
+                        <div class="caption__link">
+                          <a href="#"> sold cod create assign to you </a>
+                        </div>
+                        <div class="caption__text">
+                          <p>
+                            کدهای فروش رفته تست جدید کدهای فروش رفته تست جدید
+                            کدهای فروش رفته تست جدید کدهای فروش رفته تست جدید
+                            کدهای فروش رفته تست جدید کدهای فروش رفته تست جدید
+                          </p>
+                        </div>
+                      </div>
+                      <div class="notif__item--datetime">
+                        <div class="notif__item--datetime--title">
+                          <span>1400-12-10</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="more__notif" id="more__notif">بیشتر</div>
+                </div>
+                <div class="notif__footer">
+                  <a href="#" class="notif__footer--link"> مشاهده بیشتر </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="dropdown u-margin-left-5">
+            <button class="btn__dropdown btn__dropdown__note"></button>
+            <div class="dropdown__items noetbook">
+              <div class="noetbook__container">
+                <div class="noetbook__header">
+                  <div class="noetbook__header--row">
+                    <h3>یادداشت های من</h3>
+                  </div>
+                </div>
+                <div class="noetbook__body">
+                  <div class="noetbook__body--row" id="Mynotebooke">
+                    <div class="noetbook--item">
+                      <p class="noetbook__pragraf">یادداشت های من</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="noetbook__footer">
+                  <a href="" class="noetbook__footer--link"> یادداشت جدید </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="dropdown__search u-margin-left-5">
+            <form class="item__search__bar">
+              <button class="btn__search"></button>
+              <input type="text" class="search" placeholder="جستجو کردن" />
+              <div class="show__result" style="display: none">
+                <div class="show__result--header">
+                  <div class="show__result--header--title">
+                    <p>جستجو</p>
+                  </div>
+                </div>
+                <div class="show__result--body">
+                  <div class="result__items">
+                    <a href="" class="link__result">نتیجه جستجو</a>
+                    <span class="badge-sussess">حساب</span>
+                  </div>
+                  <div class="result__items">
+                    <a href="" class="link__result">نتیجه جستجو</a>
+                    <span class="badge-sussess">حساب</span>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end Header    -->
+    <!-- start Sidbar  -->
+    <div class="sidbar">
+      <div class="sidbar__container">
+        <div class="sidbar__row">
+          <ul class="navbar">
+            <li class="nav__item">
+              <a href="#" class="nav__item--link">
+                <div class="nav__item--link--picuter">
+                  <span class="fas fa-cash-register icon--navbar"></span>
+                </div>
+                <span class="nav__item--link--title">فروش</span>
+              </a>
+              <div class="submenu">
+                <ul class="submenu__container">
+                  <li class="submenu__item">
+                    <a href="#" class="submenu__item--link">
+                      <p class="submenu__item--link--title">پیش فاکتور</p>
+                      <div class="icon__submenu">
+                        <span class="fas fa-file-invoice-dollar"></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="submenu__item">
+                    <a href="#" class="submenu__item--link">
+                      <p class="submenu__item--link--title">پیش فاکتور</p>
+                      <div class="icon__submenu">
+                        <span class="fas fa-file-invoice-dollar"></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="submenu__item">
+                    <a href="#" class="submenu__item--link">
+                      <p class="submenu__item--link--title">پیش فاکتور</p>
+                      <div class="icon__submenu">
+                        <span class="fas fa-file-invoice-dollar"></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="submenu__item">
+                    <a href="#" class="submenu__item--link">
+                      <p class="submenu__item--link--title">پیش فاکتور</p>
+                      <div class="icon__submenu">
+                        <span class="fas fa-file-invoice-dollar"></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="submenu__item">
+                    <a href="#" class="submenu__item--link">
+                      <p class="submenu__item--link--title">پیش فاکتور</p>
+                      <div class="icon__submenu">
+                        <span class="fas fa-file-invoice-dollar"></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="submenu__item">
+                    <a href="#" class="submenu__item--link">
+                      <p class="submenu__item--link--title">پیش فاکتور</p>
+                      <div class="icon__submenu">
+                        <span class="fas fa-file-invoice-dollar"></span>
+                      </div>
+                    </a>
+                  </li>
+
+                  <li class="submenu__item">
+                    <a href="#" class="submenu__item--link">
+                      <p class="submenu__item--link--title">پیش فاکتور</p>
+                      <div class="icon__submenu">
+                        <span class="fas fa-file-invoice-dollar"></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="submenu__item">
+                    <a href="#" class="submenu__item--link">
+                      <p class="submenu__item--link--title">پیش فاکتور</p>
+                      <div class="icon__submenu">
+                        <span class="fas fa-file-invoice-dollar"></span>
+                      </div>
+                    </a>
+                  </li>
+
+                  <li class="submenu__item">
+                    <a href="#" class="submenu__item--link">
+                      <p class="submenu__item--link--title">پیش فاکتور</p>
+                      <div class="icon__submenu">
+                        <span class="fas fa-file-invoice-dollar"></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="submenu__item">
+                    <a href="#" class="submenu__item--link">
+                      <p class="submenu__item--link--title">پیش فاکتور</p>
+                      <div class="icon__submenu">
+                        <span class="fas fa-file-invoice-dollar"></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="submenu__item">
+                    <a href="#" class="submenu__item--link">
+                      <p class="submenu__item--link--title">پیش فاکتور</p>
+                      <div class="icon__submenu">
+                        <span class="fas fa-file-invoice-dollar"></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="submenu__item">
+                    <a href="#" class="submenu__item--link">
+                      <p class="submenu__item--link--title">پیش فاکتور</p>
+                      <div class="icon__submenu">
+                        <span class="fas fa-file-invoice-dollar"></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="submenu__item">
+                    <a href="#" class="submenu__item--link">
+                      <p class="submenu__item--link--title">پیش فاکتور</p>
+                      <div class="icon__submenu">
+                        <span class="fas fa-file-invoice-dollar"></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="submenu__item">
+                    <a href="#" class="submenu__item--link">
+                      <p class="submenu__item--link--title">پیش فاکتور</p>
+                      <div class="icon__submenu">
+                        <span class="fas fa-file-invoice-dollar"></span>
+                      </div>
+                    </a>
+                  </li>
+
+                  <li class="submenu__item">
+                    <a href="#" class="submenu__item--link">
+                      <p class="submenu__item--link--title">پیش فاکتور</p>
+                      <div class="icon__submenu">
+                        <span class="fas fa-file-invoice-dollar"></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="submenu__item">
+                    <a href="#" class="submenu__item--link">
+                      <p class="submenu__item--link--title">پیش فاکتور</p>
+                      <div class="icon__submenu">
+                        <span class="fas fa-file-invoice-dollar"></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="submenu__item">
+                    <a href="#" class="submenu__item--link">
+                      <p class="submenu__item--link--title">پیش فاکتور</p>
+                      <div class="icon__submenu">
+                        <span class="fas fa-file-invoice-dollar"></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="submenu__item">
+                    <a href="#" class="submenu__item--link">
+                      <p class="submenu__item--link--title">پیش فاکتور</p>
+                      <div class="icon__submenu">
+                        <span class="fas fa-file-invoice-dollar"></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="submenu__item">
+                    <a href="#" class="submenu__item--link">
+                      <p class="submenu__item--link--title">پیش فاکتور</p>
+                      <div class="icon__submenu">
+                        <span class="fas fa-file-invoice-dollar"></span>
+                      </div>
+                    </a>
+                  </li>
+
+                  <li class="submenu__item">
+                    <a href="#" class="submenu__item--link">
+                      <p class="submenu__item--link--title">پیش فاکتور</p>
+                      <div class="icon__submenu">
+                        <span class="fas fa-file-invoice-dollar"></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="submenu__item">
+                    <a href="#" class="submenu__item--link">
+                      <p class="submenu__item--link--title">پیش فاکتور</p>
+                      <div class="icon__submenu">
+                        <span class="fas fa-file-invoice-dollar"></span>
+                      </div>
+                    </a>
+                  </li>
+                  <!-- not loop -->
+                  <div class="line-sidbar"></div>
+                </ul>
+              </div>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__item--link">
+                <div class="nav__item--link--picuter">
+                  <span class="fas fa-balance-scale icon--navbar"></span>
+                </div>
+                <span class="nav__item--link--title">پشتیبانی</span>
+              </a>
+              <div class="submenu">
+                <ul class="submenu__container">
+                  <li class="submenu__item">
+                    <a href="#" class="submenu__item--link">
+                      <p class="submenu__item--link--title">پیش فاکتور</p>
+                      <div class="icon__submenu">
+                        <span class="fas fa-file-invoice-dollar"></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="submenu__item">
+                    <a href="#" class="submenu__item--link">
+                      <p class="submenu__item--link--title">پیش فاکتور</p>
+                      <div class="icon__submenu">
+                        <span class="fas fa-file-invoice-dollar"></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="submenu__item">
+                    <a href="#" class="submenu__item--link">
+                      <p class="submenu__item--link--title">پیش فاکتور</p>
+                      <div class="icon__submenu">
+                        <span class="fas fa-file-invoice-dollar"></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="submenu__item">
+                    <a href="#" class="submenu__item--link">
+                      <p class="submenu__item--link--title">پیش فاکتور</p>
+                      <div class="icon__submenu">
+                        <span class="fas fa-file-invoice-dollar"></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="submenu__item">
+                    <a href="#" class="submenu__item--link">
+                      <p class="submenu__item--link--title">پیش فاکتور</p>
+                      <div class="icon__submenu">
+                        <span class="fas fa-file-invoice-dollar"></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="submenu__item">
+                    <a href="#" class="submenu__item--link">
+                      <p class="submenu__item--link--title">پیش فاکتور</p>
+                      <div class="icon__submenu">
+                        <span class="fas fa-file-invoice-dollar"></span>
+                      </div>
+                    </a>
+                  </li>
+
+                  <li class="submenu__item">
+                    <a href="#" class="submenu__item--link">
+                      <p class="submenu__item--link--title">پیش فاکتور</p>
+                      <div class="icon__submenu">
+                        <span class="fas fa-file-invoice-dollar"></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="submenu__item">
+                    <a href="#" class="submenu__item--link">
+                      <p class="submenu__item--link--title">پیش فاکتور</p>
+                      <div class="icon__submenu">
+                        <span class="fas fa-file-invoice-dollar"></span>
+                      </div>
+                    </a>
+                  </li>
+
+                  <li class="submenu__item">
+                    <a href="#" class="submenu__item--link">
+                      <p class="submenu__item--link--title">پیش فاکتور</p>
+                      <div class="icon__submenu">
+                        <span class="fas fa-file-invoice-dollar"></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="submenu__item">
+                    <a href="#" class="submenu__item--link">
+                      <p class="submenu__item--link--title">پیش فاکتور</p>
+                      <div class="icon__submenu">
+                        <span class="fas fa-file-invoice-dollar"></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="submenu__item">
+                    <a href="#" class="submenu__item--link">
+                      <p class="submenu__item--link--title">پیش فاکتور</p>
+                      <div class="icon__submenu">
+                        <span class="fas fa-file-invoice-dollar"></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="submenu__item">
+                    <a href="#" class="submenu__item--link">
+                      <p class="submenu__item--link--title">پیش فاکتور</p>
+                      <div class="icon__submenu">
+                        <span class="fas fa-file-invoice-dollar"></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="submenu__item">
+                    <a href="#" class="submenu__item--link">
+                      <p class="submenu__item--link--title">پیش فاکتور</p>
+                      <div class="icon__submenu">
+                        <span class="fas fa-file-invoice-dollar"></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="submenu__item">
+                    <a href="#" class="submenu__item--link">
+                      <p class="submenu__item--link--title">پیش فاکتور</p>
+                      <div class="icon__submenu">
+                        <span class="fas fa-file-invoice-dollar"></span>
+                      </div>
+                    </a>
+                  </li>
+
+                  <li class="submenu__item">
+                    <a href="#" class="submenu__item--link">
+                      <p class="submenu__item--link--title">پیش فاکتور</p>
+                      <div class="icon__submenu">
+                        <span class="fas fa-file-invoice-dollar"></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="submenu__item">
+                    <a href="#" class="submenu__item--link">
+                      <p class="submenu__item--link--title">پیش فاکتور</p>
+                      <div class="icon__submenu">
+                        <span class="fas fa-file-invoice-dollar"></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="submenu__item">
+                    <a href="#" class="submenu__item--link">
+                      <p class="submenu__item--link--title">پیش فاکتور</p>
+                      <div class="icon__submenu">
+                        <span class="fas fa-file-invoice-dollar"></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="submenu__item">
+                    <a href="#" class="submenu__item--link">
+                      <p class="submenu__item--link--title">پیش فاکتور</p>
+                      <div class="icon__submenu">
+                        <span class="fas fa-file-invoice-dollar"></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="submenu__item">
+                    <a href="#" class="submenu__item--link">
+                      <p class="submenu__item--link--title">پیش فاکتور</p>
+                      <div class="icon__submenu">
+                        <span class="fas fa-file-invoice-dollar"></span>
+                      </div>
+                    </a>
+                  </li>
+
+                  <li class="submenu__item">
+                    <a href="#" class="submenu__item--link">
+                      <p class="submenu__item--link--title">پیش فاکتور</p>
+                      <div class="icon__submenu">
+                        <span class="fas fa-file-invoice-dollar"></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="submenu__item">
+                    <a href="#" class="submenu__item--link">
+                      <p class="submenu__item--link--title">پیش فاکتور</p>
+                      <div class="icon__submenu">
+                        <span class="fas fa-file-invoice-dollar"></span>
+                      </div>
+                    </a>
+                  </li>
+                  <!-- not loop -->
+                  <div class="line-sidbar"></div>
+                </ul>
+              </div>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__item--link">
+                <div class="nav__item--link--picuter">
+                  <span class="fas fa-cart-plus icon--navbar"></span>
+                </div>
+                <span class="nav__item--link--title">بازاریابی</span>
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__item--link">
+                <div class="nav__item--link--picuter">
+                  <span class="icon--navbar fas fa-chart-bar"></span>
+                </div>
+                <span class="nav__item--link--title">گزارش ها</span>
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__item--link">
+                <div class="nav__item--link--picuter">
+                  <span class="icon--navbar fas fa-city"></span>
+                </div>
+                <span class="nav__item--link--title">تنظیمات</span>
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__item--link">
+                <div class="nav__item--link--picuter">
+                  <span class="icon--navbar fas fa-briefcase"></span>
+                </div>
+                <span class="nav__item--link--title">سایر</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- end Sidbar    -->
+
+    <!-- start main__container -->
+    <main class="main">
+      <div class="container">
+        <div class="row">
+          <div class="breadcrumbs u-margin-top-9 u-margin-bottom-19">
+            <div class="breadcrumbs--title">
+              <h5><a href="#" class="title"> حساب ها </a></h5>
+              <img
+                src="dist/images/arrow_down.svg"
+                alt=""
+                class="breadcrumbs--icon"
+              />
+              <p>ايجاد كردن</p>
+            </div>
+          </div>
+        </div>
+
+        <form class="row" action="#">
+          <div class="col-md-12 u-margin-bottom-19">
+            <div class="submit__form">
+              <button class="btn btn--success" type="submit">ذخیره</button>
+              <button class="btn btn--outline--success">لغو</button>
+            </div>
+          </div>
+          <div class="grid grid__container u-padding-bottom-100">
+            <div class="row u-margin-0">
+              <div class="master__form">
+                <div class="row u-margin-0 u-margin-bottom-30">
+                  <div class="panel">
+                    <div class="panel__header">
+                      <div class="panel__header--row">
+                        <h3>بررسی اجمالی</h3>
+                      </div>
+                    </div>
+                    <div class="panel__body">
+                      <div class="row u-margin-top-16">
+                        <div class="col-md-4 col-sm-12 u-margin-bottom-sm-16">
+                          <div class="m-form--group">
+                            <div class="m-form--group--top">
+                              <div class="right">
+                                <label for="" class="title"
+                                  >نام کسب و کار <span>*</span></label
+                                ><!-- error -->
+                              </div>
+                            </div>
+                            <div class="m-form--group--bottom">
+                              <div class="m-form--control--row">
+                                <div class="container__forms">
+                                  <input
+                                    type="text"
+                                    name=""
+                                    id=""
+                                    class="m-form--control m-form--control--input"
+                                  />
+                                </div>
+                                <!-- error -->
+
+                                <span
+                                  class="error--message"
+                                  style="display: none"
+                                  >نام کسب و کار مورد نیاز است</span
+                                >
+                              </div>
+
+                              <p class="data__value" style="display: none">
+                                این متن تستی است
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-md-4 col-sm-12 u-margin-bottom-sm-16">
+                          <div class="m-form--group">
+                            <div class="m-form--group--top">
+                              <div class="right">
+                                <label for="" class="title"> مالک </label
+                                ><!-- error -->
+                              </div>
+                            </div>
+                            <div class="m-form--group--bottom">
+                              <div class="m-form--control--row">
+                                <div class="container__forms">
+                                  <input
+                                    type="text"
+                                    name=""
+                                    id=""
+                                    class="m-form--control m-form--control--input"
+                                  />
+                                  <div class="container__button">
+                                    <button class="btn__form btn__form--modal btn__Open--Modal" data-type="modal" data-target-modal-id="crmModal-1">
+                                      <img
+                                        src="dist/images/arrow_down.svg"
+                                        alt=""
+                                      />
+                                    </button>
+                                    <button class="btn__form btn__form--close">
+                                      <img
+                                        src="dist/images/close___icon.svg"
+                                        alt=""
+                                      />
+                                    </button>
+                                  </div>
+                                  <div class="modal" id="crmModal-1">
+                                    <div class="modal--bg"></div>
+                                    <div class="modal__content">
+                                      <div class="panel u-transparent-bg">
+                                        <div class="panel__header bg__header">
+                                          <div class="panel__header--row">
+                                            <h3>بررسی اجمالی</h3>
+                                          </div>
+                                        </div>
+                                        <div class="panel__body u-overflow-y-auto">
+                                          <div class="row u-padding">
+                                            <div class="col-md-12">
+                                              <div class="submit__form">
+                                                <button class="btn btn--success" type="submit">ذخیره</button>
+                                                <button class="btn btn--outline--success btnCloseModal" data-bs-dismiss-id="crmModal-1" aria-label="Close">لغو</button>
+                                              </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                              <div class="grid grid__container--modal">
+                                                <div class="row u-margin-0">
+                                                  <div class="master__form">
+                                                    <div class="row u-margin-0 u-margin-bottom-30">
+                                                      <div class="panel">
+                                                        <div class="panel__header">
+                                                          <div class="panel__header--row">
+                                                            <h3></h3>
+                                                          </div>
+                                                        </div>
+                                                        <div class="panel__body">
+                                                          <div class="row u-margin-top-16">
+                                                            <div class="col-md-6 col-sm-12 u-margin-bottom-sm-16">
+                                                              <div class="m-form--group">
+                                                                <div class="m-form--group--top">
+                                                                  <div class="right">
+                                                                    <label for="" class="title"
+                                                                      >نام کسب و کار <span>*</span></label
+                                                                    ><!-- error -->
+                                                                  </div>
+                                                                </div>
+                                                                <div class="m-form--group--bottom">
+                                                                  <div class="m-form--control--row">
+                                                                    <div class="container__forms">
+                                                                      <select class="m-form--control--select">
+                                                                        <option value="قرمز">قرمز</option>
+                                                                        <option value="سبز">سبز</option>
+                                                                        <option value="آبی">آبی</option>
+                                                                        <option value="آبی">آبی</option>
+                                                                      </select>
+                                                                    </div>
+                                                                    <!-- error -->
+                                    
+                                                                    <span
+                                                                      class="error--message"
+                                                                      style="display: none"
+                                                                      >نام کسب و کار مورد نیاز است</span
+                                                                    >
+                                                                  </div>
+                                    
+                                                                  <p class="data__value" style="display: none">
+                                                                    این متن تستی است
+                                                                  </p>
+                                                                </div>
+                                                              </div>
+                                                            </div>
+                                                            <div class="col-md-6 col-sm-12 u-margin-bottom-sm-16">
+                                                              <div class="m-form--group">
+                                                                <div class="m-form--group--top">
+                                                                  <div class="right">
+                                                                    <label for="" class="title">نام کسب و کار <span>*</span></label><!-- error -->
+                                                                  </div>
+                                                                </div>
+                                                                <div class="m-form--group--bottom">
+                                                                  <div class="m-form--control--row">
+                                                                    <div class="container__forms">
+                                                                      <input type="text" name="" id="" class="m-form--control m-form--control--input">
+                                                                    </div>
+                                                                    <!-- error -->
+                                    
+                                                                    <span class="error--message" style="display: none">نام کسب و کار مورد نیاز است</span>
+                                                                  </div>
+                                    
+                                                                  <p class="data__value" style="display: none">
+                                                                    این متن تستی است
+                                                                  </p>
+                                                                </div>
+                                                              </div>
+                                                            </div>
+                                                          </div>
+                                                          <div class="row u-margin-top-16">
+                                                            <div class="col-md-6 col-sm-12 u-margin-bottom-sm-16">
+                                                              <div class="m-form--group">
+                                                                <div class="m-form--group--top">
+                                                                  <div class="right">
+                                                                    <label for="" class="title">
+                                                                      اختصاص داده شده کاربر </label><!-- error -->
+                                                                  </div>
+                                                                </div>
+                                                                <div class="m-form--group--bottom">
+                                                                  <div class="m-form--control--row">
+                                                                    <div class="container__forms">
+                                                                      <input type="text" name="" id="" class="m-form--control m-form--control--input">
+                                                                      <div class="container__button">
+                                                                        <button class="btn__form btn__form--modal">
+                                                                          <img src="dist/images/arrow_down.svg" alt="">
+                                                                        </button>
+                                                                        <button class="btn__form btn__form--close">
+                                                                          <img src="dist/images/close___icon.svg" alt="">
+                                                                        </button>
+                                                                      </div>
+                                                                    </div>
+                                                                    <!-- error -->
+                                    
+                                                                    <span class="error--message" style="display: none">نام کسب و کار مورد نیاز است</span>
+                                                                  </div>
+                                    
+                                                                  <p class="data__value" style="display: none">
+                                                                    این متن تستی است
+                                                                  </p>
+                                                                </div>
+                                                              </div>
+                                                            </div>
+                                                            <div class="col-md-6 col-sm-12 u-margin-bottom-sm-16">
+                                                              <div class="m-form--group">
+                                                                <div class="m-form--group--top">
+                                                                  <div class="right">
+                                                                    <label for="" class="title"> تیم </label><!-- error -->
+                                                                  </div>
+                                                                </div>
+                                                                <div class="m-form--group--bottom">
+                                                                  <div class="m-form--control--row">
+                                                                    <div class="container__forms">
+                                                                      <input type="text" name="" id="" class="m-form--control m-form--control--input">
+                                                                      <div class="container__button">
+                                                                        <button class="btn__form btn__form--modal">
+                                                                          <img src="dist/images/arrow_down.svg" alt="">
+                                                                        </button>
+                                                                      </div>
+                                                                    </div>
+                                                                    <!-- error -->
+                                    
+                                                                    <span class="error--message" style="display: none">نام کسب و کار مورد نیاز است</span>
+                                                                  </div>
+                                    
+                                                                  <p class="data__value" style="display: none">
+                                                                    این متن تستی است
+                                                                  </p>
+                                                                </div>
+                                                              </div>
+                                                            </div>
+                                                          </div>
+                                                          <div class="row u-margin-top-16">
+                                                            <div class="col-md-12 col-sm-12 u-margin-bottom-sm-16">
+                                                              <div class="m-form--group">
+                                                                <div class="m-form--group--top">
+                                                                  <div class="right">
+                                                                    <label for="" class="title"
+                                                                      >تلفن کسب و کار <span>*</span></label
+                                                                    ><!-- error -->
+                                                                  </div>
+                                                                </div>
+                                                                <div class="m-form--group--bottom">
+                                                                  <div class="m-form--control--row">
+                                                                    <div class="container__forms">
+                                                                      <select
+                                                                        class="m-form--control--select m-form--control--select--custom"
+                                                                      >
+                                                                        <option value="آبی">
+                                                                          آبی
+                                                                        </option>
+                                                                        <option value="قرمز">قرمز</option>
+                                                                      </select>
+                                                                      <input
+                                                                        type="text"
+                                                                        name=""
+                                                                        id=""
+                                                                        class="m-form--control m-form--control--input"
+                                                                      />
+                                                                      <div class="container__button">
+                                                                        <button class="btn__form btn__form--start">
+                                                                          <img src="dist/images/start.png" alt="" />
+                                                                        </button>
+                                                                        <button class="btn__form btn__form--modal">
+                                                                          <img src="dist/images/ben.png" alt="" />
+                                                                        </button>
+                                    
+                                                                        <button
+                                                                          class="btn__form btn__form--exclamation"
+                                                                        >
+                                                                          <img
+                                                                            src="dist/images/exclamation.png"
+                                                                            alt=""
+                                                                          />
+                                                                        </button>
+                                                                        <button class="btn__form btn__form--close">
+                                                                          <img
+                                                                            src="dist/images/close___icon.svg"
+                                                                            alt=""
+                                                                          />
+                                                                        </button>
+                                                                      </div>
+                                                                    </div>
+                                                                    <button class="btn__form btn__form--duplicate">
+                                                                      <img src="dist/images/duplicate.png" alt="" />
+                                                                    </button>
+                                                                  </div>
+                                                                </div>
+                                                              </div>
+                                                            </div>
+                                                          </div>
+                                                          <div class="row u-margin-top-16">
+                                                            <div class="col-md-6 col-sm-12 u-margin-bottom-sm-16">
+                                                              <div class="m-form--group">
+                                                                <div class="m-form--group--top">
+                                                                  <div class="right">
+                                                                    <label for="" class="title"
+                                                                      >نام کسب و کار <span>*</span></label
+                                                                    ><!-- error -->
+                                                                  </div>
+                                                                </div>
+                                                                <div class="m-form--group--bottom">
+                                                                  <div class="m-form--control--row">
+                                                                    <div class="container__forms">
+                                                                      <select class="m-form--control--select">
+                                                                        <option value="قرمز">قرمز</option>
+                                                                        <option value="سبز">سبز</option>
+                                                                        <option value="آبی">آبی</option>
+                                                                        <option value="آبی">آبی</option>
+                                                                      </select>
+                                                                    </div>
+                                                                    <!-- error -->
+                                    
+                                                                    <span
+                                                                      class="error--message"
+                                                                      style="display: none"
+                                                                      >نام کسب و کار مورد نیاز است</span
+                                                                    >
+                                                                  </div>
+                                    
+                                                                  <p class="data__value" style="display: none">
+                                                                    این متن تستی است
+                                                                  </p>
+                                                                </div>
+                                                              </div>
+                                                            </div>
+                                                            <div class="col-md-6 col-sm-12 u-margin-bottom-sm-16">
+                                                              <div class="m-form--group">
+                                                                <div class="m-form--group--top">
+                                                                  <div class="right">
+                                                                    <label for="" class="title">نام کسب و کار <span>*</span></label><!-- error -->
+                                                                  </div>
+                                                                </div>
+                                                                <div class="m-form--group--bottom">
+                                                                  <div class="m-form--control--row">
+                                                                    <div class="container__forms">
+                                                                      <input type="text" name="" id="" class="m-form--control m-form--control--input">
+                                                                    </div>
+                                                                    <!-- error -->
+                                    
+                                                                    <span class="error--message" style="display: none">نام کسب و کار مورد نیاز است</span>
+                                                                  </div>
+                                    
+                                                                  <p class="data__value" style="display: none">
+                                                                    این متن تستی است
+                                                                  </p>
+                                                                </div>
+                                                              </div>
+                                                            </div>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <div class="row u-margin-0">
+                                                  <div class="master__form">
+                                                    <div class="row u-margin-0 u-margin-bottom-30">
+                                                      <div class="panel">
+                                                        <div class="panel__header">
+                                                          <div class="panel__header--row">
+                                                            <h3></h3>
+                                                          </div>
+                                                        </div>
+                                                        <div class="panel__body">
+                                                          <div class="row u-margin-top-16">
+                                                            <div class="col-md-12 col-sm-12 u-margin-bottom-sm-16">
+                                                              <div class="m-form--group">
+                                                                <div class="m-form--group--top">
+                                                                  <div class="right">
+                                                                    <label for="" class="title">
+                                                                      اختصاص داده شده کاربر </label><!-- error -->
+                                                                  </div>
+                                                                </div>
+                                                                <div class="m-form--group--bottom">
+                                                                  <div class="m-form--control--row">
+                                                                    <div class="container__forms">
+                                                                      <input type="text" name="" id="" class="m-form--control m-form--control--input">
+                                                                      <div class="container__button">
+                                                                        <button class="btn__form btn__form--modal">
+                                                                          <img src="dist/images/arrow_down.svg" alt="">
+                                                                        </button>
+                                                                        <button class="btn__form btn__form--close">
+                                                                          <img src="dist/images/close___icon.svg" alt="">
+                                                                        </button>
+                                                                      </div>
+                                                                    </div>
+                                                                    <!-- error -->
+                                    
+                                                                    <span class="error--message" style="display: none">نام کسب و کار مورد نیاز است</span>
+                                                                  </div>
+                                    
+                                                                  <p class="data__value" style="display: none">
+                                                                    این متن تستی است
+                                                                  </p>
+                                                                </div>
+                                                              </div>
+                                                            </div>
+                                    
+                                                            <div class="col-md-12 col-sm-12 u-margin-bottom-sm-16">
+                                                              <div class="m-form--group">
+                                                                <div class="m-form--group--top">
+                                                                  <div class="right">
+                                                                    <label for="" class="title"> تیم </label><!-- error -->
+                                                                  </div>
+                                                                </div>
+                                                                <div class="m-form--group--bottom">
+                                                                  <div class="m-form--control--row">
+                                                                    <div class="container__forms">
+                                                                      <input type="text" name="" id="" class="m-form--control m-form--control--input">
+                                                                      <div class="container__button">
+                                                                        <button class="btn__form btn__form--modal">
+                                                                          <img src="dist/images/arrow_down.svg" alt="">
+                                                                        </button>
+                                                                      </div>
+                                                                    </div>
+                                                                    <!-- error -->
+                                    
+                                                                    <span class="error--message" style="display: none">نام کسب و کار مورد نیاز است</span>
+                                                                  </div>
+                                    
+                                                                  <p class="data__value" style="display: none">
+                                                                    این متن تستی است
+                                                                  </p>
+                                                                </div>
+                                                              </div>
+                                                            </div>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!-- error -->
+
+                                <span
+                                  class="error--message"
+                                  style="display: none"
+                                  >نام کسب و کار مورد نیاز است</span
+                                >
+                              </div>
+
+                              <p class="data__value" style="display: none">
+                                این متن تستی است
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-md-4 col-sm-12 u-margin-bottom-sm-16">
+                          <div class="m-form--group">
+                            <div class="m-form--group--top">
+                              <div class="right">
+                                <label for="" class="title"
+                                  >نام کسب و کار <span>*</span></label
+                                ><!-- error -->
+                              </div>
+                            </div>
+                            <div class="m-form--group--bottom">
+                              <div class="m-form--control--row">
+                                <div class="container__forms">
+                                  <select class="m-form--control--select">
+                                    <option value="قرمز">قرمز</option>
+                                    <option value="سبز">سبز</option>
+                                    <option value="آبی">آبی</option>
+                                    <option value="آبی">آبی</option>
+                                  </select>
+                                </div>
+                                <!-- error -->
+
+                                <span
+                                  class="error--message"
+                                  style="display: none"
+                                  >نام کسب و کار مورد نیاز است</span
+                                >
+                              </div>
+
+                              <p class="data__value" style="display: none">
+                                این متن تستی است
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row u-margin-top-16">
+                        <div class="col-md-12 col-sm-12 u-margin-bottom-sm-16">
+                          <div class="m-form--group">
+                            <div class="m-form--group--top">
+                              <div class="right">
+                                <label for="" class="title"
+                                  >تلفن کسب و کار <span>*</span></label
+                                ><!-- error -->
+                              </div>
+                            </div>
+                            <div class="m-form--group--bottom">
+                              <div class="m-form--control--row">
+                                <div class="container__forms">
+                                  <select
+                                    class="m-form--control--select m-form--control--select--custom"
+                                  >
+                                    <option value="نام  کسب و کار">
+                                      آبی
+                                    </option>
+                                    <option value="قرمز">قرمز</option>
+                                  </select>
+                                  <input
+                                    type="text"
+                                    name=""
+                                    id=""
+                                    class="m-form--control m-form--control--input"
+                                  />
+                                  <div class="container__button">
+                                    <button class="btn__form btn__form--start">
+                                      <img src="dist/images/start.png" alt="" />
+                                    </button>
+                                    <button class="btn__form btn__form--modal">
+                                      <img src="dist/images/ben.png" alt="" />
+                                    </button>
+
+                                    <button
+                                      class="btn__form btn__form--exclamation"
+                                    >
+                                      <img
+                                        src="dist/images/exclamation.png"
+                                        alt=""
+                                      />
+                                    </button>
+                                    <button class="btn__form btn__form--close">
+                                      <img
+                                        src="dist/images/close___icon.svg"
+                                        alt=""
+                                      />
+                                    </button>
+                                  </div>
+                                </div>
+                                <button class="btn__form btn__form--duplicate">
+                                  <img src="dist/images/duplicate.png" alt="" />
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row u-margin-top-16">
+                        <div class="col-md-12 col-sm-12 u-margin-bottom-sm-16">
+                          <div class="m-form--group">
+                            <div class="m-form--group--top">
+                              <div class="right">
+                                <label for="" class="title"
+                                  >نام <span>*</span></label
+                                ><!-- error -->
+                              </div>
+                            </div>
+                            <div class="m-form--group--bottom">
+                              <div class="m-form--control--row u-d--flex">
+                                <div class="container__forms gender">
+                                  <select class="m-form--control--select">
+                                    <option value="men">مرد</option>
+                                    <option value="women">زن</option>
+                                  </select>
+                                </div>
+                                <div class="container__forms firstName">
+                                  <input
+                                    type="text"
+                                    name=""
+                                    id=""
+                                    class="m-form--control m-form--control--input"
+                                  />
+                                </div>
+                                <div class="container__forms lastName">
+                                  <input
+                                    type="text"
+                                    name=""
+                                    id=""
+                                    class="m-form--control m-form--control--input"
+                                  />
+                                  <p class="data__value" style="display: none">
+                                    این متن تستی است
+                                  </p>
+                                </div>
+                                <!-- error -->
+
+                                <span
+                                  class="error--message"
+                                  style="display: none"
+                                  >نام کسب و کار مورد نیاز است</span
+                                >
+                              </div>
+
+                              <p class="data__value" style="display: none">
+                                این متن تستی است
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row u-margin-top-16">
+                        <div class="col-md-12 col-sm-12 u-margin-bottom-sm-16">
+                          <div class="m-form--group">
+                            <div class="m-form--group--top">
+                              <div class="right">
+                                <label for="" class="title">آدرس</label>
+                              </div>
+                            </div>
+                            <div class="m-form--group--bottom">
+                              <div class="m-form--control--row">
+                                <div class="address">
+                                  <div class="address__street">
+                                    <textarea
+                                      name=""
+                                      placeholder="خیابان"
+                                      id=""
+                                      class="form-control--textarea"
+                                    ></textarea>
+                                  </div>
+                                  <div class="address__city">
+                                    <div class="container__forms">
+                                      <input
+                                        type="text"
+                                        name=""
+                                        id=""
+                                        placeholder="شهر"
+                                        class="m-form--control m-form--control--input"
+                                      />
+                                    </div>
+                                    <div class="container__forms">
+                                      <input
+                                        type="text"
+                                        name=""
+                                        id=""
+                                        placeholder="استان"
+                                        class="m-form--control m-form--control--input"
+                                      />
+                                    </div>
+                                    <div class="container__forms">
+                                      <input
+                                        type="text"
+                                        name=""
+                                        id=""
+                                        placeholder="کد پستی"
+                                        class="m-form--control m-form--control--input"
+                                      />
+                                    </div>
+                                  </div>
+                                  <div class="address__country">
+                                    <div class="container__forms">
+                                      <input
+                                        type="text"
+                                        name=""
+                                        id=""
+                                        placeholder="کشور"
+                                        class="m-form--control m-form--control--input"
+                                      />
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row u-margin-top-16">
+                        <div class="col-md-6 col-sm-12 u-margin-bottom-sm-16">
+                          <div class="m-form--group">
+                            <div class="m-form--group--top">
+                              <div class="right">
+                                <label for="" class="title">vip </label
+                                ><!-- error -->
+                              </div>
+                            </div>
+                            <div class="m-form--group--bottom">
+                              <label class="container__checkbox">
+                                <span class="title--checkbox"></span>
+                                <input
+                                  type="checkbox"
+                                 
+                                  class="delete_checkbox"
+                                />
+                                <span class="checkmark"></span>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12 u-margin-bottom-sm-16">
+                          <div class="m-form--group">
+                            <div class="m-form--group--top">
+                              <div class="right">
+                                <label for="" class="title">تاریخ </label
+                                ><!-- error -->
+                              </div>
+                            </div>
+                            <div class="m-form--group--bottom">
+                              <div class="m-form--control--row">
+                                <div class="container__forms">
+                                  <input
+                                    type="text"
+                                    class="form__control__Datepiker m-form--control m-form--control--input"
+                                  />
+                                </div>
+                                <!-- error -->
+
+                                <span
+                                  class="error--message"
+                                  style="display: none"
+                                  >نام کسب و کار مورد نیاز است</span
+                                >
+                              </div>
+
+                              <p class="data__value" style="display: none">
+                                این متن تستی است
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row u-margin-top-16">
+                        <div class="col-md-12 col-sm-12 u-margin-bottom-sm-16">
+                          <div class="m-form--group">
+                            <div class="m-form--group--top">
+                              <div class="right">
+                                <label for="" class="title">شرح </label
+                                ><!-- error -->
+                              </div>
+                            </div>
+                            <div class="m-form--group--bottom">
+                              <div class="m-form--control--row">
+                                <textarea
+                                  name=""
+                                  id=""
+                                  class="form-control--textarea"
+                                  placeholder="توضیحات"
+                                ></textarea>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row u-margin-0">
+              <div class="master__form">
+                <div class="row u-margin-0 u-margin-bottom-30">
+                  <div class="panel">
+                    <div class="panel__header">
+                      <div class="panel__header--row">
+                        <h3>بررسی اجمالی</h3>
+                      </div>
+                    </div>
+                    <div class="panel__body">
+                      <div class="row u-margin-top-16">
+                        <div class="col-md-12 col-sm-12 u-margin-bottom-sm-16">
+                          <div class="m-form--group">
+                            <div class="m-form--group--top">
+                              <div class="right">
+                                <label for="" class="title">
+                                  اختصاص داده شده کاربر </label
+                                ><!-- error -->
+                              </div>
+                            </div>
+                            <div class="m-form--group--bottom">
+                              <div class="m-form--control--row">
+                                <div class="container__forms">
+                                  <input
+                                    type="text"
+                                    name=""
+                                    id=""
+                                    class="m-form--control m-form--control--input"
+                                  />
+                                  <div class="container__button">
+                                    <button class="btn__form btn__form--modal btn__Open--Modal" data-type="modal" data-target-modal-id="crmModal-3">
+                                      <img
+                                        src="dist/images/arrow_down.svg"
+                                        alt=""
+                                      />
+                                    </button>
+                                    <button class="btn__form btn__form--close">
+                                      <img
+                                        src="dist/images/close___icon.svg"
+                                        alt=""
+                                      />
+                                    </button>
+                                  </div>
+                                  <div class="modal" id="crmModal-3">
+                                    <div class="modal--bg"></div>
+                                    <div class="modal__content">
+                                      <div class="panel u-transparent-bg">
+                                        <div class="panel__header bg__header">
+                                          <div class="panel__header--row">
+                                            <h3>بررسی اجمالی</h3>
+                                          </div>
+                                        </div>
+                                        <div class="panel__body u-overflow-y-auto">
+                                          <div class="row u-padding">
+                                            <div class="col-md-12">
+                                              <div class="submit__form">
+                                                <button class="btn btn--success" type="submit">ذخیره</button>
+                                                <button class="btn btn--outline--success btnCloseModal" data-bs-dismiss-id="crmModal-3" aria-label="Close">لغو</button>
+                                              </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                              <div class="grid grid__container--modal">
+                                                <div class="row u-margin-0">
+                                                  <div class="master__form">
+                                                    <div class="row u-margin-0 u-margin-bottom-30">
+                                                      <div class="panel">
+                                                        <div class="panel__header">
+                                                          <div class="panel__header--row">
+                                                            <h3></h3>
+                                                          </div>
+                                                        </div>
+                                                        <div class="panel__body">
+                                                          <div class="row u-margin-top-16">
+                                                            <div class="col-md-6 col-sm-12 u-margin-bottom-sm-16">
+                                                              <div class="m-form--group">
+                                                                <div class="m-form--group--top">
+                                                                  <div class="right">
+                                                                    <label for="" class="title"
+                                                                      >نام کسب و کار <span>*</span></label
+                                                                    ><!-- error -->
+                                                                  </div>
+                                                                </div>
+                                                                <div class="m-form--group--bottom">
+                                                                  <div class="m-form--control--row">
+                                                                    <div class="container__forms">
+                                                                      <select class="m-form--control--select">
+                                                                        <option value="قرمز">قرمز</option>
+                                                                        <option value="سبز">سبز</option>
+                                                                        <option value="آبی">آبی</option>
+                                                                        <option value="آبی">آبی</option>
+                                                                      </select>
+                                                                    </div>
+                                                                    <!-- error -->
+                                    
+                                                                    <span
+                                                                      class="error--message"
+                                                                      style="display: none"
+                                                                      >نام کسب و کار مورد نیاز است</span
+                                                                    >
+                                                                  </div>
+                                    
+                                                                  <p class="data__value" style="display: none">
+                                                                    این متن تستی است
+                                                                  </p>
+                                                                </div>
+                                                              </div>
+                                                            </div>
+                                                            <div class="col-md-6 col-sm-12 u-margin-bottom-sm-16">
+                                                              <div class="m-form--group">
+                                                                <div class="m-form--group--top">
+                                                                  <div class="right">
+                                                                    <label for="" class="title">نام کسب و کار <span>*</span></label><!-- error -->
+                                                                  </div>
+                                                                </div>
+                                                                <div class="m-form--group--bottom">
+                                                                  <div class="m-form--control--row">
+                                                                    <div class="container__forms">
+                                                                      <input type="text" name="" id="" class="m-form--control m-form--control--input">
+                                                                    </div>
+                                                                    <!-- error -->
+                                    
+                                                                    <span class="error--message" style="display: none">نام کسب و کار مورد نیاز است</span>
+                                                                  </div>
+                                    
+                                                                  <p class="data__value" style="display: none">
+                                                                    این متن تستی است
+                                                                  </p>
+                                                                </div>
+                                                              </div>
+                                                            </div>
+                                                          </div>
+                                                          <div class="row u-margin-top-16">
+                                                            <div class="col-md-6 col-sm-12 u-margin-bottom-sm-16">
+                                                              <div class="m-form--group">
+                                                                <div class="m-form--group--top">
+                                                                  <div class="right">
+                                                                    <label for="" class="title">
+                                                                      اختصاص داده شده کاربر </label><!-- error -->
+                                                                  </div>
+                                                                </div>
+                                                                <div class="m-form--group--bottom">
+                                                                  <div class="m-form--control--row">
+                                                                    <div class="container__forms">
+                                                                      <input type="text" name="" id="" class="m-form--control m-form--control--input">
+                                                                      <div class="container__button">
+                                                                        <button class="btn__form btn__form--modal">
+                                                                          <img src="dist/images/arrow_down.svg" alt="">
+                                                                        </button>
+                                                                        <button class="btn__form btn__form--close">
+                                                                          <img src="dist/images/close___icon.svg" alt="">
+                                                                        </button>
+                                                                      </div>
+                                                                    </div>
+                                                                    <!-- error -->
+                                    
+                                                                    <span class="error--message" style="display: none">نام کسب و کار مورد نیاز است</span>
+                                                                  </div>
+                                    
+                                                                  <p class="data__value" style="display: none">
+                                                                    این متن تستی است
+                                                                  </p>
+                                                                </div>
+                                                              </div>
+                                                            </div>
+                                                            <div class="col-md-6 col-sm-12 u-margin-bottom-sm-16">
+                                                              <div class="m-form--group">
+                                                                <div class="m-form--group--top">
+                                                                  <div class="right">
+                                                                    <label for="" class="title"> تیم </label><!-- error -->
+                                                                  </div>
+                                                                </div>
+                                                                <div class="m-form--group--bottom">
+                                                                  <div class="m-form--control--row">
+                                                                    <div class="container__forms">
+                                                                      <input type="text" name="" id="" class="m-form--control m-form--control--input">
+                                                                      <div class="container__button">
+                                                                        <button class="btn__form btn__form--modal">
+                                                                          <img src="dist/images/arrow_down.svg" alt="">
+                                                                        </button>
+                                                                      </div>
+                                                                    </div>
+                                                                    <!-- error -->
+                                    
+                                                                    <span class="error--message" style="display: none">نام کسب و کار مورد نیاز است</span>
+                                                                  </div>
+                                    
+                                                                  <p class="data__value" style="display: none">
+                                                                    این متن تستی است
+                                                                  </p>
+                                                                </div>
+                                                              </div>
+                                                            </div>
+                                                          </div>
+                                                          <div class="row u-margin-top-16">
+                                                            <div class="col-md-12 col-sm-12 u-margin-bottom-sm-16">
+                                                              <div class="m-form--group">
+                                                                <div class="m-form--group--top">
+                                                                  <div class="right">
+                                                                    <label for="" class="title"
+                                                                      >تلفن کسب و کار <span>*</span></label
+                                                                    ><!-- error -->
+                                                                  </div>
+                                                                </div>
+                                                                <div class="m-form--group--bottom">
+                                                                  <div class="m-form--control--row">
+                                                                    <div class="container__forms">
+                                                                      <select
+                                                                        class="m-form--control--select m-form--control--select--custom"
+                                                                      >
+                                                                        <option value="نام  کسب و کار">
+                                                                          آبی
+                                                                        </option>
+                                                                        <option value="قرمز">قرمز</option>
+                                                                      </select>
+                                                                      <input
+                                                                        type="text"
+                                                                        name=""
+                                                                        id=""
+                                                                        class="m-form--control m-form--control--input"
+                                                                      />
+                                                                      <div class="container__button">
+                                                                        <button class="btn__form btn__form--start">
+                                                                          <img src="dist/images/start.png" alt="" />
+                                                                        </button>
+                                                                        <button class="btn__form btn__form--modal">
+                                                                          <img src="dist/images/ben.png" alt="" />
+                                                                        </button>
+                                    
+                                                                        <button
+                                                                          class="btn__form btn__form--exclamation"
+                                                                        >
+                                                                          <img
+                                                                            src="dist/images/exclamation.png"
+                                                                            alt=""
+                                                                          />
+                                                                        </button>
+                                                                        <button class="btn__form btn__form--close">
+                                                                          <img
+                                                                            src="dist/images/close___icon.svg"
+                                                                            alt=""
+                                                                          />
+                                                                        </button>
+                                                                      </div>
+                                                                    </div>
+                                                                    <button class="btn__form btn__form--duplicate">
+                                                                      <img src="dist/images/duplicate.png" alt="" />
+                                                                    </button>
+                                                                  </div>
+                                                                </div>
+                                                              </div>
+                                                            </div>
+                                                          </div>
+                                                          <div class="row u-margin-top-16">
+                                                            <div class="col-md-6 col-sm-12 u-margin-bottom-sm-16">
+                                                              <div class="m-form--group">
+                                                                <div class="m-form--group--top">
+                                                                  <div class="right">
+                                                                    <label for="" class="title"
+                                                                      >نام کسب و کار <span>*</span></label
+                                                                    ><!-- error -->
+                                                                  </div>
+                                                                </div>
+                                                                <div class="m-form--group--bottom">
+                                                                  <div class="m-form--control--row">
+                                                                    <div class="container__forms">
+                                                                      <select class="m-form--control--select">
+                                                                        <option value="قرمز">قرمز</option>
+                                                                        <option value="سبز">سبز</option>
+                                                                        <option value="آبی">آبی</option>
+                                                                        <option value="آبی">آبی</option>
+                                                                      </select>
+                                                                    </div>
+                                                                    <!-- error -->
+                                    
+                                                                    <span
+                                                                      class="error--message"
+                                                                      style="display: none"
+                                                                      >نام کسب و کار مورد نیاز است</span
+                                                                    >
+                                                                  </div>
+                                    
+                                                                  <p class="data__value" style="display: none">
+                                                                    این متن تستی است
+                                                                  </p>
+                                                                </div>
+                                                              </div>
+                                                            </div>
+                                                            <div class="col-md-6 col-sm-12 u-margin-bottom-sm-16">
+                                                              <div class="m-form--group">
+                                                                <div class="m-form--group--top">
+                                                                  <div class="right">
+                                                                    <label for="" class="title">نام کسب و کار <span>*</span></label><!-- error -->
+                                                                  </div>
+                                                                </div>
+                                                                <div class="m-form--group--bottom">
+                                                                  <div class="m-form--control--row">
+                                                                    <div class="container__forms">
+                                                                      <input type="text" name="" id="" class="m-form--control m-form--control--input">
+                                                                    </div>
+                                                                    <!-- error -->
+                                    
+                                                                    <span class="error--message" style="display: none">نام کسب و کار مورد نیاز است</span>
+                                                                  </div>
+                                    
+                                                                  <p class="data__value" style="display: none">
+                                                                    این متن تستی است
+                                                                  </p>
+                                                                </div>
+                                                              </div>
+                                                            </div>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <div class="row u-margin-0">
+                                                  <div class="master__form">
+                                                    <div class="row u-margin-0 u-margin-bottom-30">
+                                                      <div class="panel">
+                                                        <div class="panel__header">
+                                                          <div class="panel__header--row">
+                                                            <h3></h3>
+                                                          </div>
+                                                        </div>
+                                                        <div class="panel__body">
+                                                          <div class="row u-margin-top-16">
+                                                            <div class="col-md-12 col-sm-12 u-margin-bottom-sm-16">
+                                                              <div class="m-form--group">
+                                                                <div class="m-form--group--top">
+                                                                  <div class="right">
+                                                                    <label for="" class="title">
+                                                                      اختصاص داده شده کاربر </label><!-- error -->
+                                                                  </div>
+                                                                </div>
+                                                                <div class="m-form--group--bottom">
+                                                                  <div class="m-form--control--row">
+                                                                    <div class="container__forms">
+                                                                      <input type="text" name="" id="" class="m-form--control m-form--control--input">
+                                                                      <div class="container__button">
+                                                                        <button class="btn__form btn__form--modal">
+                                                                          <img src="dist/images/arrow_down.svg" alt="">
+                                                                        </button>
+                                                                        <button class="btn__form btn__form--close">
+                                                                          <img src="dist/images/close___icon.svg" alt="">
+                                                                        </button>
+                                                                      </div>
+                                                                    </div>
+                                                                    <!-- error -->
+                                    
+                                                                    <span class="error--message" style="display: none">نام کسب و کار مورد نیاز است</span>
+                                                                  </div>
+                                    
+                                                                  <p class="data__value" style="display: none">
+                                                                    این متن تستی است
+                                                                  </p>
+                                                                </div>
+                                                              </div>
+                                                            </div>
+                                    
+                                                            <div class="col-md-12 col-sm-12 u-margin-bottom-sm-16">
+                                                              <div class="m-form--group">
+                                                                <div class="m-form--group--top">
+                                                                  <div class="right">
+                                                                    <label for="" class="title"> تیم </label><!-- error -->
+                                                                  </div>
+                                                                </div>
+                                                                <div class="m-form--group--bottom">
+                                                                  <div class="m-form--control--row">
+                                                                    <div class="container__forms">
+                                                                      <input type="text" name="" id="" class="m-form--control m-form--control--input">
+                                                                      <div class="container__button">
+                                                                        <button class="btn__form btn__form--modal">
+                                                                          <img src="dist/images/arrow_down.svg" alt="">
+                                                                        </button>
+                                                                      </div>
+                                                                    </div>
+                                                                    <!-- error -->
+                                    
+                                                                    <span class="error--message" style="display: none">نام کسب و کار مورد نیاز است</span>
+                                                                  </div>
+                                    
+                                                                  <p class="data__value" style="display: none">
+                                                                    این متن تستی است
+                                                                  </p>
+                                                                </div>
+                                                              </div>
+                                                            </div>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!-- error -->
+
+                                <span
+                                  class="error--message"
+                                  style="display: none"
+                                  >نام کسب و کار مورد نیاز است</span
+                                >
+                              </div>
+
+                              <p class="data__value" style="display: none">
+                                این متن تستی است
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-12 col-sm-12 u-margin-bottom-sm-16">
+                          <div class="m-form--group">
+                            <div class="m-form--group--top">
+                              <div class="right">
+                                <label for="" class="title"> تیم </label
+                                ><!-- error -->
+                              </div>
+                            </div>
+                            <div class="m-form--group--bottom">
+                              <div class="m-form--control--row">
+                                <div class="container__forms">
+                                  <input
+                                    type="text"
+                                    name=""
+                                    id=""
+                                    class="m-form--control m-form--control--input"
+                                  />
+                                  <div class="container__button">
+                                    <button class="btn__form btn__form--modal btn__Open--Modal" data-type="modal" data-target-modal-id="crmModal-2">
+                                      <img
+                                        src="dist/images/arrow_down.svg"
+                                        alt=""
+                                      />
+                                    </button>
+                                  </div>
+                                  <div class="modal" id="crmModal-2">
+                                    <div class="modal--bg"></div>
+                                    <div class="modal__content">
+                                      <div class="panel u-transparent-bg">
+                                        <div class="panel__header bg__header">
+                                          <div class="panel__header--row">
+                                            <h3>بررسی اجمالی</h3>
+                                          </div>
+                                        </div>
+                                        <div class="panel__body u-overflow-y-auto">
+                                          <div class="row u-padding">
+                                            <div class="col-md-12">
+                                              <div class="submit__form">
+                                                <button class="btn btn--success" type="submit">ذخیره</button>
+                                                <button class="btn btn--outline--success btnCloseModal" data-bs-dismiss-id="crmModal-2" aria-label="Close">لغو</button>
+                                              </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                              <div class="row u-margin-0">
+                                                <div class="search__form">
+                                                  <form class="form__submit">
+                                                    <div class="form--group">
+                                                      <div class="dropdown form--group__dropdown">
+                                                        <button class="btn__dropdown">فقط من , همه</button>
+                                                        <div class="dropdown__items">
+                                                          <ul class="dropdown__menu">
+                                                            <li class="dropdown__menu--item">
+                                                              <a href="#" class="link">همه</a>
+                                                            </li>
+                                                            <li class="dropdown__menu--item">
+                                                              <a href="#" class="link">به تازگی ایجاد شده</a>
+                                                            </li>
+                                                            <li class="dropdown__menu--item">
+                                                              <label class="container__checkbox">
+                                                                <span class="title--checkbox">فقط من</span>
+                                                                <input type="checkbox" checked="checked">
+                                                                <span class="checkmark"></span>
+                                                              </label>
+                                                            </li>
+                                                            <li class="dropdown__menu--item">
+                                                              <label class="container__checkbox">
+                                                                <span class="title--checkbox">دنبال شده</span>
+                                                                <input type="checkbox" checked="checked">
+                                                                <span class="checkmark"></span>
+                                                              </label>
+                                                            </li>
+                                                          </ul>
+                                                        </div>
+                                                      </div>
+                                                      <input type="text" class="form--group__search--box" placeholder="جستجو کنید ...">
+                                                      <button class="btn btn--success form--group__sussess" type="submit"></button>
+                                                    </div>
+                                                  </form>
+                                                </div>
+                                              </div>
+                                              
+                                            </div>
+                                          </div>
+                                          <div class="row">
+                                            <div class="table__continer">
+                                              <div class="table__row">
+                                                <table class="table">
+                                                  <thead>
+                                                    <tr>
+                                                      <th>
+                                                        <div class="select-all">
+                                                          <label class="container__checkbox">
+                                                            <span class="title--checkbox"></span>
+                                                            <input type="checkbox" 
+                                                              checked="checked"  
+                                                              data-type="checked-all" 
+                                                              data-target="checked">
+                                                            <span class="checkmark"></span>
+                                                          </label>
+                                                          <div class="dropdown">
+                                                            <button class="btn__dropdown btn__dropdown__more"></button>
+                                                            <div class="dropdown__items">
+                                                              <ul class="dropdown__menu">
+                                                                <li class="dropdown__menu--item">
+                                                                  <a href="#" class="link">تمام نتایج را انتخاب کنید</a>
+                                                                </li>
+                                                              </ul>
+                                                            </div>
+                                                          </div>
+                                                        </div>
+                                                      </th>
+                                                      <th><a href="#">نام</a></th>
+                                                      <th><a href="#">نام کسب و کار</a></th>
+                                                      <th><a href="#">کد اشتراک</a></th>
+                                                      <th><a href="#">مالک</a></th>
+                                                      <th><a href="#">نمایندگی خدمات ریجیستر شده</a></th>
+                                                      <th><a href="#">فروش توسط (نماینده)</a></th>
+                                                      <th><a href="#">صنف کسب و کار</a></th>
+                                                      <th><a href="#">تلفن کسب و کار</a></th>
+                                                      <th><a href="#">استان</a></th>
+                                                      <th><a href="#">شهر</a></th>
+                                                      <th><a href="#">نوع</a></th>
+                                                      <th><a href="#">وضعیت</a></th>
+                                                      <th></th>
+                                                    </tr>
+                                                  </thead>
+                                                  <tbody>
+                                                    <tr>
+                                                      <td>
+                                                        <label class="container__checkbox">
+                                                          <span class="title--checkbox"></span>
+                                                          <input type="checkbox"  class="delete_checkbox"    data-checked-value="checked">
+                                                          <span class="checkmark"></span>
+                                                        </label>
+                                                      </td>
+                                                      <td>
+                                                        <span class="title">Account-00008</span>
+                                                      </td>
+                                                      <td>
+                                                        <a href="">این متن تستی است این متن تستی است این متن تستی است</a>
+                                                      </td>
+                                                      <td>
+                                                        <span class="title">این پیام تستی است</span>
+                                                      </td>
+                                                      <td><span class="title">این پیام تستی است</span></td>
+                                                      <td><span class="title"> این پیام تستی است</span></td>
+                                                      <td><span class="title">این پیام تستی است</span></td>
+                                                      <td><span class="title">این پیام تستی است</span></td>
+                                                      <td><span class="title">این پیام تستی است</span></td>
+                                                      <td><span class="title">این پیام تستی است</span></td>
+                                                      <td><span class="title">این پیام تستی است</span></td>
+                                                      <td>
+                                                        <span class="title type type-warn">سرمایگذار</span>
+                                                      </td>
+                                                      <td>
+                                                        <span class="title badge badge-default">غیر فعال</span>
+                                                      </td>
+                                                      <td>
+                                                        <div class="dropdown">
+                                                          <button class="btn__dropdown btn__dropdown__more"></button>
+                                                          <div class="dropdown__items">
+                                                            <ul class="dropdown__menu">
+                                                              <li class="dropdown__menu--item">
+                                                                <a href="#" class="link">چشم انداز</a>
+                                                              </li>
+                                                              <li class="dropdown__menu--item">
+                                                                <a href="#" class="link">ویرایش</a>
+                                                              </li>
+                                                              <li class="dropdown__menu--item">
+                                                                <a href="#" class="link">حذف</a>
+                                                              </li>
+                                                            </ul>
+                                                          </div>
+                                                        </div>
+                                                      </td>
+                                                    </tr>
+                                  
+                                                    <tr>
+                                                      <td>
+                                                        <label class="container__checkbox">
+                                                          <span class="title--checkbox"></span>
+                                                          <input type="checkbox"  class="delete_checkbox"  data-checked-value="checked">
+                                                          <span class="checkmark"></span>
+                                                        </label>
+                                                      </td>
+                                                      <td>
+                                                        <span class="title">Account-00008</span>
+                                                      </td>
+                                                      <td>
+                                                        <a href="">این متن تستی است این متن تستی است این متن تستی است</a>
+                                                      </td>
+                                                      <td>
+                                                        <span class="title">این پیام تستی است</span>
+                                                      </td>
+                                                      <td><span class="title">این پیام تستی است</span></td>
+                                                      <td><span class="title"> این پیام تستی است</span></td>
+                                                      <td><span class="title">این پیام تستی است</span></td>
+                                                      <td><span class="title">این پیام تستی است</span></td>
+                                                      <td><span class="title">این پیام تستی است</span></td>
+                                                      <td><span class="title">این پیام تستی است</span></td>
+                                                      <td><span class="title">این پیام تستی است</span></td>
+                                                      <td>
+                                                        <span class="title type type-info">سرمایگذار</span>
+                                                      </td>
+                                                      <td>
+                                                        <span class="title badge badge-sussess" title="فعال">فعال</span>
+                                                      </td>
+                                                      <td>
+                                                        <div class="dropdown">
+                                                          <button class="btn__dropdown btn__dropdown__more"></button>
+                                                          <div class="dropdown__items">
+                                                            <ul class="dropdown__menu">
+                                                              <li class="dropdown__menu--item">
+                                                                <a href="#" class="link">چشم انداز</a>
+                                                              </li>
+                                                              <li class="dropdown__menu--item">
+                                                                <a href="#" class="link">ویرایش</a>
+                                                              </li>
+                                                              <li class="dropdown__menu--item">
+                                                                <a href="#" class="link">حذف</a>
+                                                              </li>
+                                                            </ul>
+                                                          </div>
+                                                        </div>
+                                                      </td>
+                                                    </tr>
+                                  
+                                                    <tr>
+                                                      <td>
+                                                        <label class="container__checkbox">
+                                                          <span class="title--checkbox"></span>
+                                                          <input type="checkbox"  class="delete_checkbox"  data-checked-value="checked">
+                                                          <span class="checkmark"></span>
+                                                        </label>
+                                                      </td>
+                                                      <td>
+                                                        <span class="title">Account-00008</span>
+                                                      </td>
+                                                      <td>
+                                                        <a href="">این متن تستی است این متن تستی است این متن تستی است</a>
+                                                      </td>
+                                                      <td>
+                                                        <span class="title">این پیام تستی است</span>
+                                                      </td>
+                                                      <td><span class="title">این پیام تستی است</span></td>
+                                                      <td><span class="title"> این پیام تستی است</span></td>
+                                                      <td><span class="title">این پیام تستی است</span></td>
+                                                      <td><span class="title">این پیام تستی است</span></td>
+                                                      <td><span class="title">این پیام تستی است</span></td>
+                                                      <td><span class="title">این پیام تستی است</span></td>
+                                                      <td><span class="title">این پیام تستی است</span></td>
+                                                      <td>
+                                                        <span class="title type type-error">سرمایگذار</span>
+                                                      </td>
+                                                      <td>
+                                                        <span class="title badge badge-default">غیر فعال</span>
+                                                      </td>
+                                                      <td>
+                                                        <div class="dropdown">
+                                                          <button class="btn__dropdown btn__dropdown__more"></button>
+                                                          <div class="dropdown__items">
+                                                            <ul class="dropdown__menu">
+                                                              <li class="dropdown__menu--item">
+                                                                <a href="#" class="link">چشم انداز</a>
+                                                              </li>
+                                                              <li class="dropdown__menu--item">
+                                                                <a href="#" class="link">ویرایش</a>
+                                                              </li>
+                                                              <li class="dropdown__menu--item">
+                                                                <a href="#" class="link">حذف</a>
+                                                              </li>
+                                                            </ul>
+                                                          </div>
+                                                        </div>
+                                                      </td>
+                                                    </tr>
+                                  
+                                                    <tr>
+                                                      <td>
+                                                        <label class="container__checkbox">
+                                                          <span class="title--checkbox"></span>
+                                                          <input type="checkbox"  class="delete_checkbox"  data-checked-value="checked">
+                                                          <span class="checkmark"></span>
+                                                        </label>
+                                                      </td>
+                                                      <td>
+                                                        <span class="title">Account-00008</span>
+                                                      </td>
+                                                      <td>
+                                                        <a href="">این متن تستی است این متن تستی است این متن تستی است</a>
+                                                      </td>
+                                                      <td>
+                                                        <span class="title">این پیام تستی است</span>
+                                                      </td>
+                                                      <td><span class="title">این پیام تستی است</span></td>
+                                                      <td><span class="title"> این پیام تستی است</span></td>
+                                                      <td><span class="title">این پیام تستی است</span></td>
+                                                      <td><span class="title">این پیام تستی است</span></td>
+                                                      <td><span class="title">این پیام تستی است</span></td>
+                                                      <td><span class="title">این پیام تستی است</span></td>
+                                                      <td><span class="title">این پیام تستی است</span></td>
+                                                      <td>
+                                                        <span class="title type type-sussess">سرمایگذار</span>
+                                                      </td>
+                                                      <td>
+                                                        <span class="title badge badge-sussess" title="فعال">فعال</span>
+                                                      </td>
+                                                      <td>
+                                                        <div class="dropdown">
+                                                          <button class="btn__dropdown btn__dropdown__more"></button>
+                                                          <div class="dropdown__items">
+                                                            <ul class="dropdown__menu">
+                                                              <li class="dropdown__menu--item">
+                                                                <a href="#" class="link">چشم انداز</a>
+                                                              </li>
+                                                              <li class="dropdown__menu--item">
+                                                                <a href="#" class="link">ویرایش</a>
+                                                              </li>
+                                                              <li class="dropdown__menu--item">
+                                                                <a href="#" class="link">حذف</a>
+                                                              </li>
+                                                            </ul>
+                                                          </div>
+                                                        </div>
+                                                      </td>
+                                                    </tr>
+                                  
+                                                    <tr>
+                                                      <td>
+                                                        <label class="container__checkbox">
+                                                          <span class="title--checkbox"></span>
+                                                          <input type="checkbox" class="delete_checkbox"  data-checked-value="checked">
+                                                          <span class="checkmark"></span>
+                                                        </label>
+                                                      </td>
+                                                      <td>
+                                                        <span class="title">Account-00008</span>
+                                                      </td>
+                                                      <td>
+                                                        <a href="">این متن تستی است این متن تستی است این متن تستی است</a>
+                                                      </td>
+                                                      <td>
+                                                        <span class="title">این پیام تستی است</span>
+                                                      </td>
+                                                      <td><span class="title">این پیام تستی است</span></td>
+                                                      <td><span class="title"> این پیام تستی است</span></td>
+                                                      <td><span class="title">این پیام تستی است</span></td>
+                                                      <td><span class="title">این پیام تستی است</span></td>
+                                                      <td><span class="title">این پیام تستی است</span></td>
+                                                      <td><span class="title">این پیام تستی است</span></td>
+                                                      <td><span class="title">این پیام تستی است</span></td>
+                                                      <td>
+                                                        <span class="title type type-warn">سرمایگذار</span>
+                                                      </td>
+                                                      <td>
+                                                        <span class="title badge badge-default">غیر فعال</span>
+                                                      </td>
+                                                      <td>
+                                                        <div class="dropdown">
+                                                          <button class="btn__dropdown btn__dropdown__more"></button>
+                                                          <div class="dropdown__items">
+                                                            <ul class="dropdown__menu">
+                                                              <li class="dropdown__menu--item">
+                                                                <a href="#" class="link">چشم انداز</a>
+                                                              </li>
+                                                              <li class="dropdown__menu--item">
+                                                                <a href="#" class="link">ویرایش</a>
+                                                              </li>
+                                                              <li class="dropdown__menu--item">
+                                                                <a href="#" class="link">حذف</a>
+                                                              </li>
+                                                            </ul>
+                                                          </div>
+                                                        </div>
+                                                      </td>
+                                                    </tr>
+                                  
+                                                    <tr>
+                                                      <td>
+                                                        <label class="container__checkbox">
+                                                          <span class="title--checkbox"></span>
+                                                          <input type="checkbox"  class="delete_checkbox"  data-checked-value="checked">
+                                                          <span class="checkmark"></span>
+                                                        </label>
+                                                      </td>
+                                                      <td>
+                                                        <span class="title">Account-00008</span>
+                                                      </td>
+                                                      <td>
+                                                        <a href="">این متن تستی است این متن تستی است این متن تستی است</a>
+                                                      </td>
+                                                      <td>
+                                                        <span class="title">این پیام تستی است</span>
+                                                      </td>
+                                                      <td><span class="title">این پیام تستی است</span></td>
+                                                      <td><span class="title"> این پیام تستی است</span></td>
+                                                      <td><span class="title">این پیام تستی است</span></td>
+                                                      <td><span class="title">این پیام تستی است</span></td>
+                                                      <td><span class="title">این پیام تستی است</span></td>
+                                                      <td><span class="title">این پیام تستی است</span></td>
+                                                      <td><span class="title">این پیام تستی است</span></td>
+                                                      <td>
+                                                        <span class="title type type-info">سرمایگذار</span>
+                                                      </td>
+                                                      <td>
+                                                        <span class="title badge badge-sussess" title="فعال">فعال</span>
+                                                      </td>
+                                                      <td>
+                                                        <div class="dropdown">
+                                                          <button class="btn__dropdown btn__dropdown__more"></button>
+                                                          <div class="dropdown__items">
+                                                            <ul class="dropdown__menu">
+                                                              <li class="dropdown__menu--item">
+                                                                <a href="#" class="link">چشم انداز</a>
+                                                              </li>
+                                                              <li class="dropdown__menu--item">
+                                                                <a href="#" class="link">ویرایش</a>
+                                                              </li>
+                                                              <li class="dropdown__menu--item">
+                                                                <a href="#" class="link">حذف</a>
+                                                              </li>
+                                                            </ul>
+                                                          </div>
+                                                        </div>
+                                                      </td>
+                                                    </tr>
+                                  
+                                                    <tr>
+                                                      <td>
+                                                        <label class="container__checkbox">
+                                                          <span class="title--checkbox"></span>
+                                                          <input type="checkbox"  class="delete_checkbox"  data-checked-value="checked">
+                                                          <span class="checkmark"></span>
+                                                        </label>
+                                                      </td>
+                                                      <td>
+                                                        <span class="title">Account-00008</span>
+                                                      </td>
+                                                      <td>
+                                                        <a href="">این متن تستی است این متن تستی است این متن تستی است</a>
+                                                      </td>
+                                                      <td>
+                                                        <span class="title">این پیام تستی است</span>
+                                                      </td>
+                                                      <td><span class="title">این پیام تستی است</span></td>
+                                                      <td><span class="title"> این پیام تستی است</span></td>
+                                                      <td><span class="title">این پیام تستی است</span></td>
+                                                      <td><span class="title">این پیام تستی است</span></td>
+                                                      <td><span class="title">این پیام تستی است</span></td>
+                                                      <td><span class="title">این پیام تستی است</span></td>
+                                                      <td><span class="title">این پیام تستی است</span></td>
+                                                      <td>
+                                                        <span class="title type type-error">سرمایگذار</span>
+                                                      </td>
+                                                      <td>
+                                                        <span class="title badge badge-default">غیر فعال</span>
+                                                      </td>
+                                                      <td>
+                                                        <div class="dropdown">
+                                                          <button class="btn__dropdown btn__dropdown__more"></button>
+                                                          <div class="dropdown__items">
+                                                            <ul class="dropdown__menu">
+                                                              <li class="dropdown__menu--item">
+                                                                <a href="#" class="link">چشم انداز</a>
+                                                              </li>
+                                                              <li class="dropdown__menu--item">
+                                                                <a href="#" class="link">ویرایش</a>
+                                                              </li>
+                                                              <li class="dropdown__menu--item">
+                                                                <a href="#" class="link">حذف</a>
+                                                              </li>
+                                                            </ul>
+                                                          </div>
+                                                        </div>
+                                                      </td>
+                                                    </tr>
+                                  
+                                                    <tr>
+                                                      <td>
+                                                        <label class="container__checkbox">
+                                                          <span class="title--checkbox"></span>
+                                                          <input 
+                                                          type="checkbox" 
+                                                          class="delete_checkbox" 
+                                                          data-checked-value="checked"
+                                                          >
+                                                          <span class="checkmark"></span>
+                                                        </label>
+                                                      </td>
+                                                      <td>
+                                                        <span class="title">Account-00008</span>
+                                                      </td>
+                                                      <td>
+                                                        <a href="">این متن تستی است این متن تستی است این متن تستی است</a>
+                                                      </td>
+                                                      <td>
+                                                        <span class="title">این پیام تستی است</span>
+                                                      </td>
+                                                      <td><span class="title">این پیام تستی است</span></td>
+                                                      <td><span class="title"> این پیام تستی است</span></td>
+                                                      <td><span class="title">این پیام تستی است</span></td>
+                                                      <td><span class="title">این پیام تستی است</span></td>
+                                                      <td><span class="title">این پیام تستی است</span></td>
+                                                      <td><span class="title">این پیام تستی است</span></td>
+                                                      <td><span class="title">این پیام تستی است</span></td>
+                                                      <td>
+                                                        <span class="title type type-sussess">سرمایگذار</span>
+                                                      </td>
+                                                      <td>
+                                                        <span class="title badge badge-sussess" title="فعال">فعال</span>
+                                                      </td>
+                                                      <td>
+                                                        <div class="dropdown">
+                                                          <button class="btn__dropdown btn__dropdown__more"></button>
+                                                          <div class="dropdown__items">
+                                                            <ul class="dropdown__menu">
+                                                              <li class="dropdown__menu--item">
+                                                                <a href="#" class="link">چشم انداز</a>
+                                                              </li>
+                                                              <li class="dropdown__menu--item">
+                                                                <a href="#" class="link">ویرایش</a>
+                                                              </li>
+                                                              <li class="dropdown__menu--item">
+                                                                <a href="#" class="link">حذف</a>
+                                                              </li>
+                                                            </ul>
+                                                          </div>
+                                                        </div>
+                                                      </td>
+                                                    </tr>
+                                                  </tbody>
+                                                </table>
+                                              </div>
+                                              <a href="#" class="show__more--lists">
+                                                <span>رکورد 201 </span>
+                                                <span>مشاهده رکوردهای بیشتر</span>
+                                              </a>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!-- error -->
+
+                                <span
+                                  class="error--message"
+                                  style="display: none"
+                                  >نام کسب و کار مورد نیاز است</span
+                                >
+                              </div>
+
+                              <p class="data__value" style="display: none">
+                                این متن تستی است
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </main>
+    <!-- end main__container -->
+
+    <!-- start Footer  -->
+    <footer class="footer">
+      <div class="footer__row">
+        <div class="footer__icon">[</div>
+        <p class="footer__title">گروه شرکت های طرفه نگار 2022</p>
+        <div class="footer__icon">]</div>
+      </div>
+    </footer>
+    <!-- end Footer  -->
+    <script src="dist/script/jquery-3.6.0.min.js"></script>
+    <script src="dist/script/persian-date.min.js"></script>
+    <script src="dist/script/persian-datepicker.min.js"></script>
+    <script src="dist/script/main.js"></script>
+    <script type="text/javascript"></script>
+  </body>
+</html>

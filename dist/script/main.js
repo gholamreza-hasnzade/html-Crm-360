@@ -69,18 +69,6 @@
 
 
 
-    let allCB = $('input[name="selected[]"]');
-    let mainCB = $('input[name="select__all"]')
-    mainCB.on('click', function () {
-        let status = $(this).is(':checked');
-        allCB.prop('checked', status);
-    });
-    allCB.on('change', function () {
-        let status = $('input[name="selected[]"]:checked').length === allCB.length;
-        $('input[name="select__all"]').prop('checked', status);
-    });
-
-
 
 
 
@@ -133,14 +121,77 @@
         })
     }
 
+    dropdownSelect()
 
+
+    const btnOpenModals = document.querySelectorAll('.btn__Open--Modal[data-type="modal"]'),
+        btnCloseModals = document.querySelectorAll('.btnCloseModal');
+    btnOpenModals.forEach(btnOpen => {
+        btnOpen.addEventListener('click', showModal)
+    });
+    function showModal(e) {
+        const targetModalID = e.target.getAttribute('data-target-modal-id');
+        const modal = document.querySelector(`#${targetModalID}`);
+        if (modal) {
+            modal.classList.add('active-modal');
+        }
+    }
+
+    btnCloseModals.forEach(btnClose => {
+        btnClose.addEventListener("click", closeModal)
+    })
+
+    function closeModal(e) {
+        const targetModalID = e.target.getAttribute('data-bs-dismiss-id');
+        const modal = document.querySelector(`#${targetModalID}`);
+        if (modal) {
+            modal.classList.remove('active-modal');
+        }
+    }
+
+
+
+
+    
+   /*  let allCB = $('input[name="selected[]"]');
+    let mainCB = $('input[name="select__all"]')
+    mainCB.on('click', function () {
+        let status = $(this).is(':checked');
+        allCB.prop('checked', status);
+    });
+    allCB.on('change', function () {
+        let status = $('input[name="selected[]"]:checked').length === allCB.length;
+        $('input[name="select__all"]').prop('checked', status);
+    }); */
+
+    const checkedAll = document.querySelectorAll('* [data-type="checked-all"]');
+    checkedAll.forEach(checkBox => {
+        checkBox.addEventListener('change', e => {
+            const isChecked = e.target.checked;
+            const targetName = e.target.getAttribute('data-target');
+            const targets = document.querySelectorAll(`*[data-checked-value="${ targetName }"]`);
+            targets.forEach(target => {
+                target.checked = isChecked;
+            });
+
+           
+        });
+        
+    });
+    
+    
+    /* dataCheckedValue.on('change', function () {
+        let status = $('input[name="data-checked-value"]:checked').length === allCB.length;
+        $('input[data-type="checked-all]').prop('checked', status);
+    }); */
 
 }())
 
 $(document).ready(function () {
     $(".form__control__Datepiker").pDatepicker({
         observer: true,
+        initialValue: false,
         format: 'YYYY/MM/DD',
         altField: '.observer-example-alt'
     });
-});
+}); 

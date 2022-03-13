@@ -1,4 +1,4 @@
-.header {
+.mina__header {
   width: 100%;
   box-shadow: 0 3px 6px 0 rgba($bg-color-black, 0.08);
   background-color: $bg-color-secondry;
@@ -7,7 +7,7 @@
   position: fixed;
   top: 0;
   z-index: 10;
-  &__container {
+  &--container {
     height: 100%;
     width: 100%;
     @include flexBox(row, center, space-between);

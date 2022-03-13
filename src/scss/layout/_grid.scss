@@ -23,6 +23,11 @@
   grid-template-columns: minmax(auto, 67%) minmax(auto, 33%);
 }
 
+.grid__container--modal {
+  grid-column-gap: 16px;
+  grid-template-columns: minmax(auto, 60%) minmax(auto, 40%);
+}
+
 @media only screen and (max-width: 576px) {
 }
 

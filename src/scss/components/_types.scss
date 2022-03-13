@@ -7,7 +7,7 @@ $message-types: (
 ) !default;
 
 // Placeholder for static values 
-%badge {
+%type {
   color: $text-color-secondr;
   width: auto;
   height: 22px;
@@ -20,13 +20,13 @@ $message-types: (
 }
 
 
-@mixin message($color) {
-  @extend %badge;
+@mixin types($color) {
+  @extend %type;
   background: $color;
 }
 
 @each $type, $color in $message-types {
-  .badge-#{$type} {
-    @include message($color);
+  .type-#{$type} {
+    @include types($color);
   }
 }
