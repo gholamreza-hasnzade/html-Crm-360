@@ -134,6 +134,7 @@
         const modal = document.querySelector(`#${targetModalID}`);
         if (modal) {
             modal.classList.add('active-modal');
+            document.body.style.overflow = "hidden";
         }
     }
 
@@ -146,44 +147,61 @@
         const modal = document.querySelector(`#${targetModalID}`);
         if (modal) {
             modal.classList.remove('active-modal');
+            document.body.style.overflow = "unset";
         }
     }
 
 
 
 
-    
-   /*  let allCB = $('input[name="selected[]"]');
-    let mainCB = $('input[name="select__all"]')
-    mainCB.on('click', function () {
-        let status = $(this).is(':checked');
-        allCB.prop('checked', status);
-    });
-    allCB.on('change', function () {
-        let status = $('input[name="selected[]"]:checked').length === allCB.length;
-        $('input[name="select__all"]').prop('checked', status);
-    }); */
+
+    /*  let allCB = $('input[name="selected[]"]');
+     let mainCB = $('input[name="select__all"]')
+     mainCB.on('click', function () {
+         let status = $(this).is(':checked');
+         allCB.prop('checked', status);
+     });
+     allCB.on('change', function () {
+         let status = $('input[name="selected[]"]:checked').length === allCB.length;
+         $('input[name="select__all"]').prop('checked', status);
+     }); */
 
     const checkedAll = document.querySelectorAll('* [data-type="checked-all"]');
     checkedAll.forEach(checkBox => {
         checkBox.addEventListener('change', e => {
             const isChecked = e.target.checked;
             const targetName = e.target.getAttribute('data-target');
-            const targets = document.querySelectorAll(`*[data-checked-value="${ targetName }"]`);
+            const targets = document.querySelectorAll(`*[data-checked-value="${targetName}"]`);
             targets.forEach(target => {
                 target.checked = isChecked;
             });
-
-           
         });
-        
     });
-    
-    
-    /* dataCheckedValue.on('change', function () {
-        let status = $('input[name="data-checked-value"]:checked').length === allCB.length;
-        $('input[data-type="checked-all]').prop('checked', status);
-    }); */
+    function showEditPenCil() {
+        const formGroups = document.querySelectorAll(".m-form--group");
+        try {
+            formGroups.forEach(function (formGroup) {
+                formGroup.addEventListener("mouseover", function () {
+                    const pencilIcon = formGroup.children[0].children[0].children[1];
+                    if (pencilIcon) {
+                        pencilIcon.classList.remove("hidden");
+                        pencilIcon.addEventListener("click",function(e){
+
+                        })
+                    }
+                })
+                formGroup.addEventListener("mouseout", function () {
+                    const pencilIcon = formGroup.children[0].children[0].children[1];
+                    if (pencilIcon) {
+                        pencilIcon.classList.add("hidden")
+                    }
+                })
+            })
+        } catch (error) {
+            console.log(error.message);
+        }
+    }
+    showEditPenCil()
 
 }())
 

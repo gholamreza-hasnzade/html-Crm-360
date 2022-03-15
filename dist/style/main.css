@@ -187,8 +187,13 @@ body {
   padding: 6px; }
 
 .u-overflow-y-auto {
-  overflow-x: hidden;
-  overflow-y: auto; }
+  -ms-overflow-style: none;
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+  scrollbar-width: thin !important; }
+  .u-overflow-y-auto::-webkit-scrollbar {
+    display: none;
+    width: 1px; }
 
 .u-width-15 {
   width: 15% !important; }
@@ -1069,7 +1074,6 @@ body {
 /* input */
 .m-form--group {
   width: 100%;
-  /* height: 75px; */
   padding: 8px;
   display: flex;
   flex-direction: column;
@@ -1095,6 +1099,8 @@ body {
       font-size: 10px;
       margin-right: 8px;
       color: #16b8e0; }
+      .m-form--group--top .right .icon--pencil.hidden {
+        display: none; }
     .m-form--group--top .left {
       display: flex;
       flex-direction: row;
@@ -1108,7 +1114,7 @@ body {
       .m-form--group--top .left .icon--cansel {
         font-size: 10px;
         color: #16b8e0; }
-  .m-form--group--bottom .container__forms {
+  .m-form--group--bottom .m-form--continers .container__forms {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -1123,7 +1129,7 @@ body {
     -moz-transition: all 0.3s ease;
     -ms-transition: all 0.3s ease;
     -o-transition: all 0.3s ease; }
-    .m-form--group--bottom .container__forms .m-form--control {
+    .m-form--group--bottom .m-form--continers .container__forms .m-form--control {
       width: 100%;
       height: 100%;
       border: none;
@@ -1131,13 +1137,13 @@ body {
       font-family: iransans;
       color: #848484;
       background-color: transparent; }
-    .m-form--group--bottom .container__forms:focus-within {
+    .m-form--group--bottom .m-form--continers .container__forms:focus-within {
       border: solid 0.5px #16b8e0; }
-    .m-form--group--bottom .container__forms.error {
+    .m-form--group--bottom .m-form--continers .container__forms.error {
       border: solid 0.5px #ff8761; }
-    .m-form--group--bottom .container__forms:not(:last-child) {
+    .m-form--group--bottom .m-form--continers .container__forms:not(:last-child) {
       margin-bottom: 6px; }
-    .m-form--group--bottom .container__forms .container__button {
+    .m-form--group--bottom .m-form--continers .container__forms .container__button {
       display: flex;
       flex-direction: row;
       align-items: center;
@@ -1146,18 +1152,18 @@ body {
       flex: 0 0 20%;
       position: absolute;
       left: 0; }
-    .m-form--group--bottom .container__forms.gender {
+    .m-form--group--bottom .m-form--continers .container__forms.gender {
       flex: 0 0 20%;
       max-width: 20%;
       margin-left: 2px; }
-      .m-form--group--bottom .container__forms.gender .dropdown-select__list {
+      .m-form--group--bottom .m-form--continers .container__forms.gender .dropdown-select__list {
         height: auto;
         overflow: hidden; }
-    .m-form--group--bottom .container__forms.firstName {
+    .m-form--group--bottom .m-form--continers .container__forms.firstName {
       flex: 0 0 20%;
       max-width: 20%;
       margin-left: 2px; }
-    .m-form--group--bottom .container__forms.lastName {
+    .m-form--group--bottom .m-form--continers .container__forms.lastName {
       flex: 0 0 59%;
       max-width: 59%;
       margin-left: 2px; }
@@ -1323,23 +1329,26 @@ select.m-form--control--select {
 
 /* modal */
 .modal {
-  position: fixed;
-  inset: 0;
-  display: grid;
-  place-items: center;
   visibility: hidden;
   opacity: 0;
+  position: fixed;
   transition: 0.4s;
   z-index: 100;
   width: 100%;
-  height: 100%;
-  padding: 60px 0;
   overflow: hidden;
-  transition: 0.4s; }
+  transition: 0.4s;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  -webkit-overflow-scrolling: touch;
+  outline: 0; }
   .modal .bg__header {
     background: #e5e5e5; }
-  .modal .modal--bg {
-    position: absolute;
+  .modal::before {
+    content: "";
+    position: fixed;
     width: 100%;
     height: 100%;
     background-color: rgba(39, 39, 39, 0.2);
@@ -1348,15 +1357,19 @@ select.m-form--control--select {
     -o-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px); }
   .modal__content {
-    position: relative;
+    position: fixed;
     box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
     background-color: #f9f8f8;
     border-radius: 16px;
-    width: 950px;
+    width: 800px;
+    height: 600px;
     z-index: 10;
-    height: 100%; }
+    top: 50px;
+    bottom: 50px;
+    overflow: hidden; }
     .modal__content .panel__body {
-      height: 100%; }
+      height: 90%;
+      padding-bottom: 60px; }
   .modal .panel {
     height: 100%; }
   .modal.active-modal {

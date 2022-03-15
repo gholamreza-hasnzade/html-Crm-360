@@ -1,6 +1,5 @@
 .m-form--group {
   width: 100%;
-  /* height: 75px; */
   padding: $padding-8;
   @include flexBox(column, unset, unset);
   &--top {
@@ -19,10 +18,14 @@
           color: $text-color-warning-dark;
         }
       }
-      .icon--pencil {
+      .icon--pencil { 
         font-size: 10px;
         margin-right: $margin-8;
         color: $text-color-light;
+
+        &.hidden{
+          display: none;
+        }
       }
     }
     .left {
@@ -41,61 +44,64 @@
     }
   }
   &--bottom {
-    .container__forms {
-      @include flexBox(row, center, space-between);
-      width: 100%;
-      border-radius: 2px;
-      height: 30px;
-      border: solid 0.5px $bg-color-border-dark;
-      position: relative;
-      @include transition3s();
-      .m-form--control {
+    .m-form--continers{
+      .container__forms {
+        @include flexBox(row, center, space-between);
         width: 100%;
-        height: 100%;
-        border: none;
-        padding-right: $padding-8;
-        font-family: $fontFamily;
-        color: $text-color-warm-grey;
-        background-color: transparent;
-      }
-      &:focus-within {
-        border: solid 0.5px $bg-color-light;
-      }
-      &.error {
-        border: solid 0.5px $text-color-warning-dark;
-      }
-      &:not(:last-child){
-        margin-bottom: 6px;
-      }
-      .container__button{
-        @include flexBox(row, center, unset);
-        height: 100%;
-        flex: 0 0 20%;
-        position: absolute;
-        left: 0;
-      }
-
-      &.gender{
-        flex: 0 0 20%;
-        max-width: 20%;
-        margin-left: 2px;
-
-        .dropdown-select__list{
-          height: auto;
-          overflow: hidden;
+        border-radius: 2px;
+        height: 30px;
+        border: solid 0.5px $bg-color-border-dark;
+        position: relative;
+        @include transition3s();
+        .m-form--control {
+          width: 100%;
+          height: 100%;
+          border: none;
+          padding-right: $padding-8;
+          font-family: $fontFamily;
+          color: $text-color-warm-grey;
+          background-color: transparent;
+        }
+        &:focus-within {
+          border: solid 0.5px $bg-color-light;
+        }
+        &.error {
+          border: solid 0.5px $text-color-warning-dark;
+        }
+        &:not(:last-child){
+          margin-bottom: 6px;
+        }
+        .container__button{
+          @include flexBox(row, center, unset);
+          height: 100%;
+          flex: 0 0 20%;
+          position: absolute;
+          left: 0;
+        }
+  
+        &.gender{
+          flex: 0 0 20%;
+          max-width: 20%;
+          margin-left: 2px;
+  
+          .dropdown-select__list{
+            height: auto;
+            overflow: hidden;
+          }
+        }
+        &.firstName{
+          flex: 0 0 20%;
+          max-width: 20%;
+          margin-left: 2px;
+        }
+        &.lastName{
+          flex: 0 0 59%;
+          max-width: 59%;
+          margin-left: 2px;
         }
       }
-      &.firstName{
-        flex: 0 0 20%;
-        max-width: 20%;
-        margin-left: 2px;
-      }
-      &.lastName{
-        flex: 0 0 59%;
-        max-width: 59%;
-        margin-left: 2px;
-      }
     }
+   
     .error--message {
       color: $text-color-warning-dark;
       font-size: 13px;
