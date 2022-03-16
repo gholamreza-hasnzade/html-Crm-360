@@ -69,7 +69,7 @@
 }
 
 .u-d--flex{
-  @include flexBox(row,center,unset);
+  @include flexBox(row,unset,unset);
 }
 
 .u-transparent-bg {

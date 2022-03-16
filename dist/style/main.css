@@ -201,7 +201,7 @@ body {
 .u-d--flex {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: unset;
   justify-content: unset; }
 
 .u-transparent-bg {
@@ -285,6 +285,9 @@ body {
   justify-content: unset; }
   .header-buttons .dropdown .btn__dropdown.btn__dropdown__more {
     background-color: #fcfcfc !important; }
+
+.dropdown .btn__dropdown.btn__dropdown--from {
+  background: url("../images/more.svg") no-repeat center center #fcfcfc; }
 
 .btn {
   padding: 0 25px;
@@ -490,7 +493,7 @@ body {
     padding: 9px 0px;
     border-radius: 5px;
     text-align: center;
-    height: 33px;
+    height: 30px;
     width: 33px; }
     .dropdown .btn__dropdown__more {
       background: url("../images/more.svg") no-repeat center center #ebebeb; }
@@ -514,7 +517,8 @@ body {
     -moz-transition: transform 0.3s ease 0s;
     -ms-transition: transform 0.3s ease 0s;
     -o-transition: transform 0.3s ease 0s;
-    transform-origin: top left; }
+    transform-origin: top left;
+    z-index: 10; }
     .dropdown .dropdown__items .dropdown__menu {
       background: #fcfcfc;
       border-radius: 3px;
@@ -811,6 +815,9 @@ body {
       -moz-transition: transform 0.5s cubic-bezier(0.175, 0.885, 32, 1.275);
       -ms-transition: transform 0.5s cubic-bezier(0.175, 0.885, 32, 1.275);
       -o-transition: transform 0.5s cubic-bezier(0.175, 0.885, 32, 1.275); }
+    .dropdown .dropdown__items.right__dropdown {
+      right: 0;
+      transform-origin: top right; }
   .dropdown .dropdown__items.notifications {
     left: -37px; }
   .dropdown .dropdown__items.noetbook {
@@ -1027,15 +1034,19 @@ body {
 /* form */
 .master__form {
   width: 100%; }
-  .master__form .submit__form {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: unset;
-    margin-bottom: 16px; }
-    .master__form .submit__form .btn:not(:last-child) {
-      margin-left: 6px; }
+
+.submit__form {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: unset; }
+  .submit__form .btn:not(:last-child) {
+    margin-left: 6px; }
+  .submit__form.actions-btn-group.hidden {
+    display: none; }
+  .submit__form.edite-btn-group.hidden {
+    display: none; }
 
 /* panel */
 .panel {
@@ -1098,15 +1109,16 @@ body {
     .m-form--group--top .right .icon--pencil {
       font-size: 10px;
       margin-right: 8px;
-      color: #16b8e0; }
+      color: #16b8e0;
+      opacity: 0;
+      visibility: hidden; }
       .m-form--group--top .right .icon--pencil.hidden {
         display: none; }
     .m-form--group--top .left {
       display: flex;
       flex-direction: row;
       align-items: center;
-      justify-content: unset;
-      /* display: none; */ }
+      justify-content: unset; }
       .m-form--group--top .left .icon--edit {
         font-size: 10px;
         color: #16b8e0;
@@ -1114,6 +1126,8 @@ body {
       .m-form--group--top .left .icon--cansel {
         font-size: 10px;
         color: #16b8e0; }
+      .m-form--group--top .left.hidden {
+        display: none; }
   .m-form--group--bottom .m-form--continers .container__forms {
     display: flex;
     flex-direction: row;
@@ -1167,12 +1181,23 @@ body {
       flex: 0 0 59%;
       max-width: 59%;
       margin-left: 2px; }
+  .m-form--group--bottom .m-form--continers.hidden {
+    display: none; }
   .m-form--group--bottom .error--message {
     color: #ff8761;
     font-size: 13px; }
-  .m-form--group--bottom .data__value {
+  .m-form--group--bottom .show__info .data__value {
     font-size: 13px;
     color: #a8a8a8; }
+  .m-form--group--bottom .show__info .item__infos .item__info .link {
+    font-size: 10px;
+    color: #16b8e0; }
+  .m-form--group--bottom .show__info .item__infos .item__info .title {
+    margin-left: 5px;
+    font-size: 9px;
+    color: #a8a8a8; }
+  .m-form--group--bottom .show__info.hidden {
+    display: none; }
   .m-form--group--bottom .form__infromation {
     display: flex;
     flex-direction: row;
@@ -1215,6 +1240,9 @@ body {
           margin-right: 6px; }
   .m-form--group--bottom__street {
     width: 100%; }
+  .m-form--group:hover .icon--pencil {
+    opacity: 1;
+    visibility: visible; }
 
 /* textarea */
 .form-control--textarea {

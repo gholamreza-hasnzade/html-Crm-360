@@ -19,8 +19,6 @@
     } catch (error) {
         console.log(error.message);
     }
-
-    // Close the dropdown if the user clicks outside of it
     window.onclick = function (event) {
         if (!event.target.matches('.btn__dropdown')) {
             let dropdowns = document.getElementsByClassName("dropdown__items");
@@ -33,9 +31,6 @@
             }
         }
     }
-
-
-
     /*  ***** Mynotebooke ***** */
     const Mynotebooke = document.querySelector(".noetbook__body--row");
     const createELmetP = document.createElement("p");
@@ -46,7 +41,6 @@
         Mynotebooke.appendChild(createELmetP)
     }
     /*  ***** Mynotebooke ***** */
-
     /* more list notif */
     const notif__item = document.querySelectorAll(".notif__item");
     const more__notif = document.getElementById("more__notif");
@@ -54,7 +48,6 @@
         more__notif.style.display = "none"
     }
     /* more list notif */
-
 
     /* ****  notifContainer *** */
     const notifContainer = document.querySelector(".notif__container");
@@ -66,11 +59,6 @@
         notifContainer.appendChild(crtNotiTag_P)
     }
     /* ****  notifContainer *** */
-
-
-
-
-
 
 
     function dropdownSelect() {
@@ -120,7 +108,6 @@
             $(this).closest('.dropdown-select').prev('select').val(data__value).trigger('change');
         })
     }
-
     dropdownSelect()
 
 
@@ -181,35 +168,81 @@
         const formGroups = document.querySelectorAll(".m-form--group");
         try {
             formGroups.forEach(function (formGroup) {
-                formGroup.addEventListener("mouseover", function () {
-                    const pencilIcon = formGroup.children[0].children[0].children[1];
-                    if (pencilIcon) {
+                const pencilIcon = formGroup.children[0].children[0].children[1];
+                const showInputs = formGroup.children[1].children[0];
+                const showInfo = formGroup.children[1].children[1];
+                const closeRow = formGroup.children[0].children[1];
+                if (pencilIcon) {
+                    pencilIcon.addEventListener("click", function () {
+                        if (pencilIcon) {
+                            showInputs.classList.remove("hidden");
+                            pencilIcon.classList.add("hidden");
+                            closeRow.classList.remove("hidden");
+                            showInfo.classList.add("hidden");
+                        }
+                    })
+                }
+                if (closeRow) {
+                    const closeIcon = formGroup.children[0].children[1].children[1];
+                    closeIcon.addEventListener("click", function () {
+                        showInputs.classList.add("hidden");
                         pencilIcon.classList.remove("hidden");
-                        pencilIcon.addEventListener("click",function(e){
-
-                        })
-                    }
-                })
-                formGroup.addEventListener("mouseout", function () {
-                    const pencilIcon = formGroup.children[0].children[0].children[1];
-                    if (pencilIcon) {
-                        pencilIcon.classList.add("hidden")
-                    }
-                })
+                        closeRow.classList.add("hidden");
+                        showInfo.classList.remove("hidden");
+                    })
+                }
             })
         } catch (error) {
-            console.log(error.message);
+            console.log(error);
         }
     }
-    showEditPenCil()
+    showEditPenCil();
+    function datePickerPersion() {
+        const datePickers = document.querySelectorAll(".form__control__Datepiker");
+        if (datePickers) {
+            datePickers.forEach(function (datepicker) {
+                $(datepicker).pDatepicker({
+                    observer: true,
+                    initialValue: false,
+                    format: 'YYYY/MM/DD',
+                    altField: '.observer-example-alt'
+                });
+            })
+        }
+    }
+    datePickerPersion();
 
+    function showEditeBtn() {
+        const actionsBtnGroup = document.querySelectorAll(".actions-btn-group");
+        if (actionsBtnGroup) {
+            actionsBtnGroup.forEach(function (actionsBtn) {
+                const btnClick = actionsBtn.children[1];
+                btnClick.addEventListener("click", function () {
+                    const parentEl = btnClick.parentElement;
+                    parentEl.classList.add("hidden");
+                    parentEl.nextElementSibling.classList.remove("hidden")
+                })
+            })
+        }
+    }
+    showEditeBtn();
+
+    function closeEditBtn(){
+        const editeBtnGroup = document.querySelectorAll(".edite-btn-group")
+        if (editeBtnGroup) {
+            editeBtnGroup.forEach(function (actionsBtn) {
+                const btnClick = actionsBtn.children[1];
+                btnClick.addEventListener("click", function () {
+                    const parentEl = btnClick.parentElement;
+                    parentEl.classList.add("hidden");
+                    parentEl.previousElementSibling.classList.remove("hidden");
+                })
+            })
+        }
+    }
+    closeEditBtn();
+
+    function clearInputs() {
+    }
 }())
 
-$(document).ready(function () {
-    $(".form__control__Datepiker").pDatepicker({
-        observer: true,
-        initialValue: false,
-        format: 'YYYY/MM/DD',
-        altField: '.observer-example-alt'
-    });
-}); 

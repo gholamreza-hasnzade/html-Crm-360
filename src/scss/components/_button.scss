@@ -86,7 +86,11 @@
     }
   }
 }
-
+.dropdown {
+  .btn__dropdown.btn__dropdown--from{
+    background: url("../images/more.svg") no-repeat center center $bg-color-secondry;
+  }
+}
 .btn {
   padding: 0 25px;
   height: 30px;

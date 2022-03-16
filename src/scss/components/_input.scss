@@ -2,8 +2,10 @@
   width: 100%;
   padding: $padding-8;
   @include flexBox(column, unset, unset);
+
   &--top {
     @include flexBox(row, center, space-between);
+
     .right {
       .title {
         font-size: 12px;
@@ -14,37 +16,49 @@
         letter-spacing: normal;
         text-align: right;
         color: $text-color-warm-grey;
+
         &.error {
           color: $text-color-warning-dark;
         }
       }
-      .icon--pencil { 
+
+      .icon--pencil {
         font-size: 10px;
         margin-right: $margin-8;
         color: $text-color-light;
+        opacity: 0;
+        visibility: hidden;
 
-        &.hidden{
+        &.hidden {
           display: none;
         }
       }
     }
+
     .left {
       @include flexBox(row, center, unset);
-      /* display: none; */
+
 
       .icon--edit {
         font-size: 10px;
         color: $text-color-light;
         margin-left: $margin-8;
       }
+
       .icon--cansel {
         font-size: 10px;
         color: $text-color-light;
+
+      }
+
+      &.hidden {
+        display: none;
       }
     }
   }
+
   &--bottom {
-    .m-form--continers{
+    .m-form--continers {
       .container__forms {
         @include flexBox(row, center, space-between);
         width: 100%;
@@ -53,6 +67,7 @@
         border: solid 0.5px $bg-color-border-dark;
         position: relative;
         @include transition3s();
+
         .m-form--control {
           width: 100%;
           height: 100%;
@@ -62,59 +77,96 @@
           color: $text-color-warm-grey;
           background-color: transparent;
         }
+
         &:focus-within {
           border: solid 0.5px $bg-color-light;
         }
+
         &.error {
           border: solid 0.5px $text-color-warning-dark;
         }
-        &:not(:last-child){
+
+        &:not(:last-child) {
           margin-bottom: 6px;
         }
-        .container__button{
+
+        .container__button {
           @include flexBox(row, center, unset);
           height: 100%;
           flex: 0 0 20%;
           position: absolute;
           left: 0;
         }
-  
-        &.gender{
+
+        &.gender {
           flex: 0 0 20%;
           max-width: 20%;
           margin-left: 2px;
-  
-          .dropdown-select__list{
+
+          .dropdown-select__list {
             height: auto;
             overflow: hidden;
           }
         }
-        &.firstName{
+
+        &.firstName {
           flex: 0 0 20%;
           max-width: 20%;
           margin-left: 2px;
         }
-        &.lastName{
+
+        &.lastName {
           flex: 0 0 59%;
           max-width: 59%;
           margin-left: 2px;
         }
       }
+
+      &.hidden {
+        display: none;
+      }
     }
-   
+
     .error--message {
       color: $text-color-warning-dark;
       font-size: 13px;
     }
-    .data__value {
-      font-size: 13px;
-      color: $text-color-border-dark;
+
+    .show__info {
+      .data__value {
+        font-size: 13px;
+        color: $text-color-border-dark;
+      }
+      .item__infos{
+        .item__info{
+          .link{
+            font-size: 10px;
+            color: $text-color-light;
+          }
+          .title{
+            margin-left: 5px;
+            font-size: 9px;
+            color: $text-color-border-dark;
+          }
+         }
+      }
+    
+        
+       
+      
+     
+
+      &.hidden {
+        display: none;
+      }
     }
+
+
     .form__infromation {
       @include flexBox(row, center, unset);
 
       &--link {
-        font-size: 14px; 
+        font-size: 14px;
         font-weight: 500;
         font-stretch: normal;
         font-style: normal;
@@ -123,12 +175,14 @@
         text-align: right;
         color: $bg-color-light;
         margin-left: $margin-6;
-        &:not(:first-child){
+
+        &:not(:first-child) {
           margin-right: $margin-6;
         }
       }
-      &--text{
-        font-size: 14px; 
+
+      &--text {
+        font-size: 14px;
         font-stretch: normal;
         font-style: normal;
         line-height: 1.63;
@@ -139,20 +193,29 @@
       }
     }
 
-    .address{
-      @include flexBox(column,unset,unset);
-      &__city{
-        @include flexBox(row,unset,unset);
-        .container__forms{
+    .address {
+      @include flexBox(column, unset, unset);
+
+      &__city {
+        @include flexBox(row, unset, unset);
+
+        .container__forms {
           width: 48%;
-          &:not(:first-child){
+
+          &:not(:first-child) {
             margin-right: 6px;
           }
         }
       }
     }
-    &__street{
+
+    &__street {
       width: 100%;
     }
+  }
+
+  &:hover .icon--pencil {
+    opacity: 1;
+    visibility: visible;
   }
 }

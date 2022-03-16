@@ -8,7 +8,7 @@
     padding: 9px 0px;
     border-radius: $border-radius-5;
     text-align: center;
-    height: 33px;
+    height: 30px;
     width: 33px;
 
     &__more {
@@ -47,7 +47,7 @@
     -ms-transition: transform 0.3s ease 0s;
     -o-transition: transform 0.3s ease 0s;
     transform-origin: top left;
-
+    z-index: 10;
     .dropdown__menu {
       background: $bg-color-secondry;
       border-radius: $border-radius-3;
@@ -403,6 +403,11 @@
       -moz-transition: transform 0.5s cubic-bezier(0.175, 0.885, 32, 1.275);
       -ms-transition: transform 0.5s cubic-bezier(0.175, 0.885, 32, 1.275);
       -o-transition: transform 0.5s cubic-bezier(0.175, 0.885, 32, 1.275);
+    }
+    &.right__dropdown {
+      right: 0;
+      transform-origin: top right;
+
     }
   }
 

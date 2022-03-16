@@ -1,13 +1,22 @@
 .master__form {
   width: 100%;
-  .submit__form {
-    width: 100%;
-    @include flexBox(row, center, unset);
-    margin-bottom: $margin-16;
-    .btn {
-      &:not(:last-child) {
-        margin-left: $margin-6;
-      }
+}
+.submit__form {
+  width: 100%;
+  @include flexBox(row, center, unset);
+  .btn {
+    &:not(:last-child) {
+      margin-left: $margin-6;
+    }
+  }
+  &.actions-btn-group{
+    &.hidden{
+      display: none;
+    }
+  }
+  &.edite-btn-group{
+    &.hidden{
+      display: none;
     }
   }
 }
