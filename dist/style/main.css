@@ -165,6 +165,9 @@ body {
 .u-margin-top-16 {
   margin-top: 16px; }
 
+.u-margin-bottom-8 {
+  margin-bottom: 8px; }
+
 .u-margin-bottom-16 {
   margin-bottom: 16px; }
 
@@ -183,7 +186,7 @@ body {
 .u-padding-bottom-100 {
   padding-bottom: 100px; }
 
-.u-padding {
+.u-padding-6 {
   padding: 6px; }
 
 .u-overflow-y-auto {
