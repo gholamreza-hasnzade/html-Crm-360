@@ -165,6 +165,9 @@ body {
 .u-margin-top-16 {
   margin-top: 16px; }
 
+.u-margin-top-5 {
+  margin-top: 5px; }
+
 .u-margin-bottom-8 {
   margin-bottom: 8px; }
 
@@ -364,17 +367,18 @@ body {
       height: 12px; }
     .btn__form--modal:hover {
       background-color: #c8c8c8; }
-  .btn__form--close {
+  .btn__form--stop {
+    transform: rotate(180deg);
     background-color: #ebebeb;
     transition: all 0.3s ease;
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
     -ms-transition: all 0.3s ease;
     -o-transition: all 0.3s ease; }
-    .btn__form--close img {
+    .btn__form--stop img {
       width: 12px;
       height: 12px; }
-    .btn__form--close:hover {
+    .btn__form--stop:hover {
       background-color: #c8c8c8; }
   .btn__form--exclamation {
     background-color: #d8d8d8;
@@ -400,6 +404,22 @@ body {
       height: 12px; }
     .btn__form--start:hover {
       background-color: #c8c8c8; }
+    .btn__form--start.hidden {
+      display: none; }
+  .btn__form--close {
+    background-color: #ebebeb;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease; }
+    .btn__form--close img {
+      width: 12px;
+      height: 12px; }
+    .btn__form--close:hover {
+      background-color: #c8c8c8; }
+    .btn__form--close.hidden {
+      display: none; }
   .btn__form--duplicate {
     width: 30px;
     height: 30px;

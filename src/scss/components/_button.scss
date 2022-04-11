@@ -171,18 +171,20 @@
     }
   }
 
-  &--close {
+  &--stop {
+    transform: rotate(180deg);
     background-color: $bg-color-warning-dark;
     @include transition3s();
     img {
       width: 12px;
       height: 12px;
     }
-
     &:hover {
       background-color: $bg-color-border-dark-hover;
     }
   }
+
+ 
   &--exclamation {
     background-color: $bg-color-border-dark-50;
     @include transition3s();
@@ -204,8 +206,27 @@
     &:hover {
       background-color: $bg-color-border-dark-hover;
     }
+
+    &.hidden{
+      display: none;
+    }
   }
 
+  &--close {
+    background-color: $bg-color-warning-dark;
+    @include transition3s();
+    img {
+      width: 12px;
+      height: 12px;
+    }
+
+    &:hover {
+      background-color: $bg-color-border-dark-hover;
+    }
+    &.hidden{
+      display: none;
+    }
+  }
   &--duplicate {
     width: 30px; 
     height: 30px;

@@ -64,13 +64,13 @@
     $(".m-form--control--select").each(function (i, select) {
       $(this).after(
         '<div class="dropdown-select ' +
-          ($(this).attr("class") || "") +
-          ' " tabindex="0">' +
-          '<span class="dropdown-select__current"></span>' +
-          '<div class="dropdown-select__list">' +
-          '<ul class="dropdown-select__ul"></ul>' +
-          "</div>" +
-          "</div>"
+        ($(this).attr("class") || "") +
+        ' " tabindex="0">' +
+        '<span class="dropdown-select__current"></span>' +
+        '<div class="dropdown-select__list">' +
+        '<ul class="dropdown-select__ul"></ul>' +
+        "</div>" +
+        "</div>"
       );
 
       var dropdown = $(this).next();
@@ -130,8 +130,8 @@
   dropdownSelect();
 
   const btnOpenModals = document.querySelectorAll(
-      '.btn__Open--Modal[data-type="modal"]'
-    ),
+    '.btn__Open--Modal[data-type="modal"]'
+  ),
     btnCloseModals = document.querySelectorAll(".btnCloseModal");
   btnOpenModals.forEach((btnOpen) => {
     btnOpen.addEventListener("click", showModal);
@@ -300,7 +300,6 @@
   }
   closeEditBtn();
 
-  function clearInputs() {}
 
   function datePickerPersion() {
     const datePickers = document.querySelectorAll(".form__control__Datepiker");
@@ -316,4 +315,36 @@
     }
   }
   datePickerPersion();
+
+
+  function duplicateinpu() {
+    const btnDublicates = document.querySelectorAll(".btnDublicate");
+    btnDublicates.forEach(function (btnEle) {
+      btnEle.addEventListener("click", function () {
+        const containerForm = btnEle.previousElementSibling;
+        const rowForm = btnEle.previousElementSibling.firstElementChild;
+        const startBtn = rowForm.lastElementChild.firstElementChild
+        const closeBtn = rowForm.lastElementChild.lastElementChild;
+        closeBtn.classList.remove("hidden");
+        startBtn.classList.remove("hidden");
+
+        const cloneForm = rowForm.cloneNode(true);
+        cloneForm.querySelector(".m-form--control--input").value = ""
+        containerForm.appendChild(cloneForm);
+      })
+    })
+  }
+  duplicateinpu();
+  function loadInput() {
+    const controlInput = document.querySelectorAll(".dublicate__inpu");
+    controlInput.forEach(function (inputItem) {
+      inputItem.addEventListener("change", function (event) {
+        if (event.target.value.length >= 2) {
+          console.log(inputItem);
+        }
+      })
+    })
+
+  }
+  loadInput()
 })();
