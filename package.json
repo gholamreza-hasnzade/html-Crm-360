@@ -4,13 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build-css": "node-sass --include-path scss src/scss/main.scss   dist/style/main.css",
+    "build-css": "sass src/scss/main.scss dist/style/main.css --no-source-map",
     "watch-css": "nodemon -e scss -x \"npm run build-css\""
   },
   "author": "gholamreza tabrizi",
   "license": "ISC",
   "devDependencies": {
-    "node-sass": "^7.0.1",
+    "sass": "^1.93.0",
     "nodemon": "^2.0.15"
   }
 }

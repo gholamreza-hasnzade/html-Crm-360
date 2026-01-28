@@ -19,6 +19,62 @@
   } catch (error) {
     console.log(error.message);
   }
+
+  const UNEXPECTED_SERVER_ERROR_MESSAGE =
+    "An unexpected error occurred on our servers. Please try again, or contact support if the issue persists.";
+
+  function ensureGlobalAlert() {
+    const existing = document.getElementById("global-alert");
+    if (existing) return existing;
+
+    const alertElem = document.createElement("div");
+    const strongElem = document.createElement("strong");
+    const pElem = document.createElement("p");
+    const closeElem = document.createElement("i");
+
+    alertElem.id = "global-alert";
+    alertElem.classList.add("global__alert");
+    strongElem.classList.add("global__alert--title");
+    pElem.classList.add("global__alert--text");
+    closeElem.classList.add("global__alert--close");
+
+    alertElem.appendChild(strongElem);
+    alertElem.appendChild(pElem);
+    alertElem.appendChild(closeElem);
+
+    closeElem.addEventListener("click", function () {
+      alertElem.classList.remove("is-visible");
+    });
+
+    document.body.appendChild(alertElem);
+    return alertElem;
+  }
+
+  function showGlobalAlert(title, message, options) {
+    const opts = options || {};
+    const autoHideMs = typeof opts.autoHideMs === "number" ? opts.autoHideMs : 6000;
+
+    const alertElem = ensureGlobalAlert();
+    alertElem.querySelector(".global__alert--title").innerText = title || "";
+    alertElem.querySelector(".global__alert--text").innerText = message || "";
+
+    alertElem.classList.add("is-visible");
+
+    if (alertElem.__autoHideTimer) {
+      clearTimeout(alertElem.__autoHideTimer);
+    }
+    if (autoHideMs > 0) {
+      alertElem.__autoHideTimer = setTimeout(function () {
+        alertElem.classList.remove("is-visible");
+      }, autoHideMs);
+    }
+  }
+
+  window.App = window.App || {};
+  window.App.showGlobalAlert = showGlobalAlert;
+  window.App.showUnexpectedServerError = function () {
+    showGlobalAlert("Error", UNEXPECTED_SERVER_ERROR_MESSAGE);
+  };
   window.onclick = function (event) {
     if (!event.target.matches(".btn__dropdown")) {
       let dropdowns = document.getElementsByClassName("dropdown__items");
